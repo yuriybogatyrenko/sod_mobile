@@ -430,3 +430,19 @@ function set_body_pos() {
 	$('body').css({top: 0})
 	$(window).scrollTop(pos);
 }
+
+/* LANGS JS COMES HERE*/
+
+$(document).ready(function () {
+	$(document).on('click', '#--langs-popup-close', function (e) {
+		e.preventDefault();
+		$('body').removeClass('popup_show');
+		$(this).closest('.--langs-popup__body').removeClass('active');
+	});
+
+	$(document).on('click', '#--langs-popup-call', function (e) {
+		e.preventDefault();
+		$('body').addClass('popup_show');
+		$('.--langs-popup__body').addClass('active');
+	});
+});
