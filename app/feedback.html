@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>soderzhnaki mobile</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="main_site_wrap">
+		<header class="site_top_header">
+			<nav class="navbar navbar-default navbar-static-top" role="navigation">
+				<div class="container">
+					<div class="dib">
+						<a href="#" class="go_back icon icon-left-open"></a>
+					</div>
+					<div class="dib page_title_header vam ffr purple_title">
+						Обратная связь
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<!-- BEGIN main_page_form_wrapper -->
+		<div class="main_page_form_wrapper form_bl white_bg login_form">
+			<form class="reg_form reg_form_third_step filter_form" method="POST">
+				<div class="container">
+					<div class="line_wrap">
+			            <input type="text" id="feedback_name" name="feedback[name]" required="required" placeholder="Имя">
+			            <div class="ul-errors"></div>
+					</div>
+					<div class="line_wrap">
+			            <input type="email" id="feedback_email" name="feedback[email]" required="required" placeholder="Почта">
+				        <div class="ul-errors"></div>
+					</div>
+					<div class="line_wrap">
+						<select id="feedback_theme" name="feedback[theme]" class="selectpicker">
+				            <option value="1" selected disabled placeholder>Тема обращения</option>
+				            <option value="1">Пожаловаться на пользователя</option>
+				            <option value="2">Задать вопрос службе поддержки</option>
+				        </select>
+					</div>
+					<div class="line_wrap">
+						<select id="feedback_reason" name="feedback[reason]" class="selectpicker">
+				            <option value="0" selected disabled placeholder>Причина обращения</option>
+				            <option value="1">Пожаловаться на пользователя</option>
+			           		<option value="2">Задать вопрос службе поддержки</option>
+				        </select>
+					</div>
+					<div class="line_wrap">
+						<input type="number" id="feedback_user_id" name="feedback[user_id]" required="required" placeholder="Укажите ID пользователя">
+					</div>
+					<div class="line_wrap text-center">
+						<a class="red_link tdu" href="#">Где посмотреть ID?</a>
+					</div>
+					<div class="line_wrap">
+						<textarea id="feedback_comment" name="feedback[comment]" required="required" class="bordered_textarea" placeholder="Комментарий"></textarea>
+			    		<div class="ul-errors"></div>
+					</div>
+					<div class="text-center line_wrap">
+						<button class="violet_btn submit_btn db">Отправить</button>
+					</div>
+					<div class="additional_info tac text-center">
+					    По всем остальным вопросам обращайтесь на почту
+					    <br><a class="red_link" href="mailto:support@soderzhanki-online.ru">support@soderzhanki-online.ru</a>
+					</div>
+				</div>
+			</form>
+
+		</div>
+		<!-- // END main_page_form_wrapper -->
+
+		<!-- BEGIN footer -->
+		<footer class="footer">
+			<div class="inner_wrap">
+				<div class="container">
+					<p class="full_version_link"><a href="#">Полная версия</a></p>
+					<p class="copyright">&copy; «Содержанки on-line». Лучший on-line<br>
+					сервис по поиску спонсоров и содержанок, 2015</p>
+				</div>
+			</div>
+		</footer>
+		<!-- // END footer -->
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-select.min.js"></script>
+	<script src="js/bootstrap-slider.js"></script>
+	<script>
+		$(document).bind('mobileinit',function(){
+		    /*$.mobile.changePage.defaults.changeHash = false;
+		    $.mobile.hashListeningEnabled = false;
+		    $.mobile.pushStateEnabled = false;*/
+
+		    $.extend(  $.mobile , {autoInitializePage: false});
+		});
+	</script>
+	<script src="js/jquery-mobile.min.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+</html>

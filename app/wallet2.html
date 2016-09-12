@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>soderzhnaki mobile</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="main_site_wrap">
+		<header class="site_top_header">
+			<nav class="navbar navbar-default navbar-static-top" role="navigation">
+				<div class="container wallet_header">
+					<div class="dib">
+						<a href="#" class="go_back icon icon-left-open"></a>
+					</div>
+					<div class="dib page_title_header vam ffr purple_title">
+						Подтвержденные фото
+					</div>
+				</div>
+			</nav>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li>
+						<div class="container">
+							<a href="#">Home</a>
+						</div>
+					</li>
+					<li>
+						<div class="container">
+							<a href="#">Home</a>
+						</div>
+					</li>
+					<li>
+						<div class="container">
+							<a href="#">Home</a>
+						</div>
+					</li>
+					<li>
+						<div class="container">
+							<a href="#">Home</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</header>
+		
+		<!-- BEGIN wallet_page_block -->
+		<div class="wallet_page_block">
+			<!-- BEGIN ballance_block -->
+			<div class="ballance_block">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-7 right_padding5">
+							<div class="wallet_info">
+								<span class="icon icon-wallet"></span>
+								<div class="text ffr">
+									<p>Ваш баланс</p>
+									<p class="money">1200 Р</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-xs-5 left_padding5">
+							<a href="#" class="red_btn db">Пополнить</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- // END ballance_block -->
+
+			<!-- BEGIN wallet_content_info_page_product -->
+			<div class="wallet_content_info_page_product ffr">
+				<div class="container">
+					<div class="content photo_verified_page">
+						<p>На нашем сервисе девушки подтверждают свои фотографии посредством модерации. Девушка со своей фотографией в руке отправляет ее модераторам, которые проверяют и присваивают статус «проверенное фото».</p>
+						<div class="images_wrap text-center confirmation">
+							<div class="dib photo_verified_image_wrap">
+								<img alt="" class="radius5" src="http://placehold.it/120x120" />
+								<span class="conf_icon confirmed"></span>
+							</div>
+							<div class="dib photo_verified_image_wrap">
+								<img alt="" class="radius5" src="http://placehold.it/120x120" />
+								<span class="conf_icon not-confirmed"></span>
+							</div>
+						</div>
+						<p>Мужчины могут фильтровать девушек по данному фильтру. Подключите услугу и будьте спокойны в том, что вы общаетесь действительно с девушкой. Покупается услуга единожды.</p>
+					</div>
+
+					<form action="#" class="buy_product_form wallet_form_block">
+						<div class="row lh50">
+							<div class="col-xs-6 right_padding5 fz18 ffr">
+								Итого: 150 руб.
+							</div>
+							<div class="col-xs-6 left_padding5">
+								<button class="violet_btn dib w100" type="submit">Купить</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+			<!-- // END wallet_content_info_page_product -->
+		</div>
+		<!-- // END wallet_page_block -->
+
+		<!-- BEGIN footer -->
+		<footer class="footer">
+			<div class="inner_wrap">
+				<div class="container">
+					<p class="full_version_link"><a href="#">Полная версия</a></p>
+					<p class="copyright">&copy; «Содержанки on-line». Лучший on-line<br>
+					сервис по поиску спонсоров и содержанок, 2015</p>
+				</div>
+			</div>
+		</footer>
+		<!-- // END footer -->
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-select.min.js"></script>
+	<script src="js/bootstrap-slider.js"></script>
+	<script>
+		$(document).bind('mobileinit',function(){
+		    /*$.mobile.changePage.defaults.changeHash = false;
+		    $.mobile.hashListeningEnabled = false;
+		    $.mobile.pushStateEnabled = false;*/
+
+		    $.extend(  $.mobile , {autoInitializePage: false});
+		});
+	</script>
+	<script src="js/jquery-mobile.min.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+</html>

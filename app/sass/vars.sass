@@ -1,0 +1,43 @@
+$purple: #ac5eb3
+$purple2: #8e93c0
+$purple2_h: #7a80a3
+$text_c: #333
+$red_c: #d94b53
+$red_ch: #c9444b
+$green: #8acd33
+$green_h: #5ea600
+$reg: "TruthCYR-R"
+$light: "TruthCYR"
+$med: "TruthCYR-Medium"
+$thin: "TruthCYR-Thin"
+$op: 0.7
+$brd_c: #e2e2e2
+
+
+=bxz($var:border-box)
+	box-sizing: $var
+	-webkit-box-sizing: $var
+	-ms-box-sizing: $var
+
+=trans($property:all,$duration:0.3s,$effect:ease,$delay:0s)
+	-webkit-transition: $property $duration $effect $delay
+	-moz-transition: $property $duration $effect $delay
+	-o-transition: $property $duration $effect $delay
+	transition: $property $duration $effect $delay
+
+=brdr($var)
+	border-radius: $var
+
+=phc($color)
+	&::-webkit-input-placeholder
+		color: $color !important
+		opacity: 1 !important
+	&::-moz-placeholder
+		color: $color !important
+		opacity: 1 !important
+	&:-moz-placeholder
+		color: $color !important
+		opacity: 1 !important
+	&:-ms-input-placeholder
+		color: $color !important
+		opacity: 1 !important

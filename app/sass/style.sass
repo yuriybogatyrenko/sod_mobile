@@ -1,0 +1,3349 @@
+@import 'fonts.css'
+@import 'bootstrap.min.css'
+@import 'bootstrap-select.min.css'
+@import 'bootstrap-slider.css'
+@import 'bootstrap-editable.css'
+@import 'bootstrap_edit.css'
+// @import 'vars'
+@import 'additional_framework'
+
+body 
+	font-family: $light
+	font-size: 14px
+	color: #000
+
+html, body
+	height: 100%
+	width: 100%
+
+a, a:hover, a:active, a:focus
+	color: inherit
+	text-decoration: none
+	outline: none
+	text-decoration: none
+
+.main_site_wrap
+	min-width: 320px
+	position: relative
+	padding-bottom: 140px
+	min-height: 100%
+	width: 100%
+
+	&.no_footer
+		padding-bottom: 0
+
+.container
+	max-width: 600px
+	min-width: 320px
+
+.trans
+	+trans()
+
+strong
+	font-weight: normal
+	font-family: $reg
+
+*[data-role="page"], #profile_submenu
+	*,
+		-webkit-user-select: none
+		-moz-user-select: none
+		-ms-user-select: none
+		-o-user-select: none
+		user-select: none
+
+label
+	font-weight: normal
+
+.navbar-collapse
+	font-size: 18px
+	padding: 0
+	
+	.navbar-nav
+		margin: 0
+		border-bottom: 4px solid #B6839E
+	
+	li
+		border-bottom: 1px solid #eedeef
+		background: #fff
+
+		&:last-child
+			border-bottom: none
+
+		a
+			display: block
+			padding: 10px 15px
+			color: #373737
+
+			&:hover
+				color: $purple
+
+.bootstrap-select.btn-group .dropdown-menu li a
+	padding: 9px 20px
+
+.dropdown-menu > .active > a, 
+.dropdown-menu > .active > a:hover, 
+.dropdown-menu > .active > a:focus,
+.dropdown-menu > .selected > a, 
+.dropdown-menu > .selected > a:hover, 
+.dropdown-menu > .selected > a:focus,
+	background: $purple2
+	color: #fff
+
+.age_slider
+
+	.slider.slider-horizontal .slider-tick, .slider.slider-horizontal .slider-handle
+		background: transparent
+		width: 30px
+		height: 30px
+		margin-top: -15px
+		border: none
+
+		&:after
+			position: absolute
+			top: 50%
+			left: 50%
+			display: block
+			content: ''
+			margin-left: -8px
+			border: 2px solid $purple
+			+bxz()
+			background: #fff
+			width: 16px
+			height: 16px
+			margin-top: -8px
+			+brdr(100px)
+
+	.slider-track-low, .slider-track-high
+		background: #d5b4d4
+
+	.slider .tooltip-inner
+		background-color: transparent
+		color: $text_c
+		font-size: 14px
+		font-family: $reg
+		padding: 0
+		width: 60px
+		text-align: center
+
+	.tooltip .tooltip-arrow
+		display: none
+
+	.slider.slider-horizontal .slider-track
+		height: 2px
+		margin-top: -1px
+		background: $purple
+
+	.slider-selection
+		border: none
+		background: transparent
+
+	.slider .tooltip.top
+		margin-top: -25px
+
+	.slider .tooltip.bottom
+		margin: 0
+
+.age_slider_wrap
+	padding: 15px 0 25px 15px
+
+	.field_title
+		font-size: 16px
+		float: left
+		font-family: $light
+
+	.age_slider
+		margin-left: 100px
+		padding-top: 2px
+
+.slider.slider-horizontal
+	width: 100%
+
+.site_top_header
+
+	.navbar-header 
+		margin-left: 0
+		margin-right: 0
+
+	.navbar
+		margin-bottom: 0
+		min-height: 0
+		border-bottom: 4px solid #b6839e
+		background-color: transparent
+		padding: 10px 0
+		margin: 0
+
+	.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus
+		background-color: transparent
+
+	.navbar-default .navbar-toggle .icon-bar
+		background-color: $purple
+		height: 5px
+		width: 32px
+
+	.navbar-toggle
+		padding: 0
+		border: none
+		margin: 0
+
+
+.logo_bl
+	line-height: 1
+	margin-left: 35px
+
+	p
+		margin-bottom: 0
+
+	.icon_logo
+		width: 55px
+
+		img
+			width: 100%
+
+	.txt_logo
+		color: #373737
+		text-align: right
+		margin-left: 10px
+		margin-top: 5px
+
+		.bot
+			font-size: 24px
+			color: #B45ABC
+
+.violet_btn
+	outline: medium none
+	cursor: pointer
+	background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 100%) repeat center center
+	background: -o-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 100%) repeat center center
+	background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.35) 100%) repeat center center
+	background-color: #CB83D2
+	color: #FFF
+	border-width: 3px 2px 2px
+	border-style: solid
+	border-color: #D8D9D8
+	border-radius: 5px
+	padding: 0px 26px
+	font-size: 18px
+	font-family: $light
+	line-height: 37px
+	vertical-align: middle
+	text-align: center
+	+trans()
+	display: inline-block
+
+	&.db
+		display: block
+		width: 100%
+		+bxz()
+		padding: 0
+
+	&:hover
+		border-color: #999
+	
+	&:active
+		background: #cb83d2
+		background: linear-gradient(top, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.45) 100%) #cb83d2
+		background: -webkit-linear-gradient(top, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.45) 100%) #cb83d2
+		background: -moz-linear-gradient(top, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.45) 100%) #cb83d2
+		background: -ms-linear-gradient(top, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.45) 100%) #cb83d2
+		background: -o-linear-gradient(top, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.45) 100%) #cb83d2
+
+	.icon
+		font-size: 24px
+		display: inline-block
+		vertical-align: middle
+
+.gray_btn 
+	outline: medium none
+	cursor: pointer
+	background: -webkit-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%) repeat center center
+	background: -o-linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%) repeat center center
+	background: linear-gradient(rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%) repeat center center
+	background-color: #fff
+	color: $text_c
+	border: 2px solid #d5d5d5
+	border-radius: 5px
+	padding: 0px 26px
+	font-size: 18px
+	font-family: $light
+	line-height: 38px
+	vertical-align: middle
+	text-align: center
+	+trans()
+	display: inline-block
+
+	&.db
+		display: block
+		width: 100%
+		+bxz()
+
+.header_buttons_wrap 
+	padding-top: 15px
+	padding-bottom: 15px
+
+	.left_bl
+		padding-left: 0
+		padding-right: 5px
+
+	.right_bl 
+		padding-left: 5px
+		padding-right: 0
+
+.search_screen
+	background: url(../images/search_screen_bg.jpg) no-repeat center top
+	background-size: cover
+
+	h1
+		color: #fff
+		font-size: 18px
+		margin-bottom: 5px
+
+	.registered_profiles
+		color: #fff
+		font-size: 14px
+		opacity: 0.57
+		font-family: $reg
+
+		.dib
+			margin: 0 8px
+
+	.violet_btn
+		padding-right: 40px
+
+		.glyphicon
+			margin-right: 15px
+			top: -2px
+		
+
+
+.main_search_form_wrap
+	padding: 10px 10px 15px
+	margin: 15px 0 30px
+	background: rgba(255,255,255,0.8)
+	border-radius: 5px
+
+.red_title
+	font-size: 26px
+	color: $red_c
+
+.bootstrap-select
+	&.btn-group
+		.dropdown-menu
+			z-index: 1100
+
+		.filter-option
+			text-overflow: ellipsis
+
+	&.gray_select_style
+		max-width: none
+		margin-bottom: 12px
+		display: inline-block
+
+	&.select_no_margin
+		margin-bottom: 0
+
+	&.display_block
+		display: block
+		width: 100% !important
+
+	&:after
+		clear: both
+		display: block
+		content: ''
+	
+	.btn
+		background: #f4f4f4
+		border-radius: 0
+		border-color: #9e9e9e
+		padding: 9px 25px 9px 15px
+		font-size: 16px
+		color: #373737
+	
+	.dropdown-toggle
+		.caret
+			width: 0
+			height: 0
+			border: 6px solid transparent
+			border-top: 7px solid #9e9e9e
+			margin-top: -4px
+
+.girls_grid
+
+	.item
+		box-shadow: 0px 0px 8px 1px #CCC
+		margin-bottom: 15px
+		border-radius: 3px
+		overflow: hidden
+		position: relative
+		text-align: center
+		clear: none
+		font-size: 14px
+
+		.img_wrap
+			display: block
+			font-size: 0
+
+			img
+				width: 100%
+				border-radius: 3px
+
+		.photo_verified
+			position: absolute
+			right: 8px
+			top: 8px
+
+		.prof_name
+			margin-top: 10px
+			margin-bottom: 5px
+			font-family: $reg
+
+		.prof_town
+			margin-bottom: 5px
+
+		.addition_info
+			> *
+				display: inline-block
+				vertical-align: middle
+				height: 40px
+				margin: 0 5px
+				background-position: center center
+				background-size: 100% auto
+
+			.photo_verified
+				width: 30px
+				position: static
+				top: auto
+				right: auto
+
+		.photos_uploaded
+			position: absolute
+			top: 10px
+			left: 10px
+			background: rgba(0,0,0,0.5)
+			color: #fff
+			z-index: 5
+			+brdr(5px)
+			font-size: 10px
+			padding: 2px 5px 2px 2px
+
+			.icon
+				color: #F1525C
+				margin-right: 4px
+				font-size: 14px
+				display: inline-block
+				vertical-align: middle
+
+.photo_verified
+	background: url(../images/person_checked.png) center center no-repeat
+	background-size: 100%
+	width: 20px
+	height: 20px
+
+.call_icon
+	width: 25px
+	height: 25px
+	background: url(../images/call_icon.png) center center no-repeat
+	background-size: 100%
+	display: inline-block
+	vertical-align: middle
+	background-size: contain
+
+.message_icon
+	width: 36px
+	background: url(../images/message_icon.png) center center no-repeat
+	background-size: 100%
+
+.has_top_
+	background: #f1525c
+	position: absolute
+	top: 0px
+	right: 10px
+	color: #fff
+	text-transform: uppercase
+	width: 32px
+	font-size: 10px
+	text-align: center
+	z-index: 1
+	display: block
+	text-decoration: none
+	line-height: 32px
+	font-family: $reg
+
+	&.left
+		right: auto
+		left: 10px
+	
+	&:after, &:before
+		position: absolute
+		content: ""
+		display: block
+		width: 0
+		height: 0
+		border: 16px solid transparent
+		border-left: 16px solid #f1525c
+		left: 0
+		bottom: -16px
+		z-index: 1
+
+	&:after
+		border: 16px solid transparent
+		border-right: 16px solid #d94a52
+		left: auto
+		right: 0
+
+.purple_title
+	font-size: 26px
+	color: $purple
+	margin-bottom: 15px
+
+.install_application
+	background: #f7f8fe
+	padding-bottom: 40px
+
+	.purple_title
+		font-size: 24px
+		margin-bottom: 25px
+
+	.block_descr
+		color: $purple
+		font-family: $reg
+		margin-bottom: 20px
+
+	.mobiles_image
+		margin-bottom: 25px
+
+	.download_aggitation
+		margin-bottom: 20px
+
+		p
+			margin-bottom: 0
+
+	.application_buttons
+		.app_icon
+			background: #151515
+			+brdr(4px)
+			padding: 5px 10px
+			color: #fff
+			font-size: 14px
+			text-align: center
+			font-family: $reg
+			line-height: 33px
+
+		.icon
+			font-size: 20px
+			display: inline-block
+			vertical-align: middle
+			line-height: 20px
+
+			&.icon-apple
+				font-size: 24px
+
+.right_padding5
+	padding-right: 5px
+
+.left_padding5
+	padding-left: 5px
+
+.main_page_seo_slider
+	padding: 30px 0
+
+	.purple_title
+		font-size: 24px
+		margin-bottom: 20px
+
+	.carousel-description
+		font-size: 16px
+		color: $purple
+		line-height: 1.5
+		margin-bottom: 0
+		font-family: $reg
+
+.carousel
+	
+	.carousel-full-description
+		p
+			margin-bottom: 20px
+
+	.carousel-image
+		text-align: center
+		margin-bottom: 25px
+
+		img
+			max-width: 100%
+
+	.carousel-controls
+		position: relative
+		z-index: 5
+		margin-bottom: 10px
+
+		.carousel-control
+			position: static
+			background: #000
+			width: 42px
+			display: inline-block
+			vertical-align: middle
+			height: 42px
+			color: #FFF
+			border-radius: 50%
+			text-align: center
+			line-height: 42px
+			font-size: 30px
+			cursor: pointer
+			margin: 0px 6px
+			opacity: 1
+			margin: 0 10px 0 0
+
+			&:hover
+				background: $purple
+
+			.glyphicon
+				position: static
+				margin: 0
+				text-align: center
+				display: inline-block
+				line-height: 42px
+				font-size: 24px
+
+.usual_text_field_style
+	font-size: 16px
+	color: #373737
+	background: #FFF
+	border-radius: 2px
+	border: 1px solid #9E9E9E
+	display: block
+	width: 100%
+	outline: medium none
+	color: #666
+	font-size: 16px
+	line-height: 2.4em
+	height: 38px
+	padding: 0px 10px
+	font-family: $light
+
+input[type="text"], input[type="number"], input[type="password"], input[type="email"], input[type=phone], textarea
+	@extend .usual_text_field_style
+	+phc(#373737)
+
+textarea
+	padding: 10px
+	height: 80px
+	resize: none
+	line-height: 1.4
+
+.gray_circle
+	display: inline-block
+	vertical-align: middle
+	width: 16px
+	height: 16px
+	background: #b2b2b2
+	border-radius: 50%
+
+.form_bl
+	padding: 15px 0px 70px
+	background: #F7F8FE none repeat scroll 0% 0%
+	position: relative
+
+	&.login_form
+		padding-bottom: 0
+
+	&.white_bg
+		background: #fff
+	
+	.field_title
+		font-size: 18px
+
+.boobs_size
+
+	.field_title
+		margin-bottom: 15px
+		font-size: 18px
+
+	label
+		cursor: pointer
+
+	.gray_circle
+		margin-bottom: 10px
+
+	.input_detection
+		color: #b2b2b2
+
+	.size_number
+		display: block
+
+	input[type="radio"], input[type="checkbox"]
+		display: none
+	
+	input[type="radio"]:checked, input[type="checkbox"]:checked
+		& + .input_detection
+			color: $purple
+
+			.gray_circle
+				background: $purple
+
+	.link
+		color: $purple
+		text-decoration: underline
+	
+	.form_descr_wrap
+		margin-bottom: 40px
+		p
+			margin-bottom: 0
+
+	.bg1
+		position: absolute
+		background: transparent url("../images/form_bl_bg1.jpg") no-repeat scroll center center / 100% auto
+		width: 213px
+		height: 100px
+		top: 0px
+		left: 0px
+
+	.container
+		z-index: 5
+		position: relative
+
+
+
+.reg_form
+	margin: 0px auto
+	background: url("../images/m_form-bg.jpg") no-repeat scroll left top, #F5F5F5 none repeat scroll 0% 0%
+	padding: 20px 15px
+	box-shadow: 0px 0px 10px 3px #CCC
+
+	.purple_title
+		margin-bottom: 17px
+
+	.date_birth_info
+		font-size: 13px
+		padding-left: 10px
+		margin-bottom: 5px
+
+	.line_wrap
+		margin-bottom: 20px
+		position: relative
+
+		&:last-child
+			margin-bottom: 0
+	
+	.name_input_wrap
+		margin-right: 130px
+
+	.name_input
+		width: 100%
+
+	.bootstrap-select
+		width: 100% !important
+		max-width: none
+
+		.dropdown-toggle
+			@extend .usual_text_field_style
+			line-height: normal
+			color: #373737
+
+	.sex
+		&.line
+			width: 120px
+			position: absolute
+			top: 0
+			right: 0
+		
+		.radio_wrap
+			border: 1px solid #9e9e9e
+			position: relative
+			width: 50%
+			height: 38px
+			line-height: 2.7em
+			background: #FFF none repeat scroll 0% 0%
+			transition: all 0.5s ease 0s
+			text-align: center
+			+brdr(2px 0 0 2px)
+
+			&:last-child
+				+brdr(0 2px 2px 0)
+
+			.text
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				cursor: pointer
+				
+			input
+				display: none
+
+			input:checked + .text
+				background: #8e8db9
+				color: #fff
+
+	.more_link
+		a
+			color: $purple
+			font-size: 16px
+
+			&:hover
+				text-decoration: underline
+
+.footer
+	position: absolute
+	bottom: 0
+	width: 100%
+	left: 0
+	font-family: $reg
+	padding-top: 6px
+	padding: 4px 0px 0
+	background: transparent -webkit-linear-gradient(left, #CC7D90 0%, #A987A7 50%, #8591C0 100%) repeat scroll 0% 0%
+	background: transparent -o-linear-gradient(left, #CC7D90 0%, #A987A7 50%, #8591C0 100%) repeat scroll 0% 0%
+	background: transparent linear-gradient(to right, #CC7D90 0%, #A987A7 50%, #8591C0 100%) repeat scroll 0% 0%
+
+	.inner_wrap
+		background: #F7F8FE
+		padding: 20px 0
+
+	.full_version_link
+		color: $purple
+		text-decoration: underline
+		font-size: 14px
+		margin-bottom: 5px
+
+	.copyright
+		color: #a7a7a7
+		font-size: 12px
+
+.activity_right_now
+	margin-bottom: 40px
+	.icon_bl
+		position: absolute
+		top: 0
+		left: 0
+		color: $purple
+		font-size: 36px
+
+	.purple_title
+		margin-top: 10px
+
+	.item_wrap
+		position: relative
+		padding-left: 60px
+	
+	.carousel-inner
+		width: auto
+		margin: 0 40px
+
+	.carousel-control
+		background: transparent
+		position: absolute
+		left: 0
+		top: 50%
+		height: 50px
+		margin-top: -25px
+		line-height: 50px
+		color: #e5cde7
+		text-shadow: none
+
+		&.right
+			left: auto
+			right: 0
+
+	.descr_bl
+		padding-top: 10px
+		font-family: $reg
+
+		.date
+			color: #a3a3a3
+			margin-bottom: 5px
+
+		.event_txt
+			font-size: 15px
+			line-height: 1.3
+
+		.name
+			color: $purple
+
+			&:hover
+				text-decoration: underline
+
+.page_title_header
+	margin: 0 0 0 20px
+	font-size: 24px
+
+/* REG PAGE START */
+.reg_black_bg
+	background: url(../images/search_screen_bg.jpg) center top no-repeat
+	background-size: cover
+	color: #fff
+	font-size: 18px
+
+	.black_bg_text
+		background: rgba(0,0,0,0.4)
+
+		p
+			padding: 20px 10px
+
+		span
+			color: $purple
+
+		a
+			font-size: 14px
+			color: #fff
+			text-decoration: underline
+			font-family: $light
+
+			&:hover
+				text-decoration: none
+	
+
+.reg_form
+	.service_agreement
+		font-size: 13px
+		
+		p
+			margin-bottom: 0
+
+		a
+			font-size: 13px
+			text-decoration: underline
+
+			&:hover
+				text-decoration: none
+
+	.section_title
+		padding: 10px 15px
+		background: #fff
+		color: $purple
+		font-size: 16px
+		margin-bottom: 15px
+
+	.add_photo_agitation
+		padding-top: 30px
+		color: #000
+		opacity: $op
+
+	&.reg_form_second_step
+		font-family: $reg
+		color: #6f6f6f
+
+	&.reg_form_third_step
+		padding-top: 40px
+
+		.line_wrap.age_slider_wrap
+			padding-bottom: 0
+			padding-left: 0
+			margin-bottom: 15px
+
+		.age_slider
+			margin-left: 80px
+
+	.sexual_preferences_block
+		.section_title
+			margin: 30px 0 25px
+
+	.additional_info
+		.section_title
+			margin: 20px 0 25px
+
+		.textarea_wrap
+			margin-bottom: 20px
+
+
+.drop_zone
+	border: 2px dashed #b9bcd6
+	width: 85%
+	font-family: $reg
+	padding: 30px 20px
+	cursor: pointer
+
+	.icon
+		color: #b9bcd6
+		font-size: 50px
+		margin-bottom: 20px
+
+	.drop_text
+		opacity: $op
+
+.person_parametr_select_list
+	.bootstrap-select.gray_select_style.display_block
+		margin-bottom: 5px
+
+
+.meet_goal
+	.section_title
+		margin-top: 25px
+		margin-bottom: 20px
+
+	label
+		line-height: 1.8
+		margin-bottom: 0
+		font-size: 16px
+		font-family: $light
+		color: #3b3b3b
+	
+	.gray_circle
+		float: left
+		margin-top: 6px
+
+	input[type="radio"], input[type="checkbox"]
+		display: none
+
+	input[type="radio"]:checked, input[type="checkbox"]:checked
+		& + .gray_circle
+			background: $purple
+
+	.label_text
+		display: block
+		margin-left: 25px
+
+		.gray_circle
+			margin-top: 7px
+
+	.select_wrap_sponsors
+		padding: 5px 5px 5px 25px
+		position: relative
+
+		&:after
+			display: block
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			background: #eee
+			opacity: 0.78
+
+	.additional_checkboxes_wrapper
+		position: relative
+		padding: 5px 0 5px 25px
+
+		&:after
+			background: #eeeeee
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			content: ''
+			display: block
+			opacity: 0.78
+
+		label
+			display: block
+			font-size: 14px
+
+	.row.active
+		.additional_checkboxes_wrapper
+			&:after
+				display: none
+
+		.select_wrap_sponsors
+			&:after
+				display: none
+
+
+.bootstrap-select.blue_select
+	width: auto !important
+	display: inline-block
+	.dropdown-toggle
+		color: #898fbd
+		height: auto
+		border: none
+		background: none
+		padding: 0 30px 0 0
+
+
+/* REG PAGE END */
+
+/* SEARCH PAGE START*/
+
+.profiles_list
+	padding-top: 20px
+
+	.carousel-inner
+		width: auto
+
+		.girls_grid.item
+			padding-top: 15px
+
+
+.search_nav
+	padding: 15px 0
+	background: #eeeeee
+
+.button_nav
+	border-radius: 5px
+	border: 1px solid #e6e6e6
+	padding: 5px 0
+	display: block
+	background: #fbfbfb
+	border-radius: 3px
+	font-family: $reg
+	text-align: center
+
+	&.active
+		background: $purple
+		color: #fff
+		border-color: $purple
+	
+.search_quick_filter
+	padding: 15px 0 0
+
+	.toggle_button
+		cursor: pointer
+
+	.toggle_hidden
+		display: none
+
+	.days_weeks
+		white-space: nowrap
+
+	.button_nav
+		padding: 0 10px
+
+	.new_title_op
+		opacity: 0.7
+		margin-right: 5px
+
+.right_add_menu
+	color: $purple
+	font-size: 0
+
+	.icon_show_filter_search
+		font-size: 32px
+
+.block_frame_style
+	background: #fbfbfb
+	border: 1px solid #e6e6e6
+	border-radius: 5px
+	padding: 4px 15px
+
+	&.right_padding5
+		padding-right: 5px
+
+	&.left_padding5
+		padding-left: 5px
+
+	&.padding0
+		padding-left: 0
+		padding-right: 0
+
+	&.search_quick_photo_ver
+		padding: 2px 4px
+		position: relative
+
+	.question_icon
+		position: absolute
+		right: 0
+		top: -7px
+
+	.photo_verified
+		width: 26px
+		height: 26px
+
+.question_icon
+	border-radius: 50%
+	border: 1px solid #898fbd
+	background: #fbfbfb
+	width: 14px
+	height: 14px
+	line-height: 1
+	display: inline-block
+	font-size: 10px
+	color: #898fbd
+	text-align: center
+	padding-left: 1px
+	cursor: pointer
+	line-height: 12px
+
+/* SEARCH PAGE END*/
+
+/* Filter page start*/
+
+.navbar
+	.go_back
+		color: $purple
+		font-size: 43px
+		width: 30px
+		text-align-last: auto
+		display: inline-block
+
+		&:before
+			margin-left: 0
+
+	.wallet_header
+		.page_title_header
+			font-size: 22px
+			margin-left: 15px
+		.go_back
+			width: 10px
+
+			&:before
+				position: relative
+				left: -20px
+
+
+.reg_form
+	&.filter_form
+		background: transparent
+		box-shadow: none
+		padding-top: 10px
+		padding-left: 0
+		padding-right: 0
+
+		.container
+			position: static
+
+		.line_wrap
+			margin-bottom: 15px
+
+			&.age_slider_wrap
+				padding-left: 15px
+
+				.field_title
+					font-size: 16px
+
+		.field_title
+			font-size: 20px
+			/* margin-bottom: 30px */
+
+		.meet_goal
+			padding-bottom: 20px
+
+	.search_param_section
+		border-bottom: 1px solid #e9e9e9
+		padding-bottom: 10px
+		margin-bottom: 20px
+
+	.violet_btn
+		margin-bottom: 10px
+
+.hidden_filter_clickable_block
+	background: #fff
+	padding: 10px 0
+	font-size: 15px
+	margin-bottom: 15px
+
+	.catch_click
+		cursor: pointer
+
+	.icon
+		color: $purple
+		width: 26px
+		height: 26px
+		border-radius: 50%
+		border: 1px solid #e9e9e9
+		text-align: center
+		line-height: 24px
+		+bxz()
+		font-size: 18px
+		margin-right: 10px
+
+		&:before
+			margin: 0
+
+/* Filter page end*/
+
+.main_page_form_wrapper
+	.form_descr
+		margin-bottom: 0
+	.reg_form
+		margin-top: 30px
+
+.purple_link
+	color: $purple
+	text-decoration: underline
+	border: none
+	background: transparent
+	cursor: pointer
+	padding: 0
+
+	&:hover
+		text-decoration: none
+		color: $purple
+
+.toggle_search_add_filter
+	display: none
+
+.bootstrap-select.btn-group .dropdown-toggle .caret
+	margin-top: -4px
+
+
+/* PROFILE PAGE START */
+.mail_icon_menu
+	font-size: 36px
+	display: inline-block
+	position: relative
+
+	&:before
+		margin: 0
+
+	.msg_number
+		position: absolute
+		top: -5px
+		left: -5px
+
+.msg_number
+	width: 20px
+	height: 20px
+	background: #6dc100
+	+brdr(50%)
+	color: #fff
+	text-align: center
+	font-size: 10px
+	line-height: 19px
+	+bxz()
+	padding-top: 1px
+	font-family: $reg
+	// font-weight: bold
+
+.profile_photo_carousel__profile_page
+	.carousel
+		.item
+			img
+				width: 100%
+
+	.carousel-indicators 
+		li, .active
+			opacity: 0.4
+			background: #fff
+			border: none
+			margin: 0 3px
+			width: 12px
+			height: 12px
+		
+		.active
+			opacity: 1
+
+
+.tell_about_yourself
+	color: #ff656e
+	font-size: 16px
+
+.personal_information_block__profile_page
+	background: #f7f7f7
+	margin-bottom: 25px
+	
+	.main_descr_block
+		font-size: 18px
+		color: #9c9c9c
+		padding: 20px 0
+		line-height: 1.6
+
+		p
+			margin-bottom: 0
+
+		.name
+			color: #000
+
+		.last-time-was-here
+			color: #7980c2
+			font-size: 14px
+			padding-top: 2px
+
+	.text_about_yourself
+		border: 1px solid #dedede
+		background: #fff
+		padding: 35px 10px
+		margin-bottom: 10px
+		position: relative
+
+		.text_content_block
+			margin-bottom: 10px
+
+		p:last-child
+			margin-bottom: 0
+
+		.tell_about_yourself
+			cursor: pointer
+
+		.icon_edit
+			position: absolute
+			top: 5px
+			right: 0px
+
+.make_call_block__profile_page
+	margin-bottom: 20px
+	
+	&.profile_editing_page
+		margin-bottom: 0
+
+		.buttons_wrap
+			margin-bottom: 0
+
+	.buttons_wrap
+		margin-bottom: 20px
+
+		p:last-child
+			margin-bottom: 0
+
+	.profile_activities_icons
+		p
+			margin-bottom: 5px
+
+		.red_color
+			color: #f2525b
+
+	color: #373737
+
+.red_c
+	color: $red_c
+
+.green_btn
+	background: #41d0a5
+	line-height: 54px
+	color: #fff
+	position: relative
+	+brdr(3px)
+	font-family: $reg
+	font-size: 15px
+
+	&.long_text
+		padding-left: 30px
+
+		.icon
+			left: 5px
+
+	&:hover
+		background: #37b08c
+		color: #fff
+
+	&.purple
+		background: #898ebd
+
+		&:hover
+			background: #72769e
+
+	.icon
+		position: absolute
+		left: 10px
+		top: 50%
+		margin-top: -27px
+		display: block
+		line-height: 54px
+		font-size: 28px
+		color: #fff
+
+.favorite_icon
+	font-size: 20px
+	color: #e04d56
+
+.ignore_icon
+	font-size: 20px
+	color: #f31002
+
+.gift_icon
+	font-size: 20px
+	color: #f2525b
+	text-shadow: 1px 0 0 #f2525b
+
+.section_block_separator
+	padding: 15px 0 0
+
+	&.has_border
+		border-top: 1px solid #efefef
+
+	.block_title
+		color: #8f93c0
+		font-size: 20px
+		margin-bottom: 15px
+		cursor: pointer
+
+		.icon_edit
+			margin-right: 0
+
+			&:before
+				margin-right: 0
+
+	.hidden_block
+		display: none
+		position: relative
+
+		ul
+			margin-bottom: 0
+
+		&.with_bg
+			background: #efefef
+			
+			.block_content
+				position: relative
+				padding: 20px 0
+				&:after
+					display: block
+					position: absolute
+					bottom: 100%
+					border: 10px solid transparent
+					border-bottom: 10px solid #efefef
+					content: ''
+					left: 20px
+					margin-bottom: -1px
+
+		p
+			margin-bottom: 0
+
+.sexual_preferences
+	.item
+		margin-bottom: 20px
+
+		&:last-child
+			margin-bottom: 0
+	.bl_title
+		color: #6e6e6e
+
+	.answer
+		font-size: 18px
+		color: #333333
+		font-family: $reg
+
+.person_appearance_table
+	width: 100%
+	margin-bottom: 5px
+
+	td
+		padding: 2px 0
+
+	td:first-child
+		font-family: $reg
+		// width: 50%
+
+
+.color_circle
+	display: inline-block
+	width: 10px
+	height: 10px
+	background: #ccc
+	+brdr(100px)
+
+/* PROFILE PAGE END */
+
+.icon_edit, .icon_delete
+	color: $red_c
+	font-size: 18px
+	margin: 0 5px
+	cursor: pointer
+	display: inline-block
+	vertical-align: middle
+	position: relative
+	top: -1px
+
+.testing_account
+	margin-bottom: 20px
+	position: relative
+
+	&:after
+		display: block
+		width: 100%
+		left: 0
+		top: 50%
+		margin-top: -1px
+		background: #dcdcdc
+		content: ''
+		position: absolute
+		height: 1px
+
+	.red_btn
+		position: relative
+		z-index: 2
+	
+
+.red_btn
+	border-radius: 50px
+	font-family: $reg
+	background: #f2535c
+	text-align: center
+	display: inline-block
+	padding: 7px 45px
+	color: #fff
+	cursor: pointer
+	border: none
+	line-height: normal
+	font-size: 14px
+
+	&.small
+		padding-left: 20px
+		padding-right: 20px
+
+	&.not_btn
+		cursor: default
+
+	&.green
+		background: $green
+
+		&.no_hover:hover
+			background: $green
+
+		&:hover
+			background: $green_h
+
+	&:hover, &:active
+		background: $red_ch
+		color: #fff
+
+	&.db
+		display: block
+		padding-left: 0
+		padding-right: 0
+
+.profile_products_info
+	font-size: 16px
+	color: #3b3b3b
+	margin-bottom: 10px
+
+	.product_info_name
+		font-size: 14px
+		opacity: 0.5
+
+	.icon
+		font-size: 20px
+		color: #b5b5b5
+
+.profile_editing_page
+	.line_wrap
+		margin-bottom: 15px
+
+.profile_save_button_wrap
+	margin-top: 15px
+
+.profile_page_editing_carousel_buttons
+	position: absolute
+	top: 50%
+	width: 100%
+	left: 0
+	line-height: 50px
+	margin-top: -25px
+	text-align: center
+
+	.dark_bg_opacity
+		background: rgba(0,0,0,0.4)
+		border-radius: 5px
+		padding: 10px 5px
+
+	.dib
+		line-height: 0
+
+.icon__add_photo, .icon__checked_photo, .icon__delete_photo
+	display: inline-block
+	height: 25px
+	width: 25px
+	background: url(../images/set_photo1.png) center center no-repeat
+	background-size: contain
+	cursor: pointer
+	vertical-align: middle
+
+	&.icon__checked_photo
+		background-image: url(../images/set_photo2.png)
+		margin: 0 25px
+
+	&.icon__delete_photo
+		background-image: url(../images/set_photo3.png)
+
+/* FOLDER LIST START */	
+.folders_list
+	margin: 0
+	padding: 0
+
+	ul
+		margin: 0
+		padding: 0
+
+	.folder_item
+		border-bottom: 1px solid $brd_c
+		font-size: 0
+
+	.inner_folder_item
+		position: relative
+		padding: 15px 45px 15px 40px
+		cursor: pointer
+		font-size: 18px
+
+		&.folder_menu_removed
+			padding-right: 0
+
+	.icon_folder
+		position: absolute
+		top: 50%
+		line-height: 30px
+		margin-top: -16px
+		left: 10px
+
+.folder_menu
+	position: absolute
+	right: 15px
+	height: 80%
+	bottom: 0
+	border: 1px solid transparent
+	border-bottom: 0
+	padding: 0 15px
+	text-align: left
+
+	ul
+		border: 1px solid $brd_c
+		position: absolute
+		right: -1px
+		top: 100%
+		display: none
+		background: #fff
+		z-index: 6
+
+	&.active
+		border-color: $brd_c
+
+		&:after, &:before
+			position: absolute
+			content: ''
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			padding-bottom: 3px
+			background: #fff
+			display: block
+			+bxz(content-box)
+			z-index: 3
+		
+		&:before
+			height: 2px
+			top: auto
+			bottom: -1px
+			padding-bottom: 0
+			z-index: 8
+
+		ul
+			display: block
+	
+
+	.clickable_menu
+		cursor: pointer
+		color: $purple
+		font-size: 24px
+		padding-top: 30%
+		position: relative
+		z-index: 5
+
+	li
+		border-bottom: 1px solid $brd_c
+		position: relative
+		padding: 10px 15px 10px 40px
+		list-style: none
+		cursor: pointer
+
+		&:last-child
+			border-bottom: 0
+
+	p
+		margin-bottom: 0
+		color: #555555
+		font-size: 14px
+
+	.icon
+		position: absolute
+		top: 50%
+		left: 5px
+		line-height: 20px
+		margin-top: -10px
+		font-size: 14px
+		color: $red_c
+		font-size: 14px
+
+		&.icon_replace
+			left: 10px
+
+
+		
+/* FOLDER LIST END */
+
+.ovh
+	overflow: hidden
+
+
+.icon_folder
+	display: inline-block
+	color: #8e93c0
+	font-size: 18px
+
+	&:before
+		margin: 0
+
+.add_folder_to_list
+	margin: 20px 0
+
+.form_add_folder_block_wrap
+	margin: 10px 0
+	position: relative
+
+	.the_buttons
+		position: relative
+		float: right
+		margin-left: 15px
+		line-height: 38px
+		font-size: 0
+
+		.red_btn
+			margin-right: 5px
+
+	.the_input
+		overflow: hidden
+
+.gray_border_btn
+	display: inline-block
+	font-size: 16px
+	font-family: $reg
+	padding: 5px 15px
+	border: 1px solid $brd_c
+	+brdr(50px)
+
+	&:hover
+		box-shadow: 0 0 3px rgba(0,0,0,0.5)
+
+	.icon
+		color: $red_c
+		font-size: 24px
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		// top: -1px
+
+		&:before
+			margin: 0
+
+/* MESSAGE TABLE START*/
+
+.messages_list_block
+	ul
+		padding-left: 0
+
+	.message_item
+		padding: 10px 0
+		list-style: none
+		
+		&.recieved
+			.avatar
+				float: right
+
+			.person_name
+				color: #000
+				text-align: right
+
+			.message_block
+				margin-left: 0
+				margin-right: 50px
+
+			.message_text_wrap
+				background: #f9f9f9
+				&:before
+					left: auto
+					right: -16px
+					border-top: 12px solid #f9f9f9
+
+
+
+	.person_name
+		color: $purple
+		font-size: 12px
+		margin-bottom: 5px
+		opacity: 0.45
+
+	.message_text_wrap
+		position: relative
+		background: #f8f0f9
+		border-radius: 10px
+		padding: 20px 20px
+		color: #000
+
+		&:before
+			position: absolute
+			top: 10px
+			content: ""
+			display: block
+			left: -16px
+			border: 16px solid transparent
+			border-top: 12px solid #f8f0f9
+
+	.message_text
+		padding-right: 00px
+		overflow: hidden
+
+		p
+			margin-bottom: 0
+
+	.message_time
+		position: absolute
+		top: 5px
+		right: 10px
+		color: #ccc
+		font-size: 14px
+
+	.message_block
+		margin-left: 50px
+
+	.avatar
+		width: 27px
+		font-size: 0
+		line-height: 0
+		letter-spacing: -1px
+		float: left
+		margin-top: 25px
+
+		img
+			width: 100%
+			+brdr(5px)
+
+.messages_header
+	padding: 15px 0
+	border-bottom: 1px solid $brd_c
+
+	.person_name
+		font-size: 18px
+
+	.message_icons
+		.icon
+			width: 30px
+			height: 25px
+			display: inline-block
+			vertical-align: middle
+			margin: 0 0 0 5px
+			background-size: contain
+			cursor: pointer
+
+			&.network_status
+				width: 40px
+
+.network_status
+	height: 25px
+	width: 25px
+	background: url(../images/lips_active.png) center center no-repeat
+	background-size: contain
+	display: inline-block
+	vertical-align: middle
+
+	&.offline
+		background-image: url(../images/lips_gray.png)
+
+/* MESSAGE TABLE END*/
+
+.send_message_form
+	padding: 20px 0
+	textarea
+		font-size: 14px
+
+	.send_msg__icons
+		line-height: 60px
+		.icon
+			font-size: 24px
+			cursor: pointer
+			color: $purple2
+			margin-right: 10px
+
+			&:last-child
+				margin-right: 0
+.userlist_inside_folder
+	ul
+		padding: 0
+		margin: 0
+.user_inside_folder_item
+	font-size: 0
+	line-height: 0
+	letter-spacing: -1px
+
+	.container
+		font-size: 14px
+		letter-spacing: normal
+		line-height: normal
+
+	&.call_item
+		.photo
+			border: 1px solid $brd_c
+			+brdr(5px)
+			background: #fff
+	
+	&.active
+		background: #8e93c0
+		color: #fff
+		
+		.icon_wrap
+			.favorites
+				color: #fff
+		
+		.last_message
+			color: #fff
+
+	.item_inner
+		position: relative
+		padding: 20px 50px 20px 70px
+		display: block
+		line-height: normal
+		letter-spacing: normal
+		font-size: 14px
+
+	.photo
+		position: absolute
+		font-size: 0
+		line-height: 0
+		top: 50%
+		left: 0
+		margin-top: -25px
+		letter-spacing: -1px
+		width: 50px
+		height: 50px
+		line-height: 50px
+		text-align: center
+
+		img
+			+brdr(5px)
+			width: 100%
+
+	.message_num
+		position: absolute
+		top: -5px
+		right: -5px
+		height: 20px
+		width: 20px
+		font-size: 12px
+		line-height: 20px
+		letter-spacing: normal
+		font-family: $reg
+		border-radius: 50%
+		text-align: center
+		background: #6dc100
+		color: #fff
+
+	.name_wrap
+		// margin-left: 12px
+		line-height: 1.1em
+		// width: 135px
+	
+	.last_message
+		color: #666
+		margin-bottom: 0
+
+	.icon_wrap
+		// width: 50px
+		text-align: right
+		font-size: 20px
+		position: absolute
+		top: 0
+		right: 0
+		height: 100%
+
+		.table
+			height: 100%
+
+		>.dib
+			width: 20px
+			text-align: center
+			cursor: pointer
+
+		.favorites
+			color: #ccc
+			cursor: pointer
+			text-align: center
+			padding-bottom: 10px
+
+		.menu_dotts
+			display: block
+			text-align: center
+
+	.folder_menu
+		position: relative
+		right: auto
+		top: auto
+		height: auto
+		font-size: 0
+
+		.clickable_menu
+			padding: 5px 0 0
+			top: 0
+
+.status_round
+	display: inline-block
+	vertical-align: middle
+	width: 8px
+	height: 8px
+	margin: 0 5px
+	border-radius: 50%
+	position: relative
+	top: -1px
+	background: #ccc
+
+	&.online
+		background: #6dc100
+
+
+.menu_dotts
+	color: $purple
+	cursor: pointer
+
+.table
+	display: table
+	width: 100%
+
+	.tr
+		display: table-row
+
+	.td
+		display: table-cell
+		vertical-align: middle
+
+.calls_toggle_settings
+
+	.the_slider_calls
+		border-radius: 50%
+		height: 24px
+		width: 24px
+		top: 2px
+		background: #fff
+		border-radius: 50%
+		position: absolute
+		left: 0
+
+	
+	.slider_calls
+		width: 55px
+		height: 28px
+		border-radius: 50px
+		position: relative
+		cursor: pointer
+		margin-right: 5px
+
+	&.is_turned.on
+		color: #6DC100
+
+		.slider_calls
+			background: #6DC100
+
+		.the_slider_calls
+			left: 100%
+			margin-left: -26px
+
+	&.is_turned.off
+		color: #ff666f
+
+		.slider_calls
+			background: #ff666f
+
+		.the_slider_calls
+			margin-left: 2px	
+
+.call_folders
+	padding: 0
+	white-space: nowrap
+	margin: 0
+	max-width: 100%
+	overflow: hidden
+
+.all_call_table_list
+	table
+		width: 100%
+
+	td
+		padding: 5px 0
+		border-bottom: 1px solid $brd_c
+
+		&:first-child
+			padding-left: 15px
+
+		&:last-child
+			padding-right: 15px
+
+	tr:last-child
+		td
+			border-bottom: none
+	
+	.call_icon_td
+		text-align: right
+		width: 20px
+
+	.call_type
+		color: #ccc
+		text-align: center
+		font-size: 18px
+
+	.call_time, .call_duration
+		font-size: 14px
+		text-align: center
+		color: #ccc
+
+	.icon-down-small, .icon-up-small
+		position: relative
+		color: #ccc
+
+		&:after
+			width: 16px
+			margin-left: -8px
+			left: 50%
+			top: 0
+			height: 2px
+			background: #ccc
+			display: block
+			position: absolute
+			content: ""
+
+	.icon-down-small
+		&:after
+			bottom: 0
+			top: auto
+	.avatar
+		width: 30px
+		padding-right: 15px
+	.avatar_wrap
+		position: relative
+		+brdr(3px)
+		display: inline-block
+		
+		.status_round
+			position: absolute
+			top: -2px
+			right: -2px
+			margin: 0
+
+		img
+			+brdr(3px)
+			max-width: none
+
+	.call_icon
+		width: 20px
+		height: 20px
+
+.icon_chat
+	color: $purple2
+	font-size: 18px
+
+.calls_page_wrap
+	padding: 25px 0
+
+.static_page_template
+	.page_title
+		font-size: 18px
+
+	.big_page_title
+		font-size: 28px
+		margin-bottom: 10px
+
+	.line_wrap
+		margin-bottom: 10px
+
+	.countinue_agreement
+		color: #6f6f6f
+		margin-bottom: 25px
+
+	.connect_your_phone
+		margin-bottom: 25px
+
+	.phone_number_wrap
+		font-size: 16px
+		margin-bottom: 20px
+
+		.editable-input, .editable-buttons
+			display: inline-block
+			width: auto
+
+		.editable-buttons
+			margin-left: 10px
+
+	.toggle_calls_settings
+		padding-left: 20px
+
+	.content_block_anonimous_wrap
+		.ttl
+			font-size: 16px
+			margin-bottom: 10px
+
+		.content_block_anonimous
+			color: #757575
+			font-family: $reg
+			line-height: 1.25
+		p
+			margin-bottom: 20px
+
+		p:last-child
+			margin-bottom: 0
+
+.calls_folders_list
+	position: relative
+	background: #f4f4f4
+	margin: 15px 0
+	font-family: $reg
+	color: #333
+
+	&:after
+		position: absolute
+		top: 0
+		right: 15px
+		width: 30px
+		height: 100%
+		background-image: -webkit-linear-gradient(right, #f4f4f4 0%, #f4f4f4 20%, rgba(255,255,255,0) 100%)
+		background-image: -o-linear-gradient(right, #f4f4f4 0%, #f4f4f4 20%, rgba(255,255,255,0) 100%)
+		background-image: linear-gradient(to left, #f4f4f4 0%, #f4f4f4 20%, rgba(255,255,255,0) 100%)
+		content: ''
+		display: block
+
+	.call_folders
+		a
+			display: block
+			padding: 20px 5px
+			position: relative
+
+	.active
+		a
+			color: $purple2
+
+			&:after
+				content: ''
+				display: block
+				position: absolute
+				border: 10px solid transparent
+				border-bottom: 10px solid #fff
+				left: 50%
+				bottom: 0
+				margin-left: -10px
+
+.red_link	
+	color: $red_c
+	cursor: pointer
+	border: none
+
+	&.tdu
+		text-decoration: underline
+
+		&:hover
+			text-decoration: none
+
+	&:hover
+		color: $red_c
+		text-decoration: underline
+
+.chose_calls_time
+	.td
+		padding: 5px 0
+	
+		&:last-child
+			text-align: right
+
+		&:first-child
+			white-space: nowrap
+
+	.select_wrapper
+		margin: 0 5px
+
+		.bootstrap-select.btn-group
+			width: 70px !important
+			box-sizing: border-box
+
+			.btn
+				padding: 9px 15px 9px 5px
+
+			.dropdown-toggle .caret
+				right: 5px
+
+	.page_title
+		line-height: 1.3
+		margin-bottom: 25px
+
+
+/* Settings page start*/
+
+.settings_page
+
+	.editable-container, .editable-input, .control-group
+		display: block
+		width: 100%
+		+bxz()
+
+		.editableform .form-control
+			display: block
+			width: 100%
+
+		&.editable-container
+			padding-right: 70px
+			position: relative
+
+		.editable-buttons
+			position: absolute
+			top: 2px
+			right: 0
+			margin: 0
+			width: auto
+
+	.line_wrap
+		border-bottom: 1px solid $brd_c
+		padding: 25px 0
+
+	.inner_wrap
+		position: relative
+		padding-left: 50px
+		display: block
+
+	.icon_left
+		position: absolute
+		top: -3px
+		left: 0
+		font-size: 32px
+		color: #ccc
+
+		&:before
+			margin: 0
+
+	.block_value
+		padding-top: 10px
+
+	.field_title
+		font-family: $reg
+		font-size: 18px
+		margin-bottom: 0
+
+	.mail_wrap
+		.block_value
+			font-size: 16px
+			font-family: $reg
+			// opacity: 0.5
+
+	.password_form
+		padding-right: 70px
+		position: relative
+
+		.red_btn
+			padding-left: 20px
+			padding-right: 20px
+			position: absolute
+			bottom: 0
+			right: 0
+
+	.toogle_slider_block_wrap
+		position: relative
+		padding-left: 70px
+		font-family: $reg
+
+		.calls_toggle_settings
+			position: absolute
+			top: 3px
+			left: 0
+
+		.slider_description
+			opacity: 0.5
+			line-height: 1.2
+
+	.notifications_wrap
+		.block_value
+			padding-top: 15px
+
+		.calls_toggle_settings
+			top: -5px
+
+		.toogle_slider_block_wrap
+			margin-bottom: 20px
+
+	.hidden_block_settings
+		display: none
+
+	.calls_toggle_settings
+
+		&.is_turned.on
+			.slider_calls
+				background: #ff666f
+
+		&.is_turned.off
+			.slider_calls
+				background: #d7d7d7
+
+/* Settings page end*/
+
+
+.radio_el, .checkbox_el
+	position: relative
+	display: inline-block
+	top: -2px
+	color: #666666
+	font-size: 18px
+	text-align: left
+	vertical-align: middle
+
+	&:before
+		margin: 0
+
+	input
+		opacity: 0
+		position: absolute
+		width: 100%
+		height: 100%
+		left: 0
+		top: 0
+		margin: 0
+		padding: 0
+
+.subscribe_active__block
+	padding: 20px 0
+
+	.page_title
+		font-size: 18px
+		margin-bottom: 10px
+
+
+.subscribes_active_list_block
+	p
+		margin-bottom: 0
+	.item
+		border-bottom: 1px solid $brd_c
+		padding: 20px 0
+		color: #959595
+
+		&:last-child
+			border-bottom: none
+
+	.send_msg
+		color: $purple2
+		.icon
+			font-size: 24px
+
+			&:before
+				margin: 0
+
+	.avatar
+		float: left
+		width: 90px
+		height: 90px
+
+		img
+			+brdr(5px)
+			width: 100%
+
+	.profile_information
+		margin-left: 105px
+
+	.profile_status
+		font-size: 12px
+		margin-top: -8px
+		&.online
+			color: $green
+
+		&.offline
+			color: #878787
+
+	.network_status
+		width: 30px
+		display: inline-block
+		vertical-align: middle
+		position: relative
+		top: -2px
+		margin-right: 5px
+
+	.name_age
+		a
+			color: $purple2
+
+	.subscribe_text
+		margin-top: 10px
+		color: #000
+
+.purple_btn
+	background: $purple2
+	color: #fff
+	+brdr(3px)
+	font-family: $reg
+	padding: 5px 10px
+	display: inline-block
+	margin-top: 5px
+	text-decoration: none
+
+	// &:hover, &:active, &:focus
+	// 	color: #fff
+	// 	text-decoration: none
+	// 	background: $purple2_h
+
+	&.active
+		background: $green
+
+		// &:hover
+		// 	background: $green_h
+
+	.icon
+		font-size: 18px
+
+.subscribe_activity_left
+	padding: 15px 0
+	background: $brd_c
+	margin-bottom: 20px
+
+	.text
+		line-height: 1
+
+	.gray
+		color: #5c5c5c
+
+	.left_text
+		font-size: 16px
+
+	p
+		margin-bottom: 0
+
+.subscribe_settings_text_block
+	margin-bottom: 30px
+
+	.the_text
+		margin-bottom: 15px
+
+	.edit_block
+		color: $red_c
+		font-size: 16px
+		cursor: pointer
+
+	.icon_edit
+		margin: 0 10px 0 0
+		&:before
+			margin: 0
+
+.subscribe_intrested_in__block
+	margin-bottom: 30px
+	.page_title
+		margin-bottom: 30px
+
+	.girls_grid
+		margin-bottom: 15px
+
+.the_subscribe_text_settings__block
+	.page_title.first_number
+		line-height: 1.1
+		font-size: 16px
+		margin-bottom: 25px
+
+	.line_wrap
+		margin-bottom: 15px
+
+		&:last-child
+			margin-bottom: 0
+
+	.price_and_button
+		line-height: 50px
+
+		.price_col
+			p
+				padding-left: 20px
+				font-size: 18px
+				margin-bottom: 0
+
+	textarea
+		height: 140px
+
+	.add_exceptions
+		padding-top: 5px
+		margin-bottom: 25px
+
+	.subscribe_form_wrap
+		margin-bottom: 50px
+
+.exceptions_list_animated_block
+	border: 1px solid $brd_c
+	padding: 10px 10px
+	position: relative
+
+	.item
+		padding: 3px 10px
+		+brdr(3px)
+		background: $purple
+		color: #fff
+		display: inline-block
+		margin: 5px 5px 5px 0
+	
+	.units
+		padding-right: 30px
+		.icon
+			cursor: pointer
+
+			&:before
+				margin-right: 0
+
+	.add_exception
+		position: absolute
+		line-height: 50px
+		height: 50px
+		top: 50%
+		margin-top: -25px
+		color: $purple
+		font-size: 28px
+		right: 0
+		cursor: pointer
+
+
+/* POPUP START */
+
+.popup
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	overflow: auto
+	background: #fff
+	z-index: 2000
+	display: none
+
+	.popup_header
+		border-bottom: 1px solid $brd_c
+		padding: 10px 0
+		font-size: 16px
+		position: relative
+
+	.close_popup
+		position: absolute
+		top: 5px
+		right: 10px
+		font-size: 24px
+		color: #666666
+		cursor: pointer
+
+		.icon
+			line-height: 40px
+			&:before
+				margin: 0
+
+	.popup_header
+		.close_popup
+			top: 50%
+			margin-top: -20px
+			height: 40px
+			line-height: 40px
+
+			&.static
+				position: static
+				margin: 0
+
+/* POPUP END */
+
+.add_your_personal_information_line_wrap
+	padding-top: 20px
+
+.exceptions_units
+	.user_inside_folder_item
+		background: #fff
+
+		&:nth-child(2n)
+			background: #f8f8f8
+
+		&:hover			
+			.top_line
+				color: #000
+
+			.last_message
+				color: #666
+
+		.item_inner
+			padding-left: 90px
+
+		.photo
+			left: 30px
+
+	.item_checkbox
+		position: absolute
+		top: 50%
+		height: 40px
+		line-height: 40px
+		margin-top: -20px
+		vertical-align: middle
+		left: 5px
+
+body.popup_show
+	position: fixed
+	overflow: hidden
+
+/* WALLET PAGE START*/
+
+.wallet_page_block
+	background: #f7f7f7
+
+.ballance_block
+	padding: 20px 0
+	border-bottom: 1px solid $brd_c
+
+.wallet_info
+	position: relative
+	padding-left: 40px
+
+	.icon
+		position: absolute
+		top: 0
+		left: 0
+		font-size: 24px
+		color: #b9b9b9
+	
+	p
+		margin-bottom: 0
+
+	.text
+		line-height: 1
+		font-size: 18px
+
+	.money
+		font-size: 24px
+		color: $red_c
+
+.wallet_navigation
+	padding-bottom: 15px
+
+	p
+		margin-bottom: 0
+
+	.field_group_title
+		background: #fff
+		font-size: 16px
+		padding: 10px 0
+
+	.group_name
+		opacity: 0.5
+
+	.profile_place
+		color: $red_c
+
+	.field_group_units
+		.item
+			padding: 10px 0
+			border-bottom: 1px solid $brd_c
+			line-height: 45px
+
+			&:last-child
+				border-bottom: none
+
+		.red_btn
+			line-height: normal
+			display: inline-block
+			padding-left: 15px
+			padding-right: 15px
+
+			&.green
+				padding-left: 0
+				padding-right: 0
+				width: 100%
+
+		.product_name
+			font-size: 18px
+
+	.active_time_left
+		line-height: normal
+		font-size: 12px
+		color: #4e4e4e
+
+	.gray
+		color: #a3a3a3
+/* WALLET PAGE END*/
+
+.wallet_content_info_page_product
+	background: #fff
+	color: #333333
+	padding: 15px 0
+	line-height: 1.3
+
+	.profile_in_top_title
+		margin-bottom: 20px
+
+	p
+		margin-bottom: 0
+
+	.images_wrap
+		margin: 20px 0
+
+		.photo_verified_image_wrap
+			margin: 0 10px
+			position: relative
+
+	.conf_icon
+		position: absolute
+		bottom: 5px
+		right: 5px
+		z-index: 5
+
+.confirmation
+	.conf_icon
+		width: 30px
+		height: 30px
+		background: url(../images/not_confirmed.png) no-repeat center center
+		margin-right: 5px
+		background-size: contain
+		display: inline-block
+
+		&.confirmed
+			background-image: url(../images/confirmed.png)
+
+
+.radius5
+	+brdr(5px)
+
+.radius3
+	+brdr(3px)
+
+.content
+	&.photo_verified_page
+		margin-bottom: 30px
+
+	&.photolent_place_page
+		margin-bottom: 15px
+		.images_wrap
+			margin-bottom: 10px
+
+		.days_left_form_wallet
+			padding-top: 15px
+
+
+
+.wallet_form_block
+	textarea
+		height: 125px
+	.line_wrap
+		margin-bottom: 15px
+
+	.bootstrap-select.gray_select_style
+		margin-bottom: 0
+
+.content_with_margins
+	p
+		margin-bottom: 15px
+
+		&:last-child
+			margin-bottom: 0
+
+.get_profile_in_top
+	.content_with_margins
+		p
+			margin-bottom: 5px
+
+		.profile_in_top_title
+			margin-bottom: 20px
+
+	.wallet_form_block
+		margin-bottom: 25px
+
+.inivisibility_wallet_page, .who_is_online_wallet
+	position: relative
+	padding: 5px 0 0 60px
+	margin-bottom: 35px
+
+	.icon_eye
+		position: absolute
+		top: -3px
+		left: 0
+		font-size: 48px
+		color: #c4c4c4
+
+		&:before
+			margin: 0
+
+	.network_status
+		width: 55px
+		height: 35px
+		position: absolute
+		top: 0
+		left: 0
+		background-position: 0 100%
+
+.balance_movements
+	font-family: $light
+	margin-bottom: 15px
+
+	.table_wrap
+		margin-bottom: 10px
+
+		&:last-child
+			margin-bottom: 0
+			tr
+				&:last-child
+					td
+						border-bottom: none
+
+	p.table_title
+		color: #000
+		border-bottom: 1px solid $brd_c
+		padding: 10px 0
+
+	table
+		width: 100%
+
+	td
+		border-bottom: 1px solid $brd_c
+		padding: 7px 5px
+
+	tr
+		&:first-child
+			font-family: $reg
+		
+
+.fill_balance_form
+	padding: 15px 0 0
+	margin-bottom: 20px
+
+	.okpay_line_wrap
+		margin-bottom: 15px
+
+	.submit_line_wrap_men_fill_payment
+		margin-bottom: 20px
+
+	.form_description
+		margin-bottom: 20px
+
+.starred_notification
+	position: relative
+	margin: 15px 0
+
+	ol, ul
+		padding: 0 0 0 25px
+		margin: 0
+
+	li
+		list-style-position: inside
+		font-size: 13px
+		margin: 0 0 25px
+
+		&:last-child
+			margin-bottom: 0
+
+	.the_starr_ic
+		font-size: 44px
+		position: absolute
+		top: 0
+		left: 0
+		color: $red_c
+		font-family: Arial, "Helvetica Neue", Helvetica, sans-serif
+		line-height: 40px
+
+.wallet_buy_premium
+	.premium_preverences
+		padding: 25px 0 15px 0
+		list-style: none
+
+		li
+			position: relative
+			margin-bottom: 15px
+			padding-left: 35px
+
+			&:last-child
+				margin-bottom: 0
+
+			&:before
+				position: absolute
+				top: 0
+				left: 0
+				width: 30px
+				height: 30px
+				display: block
+				content: ''
+				background: url(../images/premium_bullet.jpg) center center no-repeat
+				background-size: contain
+
+		.ttl
+			line-height: 1.1
+			margin-bottom: 5px
+
+	.hours_left_text
+		margin: 10px 0 25px
+
+#buy_premium
+	padding-top: 50px
+
+// .text_about_yourself
+.editable-container.editable-inline
+	display: block
+	width: 100%
+	+bxz()
+
+.form-inline .form-group
+	display: block
+
+.editable-input
+	display: block
+	width: 100%
+
+.editableform .form-control
+	display: block
+	width: 100%
+	margin-bottom: 10px
+
+.editable-buttons
+	margin: 0
+	width: 100%
+	text-align: center
+
+#profile_submenu
+	left: -100%
+	display: block
+
+	&.trans
+		transition: left 0.5s ease
+		-webkit-transition: left 0.5s ease
+		-moz-transition: left 0.5s ease
+		-ms-transition: left 0.5s ease
+		-o-transition: left 0.5s ease
+
+	&.active
+		right: 0
+
+	p
+		margin-bottom: 0
+
+	.popup_header
+		padding: 10px 0
+		background: #f7f7f7
+
+		.close_popup
+			border-right: 1px solid $brd_c
+			display: inline-block
+			width: 50px
+			color: #9a9a9a
+			text-align: center
+	
+	.avatar
+		width: 37px
+		img
+			width: 100%
+
+	.personal_info
+		padding-left: 5px
+		line-height: 1.1
+		color: #9a9a9a
+
+		.name
+			color: #000
+
+	.person_data
+		padding-left: 10px
+
+.extend_block
+	color: #9a9a9a
+	line-height: 1.2
+	padding: 10px 0
+	background: #f7f7f7
+
+	.row
+		position: relative
+
+		.extend_btn_wrap
+			position: absolute
+			height: 100%
+			top: 50%
+			right: 0
+			margin-top: -25px
+			line-height: 50px
+
+	.red_btn
+		padding-left: 15px
+		padding-right: 15px
+		line-height: normal
+
+.premium_and_status_line
+	padding: 15px 0
+
+	.premium_part_block
+		border-right: 1px solid $brd_c
+	
+	.red_btn
+		padding-left: 20px
+		position: relative
+
+	.icon_crown
+		width: 24px
+		height: 24px
+		+brdr(50%)
+		border: 2px solid #fff
+		display: inline-block
+		vertical-align: middle
+		line-height: 24px
+		+bxz()
+		position: absolute
+		top: 50%
+		margin-top: -12px
+		left: 8px
+
+
+		&:before
+			margin: 0
+
+	.visiblility_status
+		line-height: 38px
+		color: #9a9a9a
+		
+		&.online
+			color: $green
+		.icon
+			font-size: 24px
+			display: inline-block
+			vertical-align: middle
+			position: relative
+			top: -1px
+
+.submenu_elements_list
+	ul
+		margin: 0
+		padding: 0
+	li
+		list-style: none
+		position: relative
+		border-bottom: 1px solid $brd_c
+		+bxz()
+
+		a
+			display: block
+			padding: 0 20px 0 55px
+			line-height: 44px
+
+		&.gray_list_style
+			background: #f6f6f6
+
+			.icon
+				opacity: 0.6
+
+				&.network_status
+					left: 20px
+					opacity: 0.4
+
+		&.active
+			background-color: $purple2
+			color: #fff
+
+			a
+				color: #fff
+
+			.icon
+				opacity: 1
+				color: #fff
+
+	.icon
+		position: absolute
+		top: 50%
+		left: 15px
+		font-size: 24px
+		height: 40px
+		line-height: 40px
+		margin-top: -20px
+		vertical-align: middle
+		color: #b9b9b9
+
+	.msg_number
+		display: block
+		position: absolute
+		left: 100%
+		margin-left: 10px
+		top: 3px
+
+#voice_call
+	padding: 30px 0
+
+	p
+		margin-bottom: 0
+
+	.pop_title
+		margin-bottom: 20px
+
+	.call_blocked_icon
+		margin: 20px 0
+
+	.as_soon_as_connect
+		margin-bottom: 20px
+
+.table
+	margin-bottom: 0
+
+.tooltip
+	.tooltip-inner
+		background: $purple2
+	
+	&.bottom
+		.tooltip-arrow
+			border-bottom-color: $purple2
+
+.editable-address.item
+	margin-bottom: 15px
+
+.rounded_list
+	padding: 0
+	margin: 15px 0
+	li
+		position: relative
+		padding-left: 25px
+		list-style: none
+		margin: 3px 0
+
+		&:before
+			position: absolute
+			content: ''
+			display: block
+			width: 16px
+			height: 16px
+			border-radius: 50%
+			border: 2px solid $purple
+			top: 2px
+			left: 0
+
+.page_about_project
+	padding-top: 20px
+	
+	h1, h2, h3
+		font-size: 24px
+		color: $purple2
+
+	.selected-block
+		position: relative
+		box-sizing: border-box
+		padding: 90px 20px 20px
+		color: #fff
+		text-align: center
+		background: $purple url(../images/logo2-white.png) center 20px no-repeat
+
+		*
+			color: #fff
+
+		&:before
+			position: absolute
+			top: 5px
+			left: 5px
+			right: 5px
+			bottom: 5px
+			display: block
+			content: ''
+			border: 3px dashed #fff
+
+.what-is-calls-info
+	display: inline-block
+	vertical-align: middle
+	width: 143px
+	height: 160px
+	background: url(../images/what_calls_bg.png) center center no-repeat
+	background-size: cover
+	margin: 15px 0
+
+.what_calls_is
+	.calls_is_info_block_first
+		font-size: 16px
+
+.how_it_works.calls_info_block
+	background: #fafafa
+	padding: 20px 0
+	margin: 10px 0
+
+	.item
+		margin-bottom: 20px
+
+		&:last-child
+			margin-bottom: 0
+
+	.title_block_siding
+		font-size: 24px
+		margin-bottom: 20px
+
+	.tit_it
+		font-size: 16px
+
+	.icon
+		width: 91px
+		height: 91px
+		display: inline-block
+		vertical-align: top
+		margin-bottom: 10px
+		background-size: contain
+		background: url(../images/w_c_icon1.png) no-repeat center center
+
+		&.the_2
+			background-image: url(../images/w_c_icon2.png)
+
+		&.the_3
+			background-image: url(../images/w_c_icon3.png)
+
+		&.the_4	
+			background-image: url(../images/w_c_icon4.png)
+
+.calls_inform_reg_form_if_not_logged
+	.form_reg_title.fz18
+		margin-bottom: 15px
+
+
+@import langs

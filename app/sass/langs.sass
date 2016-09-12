@@ -1,0 +1,67 @@
+@import mixins/_mixins.sass
+
+.no-registrated__lang-wrapper
+  line-height: 35px
+
+.-icon-lang
+  vertical-align: middle
+  display: inline-block
+  margin-right: 5px
+  position: relative
+  top: -1px
+
+  $flags: b-g, b-y, c-n, d-e, e-e, e-s, f-r, i-l, i-t, p-t, r-u, t-r, u-a, u-s
+
+  @each $lang in $flags
+    &.lang__#{$lang}
+      +sprite(#{$lang})
+
+.-icon-carret-down
+  display: inline-block
+  vertical-align: middle
+  border: 5px solid transparent
+  border-top: 5px solid #ccc
+  position: relative
+  margin-left: 5px
+  top: 1px
+
+.langs-listing
+  padding: 0
+  margin: 0
+
+.langs-item
+  list-style: none
+  border-bottom: 1px solid #ccc
+
+  &.active
+    position: relative
+    &:after
+      display: block
+      content: ''
+      position: absolute
+      top: 50%
+      +transform(translateY(-50%))
+      right: 15px
+      +sprite(icon-lang-checked)
+
+
+  &:last-child
+    border-bottom: none
+
+.langs-link
+  display: block
+  line-height: 45px
+  font-size: 18px
+  font-family: $reg
+  padding: 0 35px 0 15px
+
+.langs-link__icon-wrap
+  width: 22px
+  height: 15px
+  display: inline-block
+  vertical-align: middle
+  margin-right: 8px
+  border-radius: 2px
+  background: #fff
+  font-size: 0
+  line-height: 0

@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>soderzhnaki mobile</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="main_site_wrap">
+		<header class="site_top_header">
+			<nav class="navbar navbar-default navbar-static-top" role="navigation">
+				<div class="container">
+					<div class="dib">
+						<a href="#" class="go_back icon icon-left-open"></a>
+					</div>
+					<div class="dib page_title_header vam ffr purple_title">
+						Фильтр
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<!-- BEGIN main_page_form_wrapper -->
+		<div class="main_page_form_wrapper form_bl">
+			<form class="reg_form reg_form_third_step filter_form" method="POST">
+				<div class="container">
+					<div class="col-xs-12">
+						<div class="line_wrap">
+							<select class="selectpicker gray_select_style select_no_margin">
+								<option value="">Содержанку</option>
+								<option value="">Содержанта</option>
+								<option value="">ХЗ</option>
+							</select>
+						</div>
+						<div class="line_wrap">
+							<select class="selectpicker gray_select_style select_no_margin">
+								<option value="">Содержанку</option>
+								<option value="">Содержанта</option>
+								<option value="">ХЗ</option>
+							</select>
+						</div>
+						<div class="line_wrap age_slider_wrap clearfix">
+							<div class="field_title">Возраст</div>
+							<div class="age_slider jquery_bootstrap_slider range">
+								<input id="age_slider" class="range_slider_jquery_sod" type="text" value="" data-slider-min="18" data-slider-max="70" data-slider-step="1" data-slider-value="[25, 50]"/>
+								<div class="l_bl">25</div>
+								<div class="r_bl">45</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="hidden_filter_clickable_block">
+					<div class="container text-center">
+						<div class="col-xs-12">
+							<div class="dib catch_click">
+								<div class="icon dib icon-plus"></div>
+								<div class="dib additional_param_text_title">Дополнительные параметры</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="toggle_search_add_filter">
+					<section class="search_param_section">
+						<div class="container hidden_search_filters">
+							<div class="col-xs-12">
+								<div class="field_title text-center line_wrap first-title">Внешность и параметры</div>
+								<div class="line_wrap age_slider_wrap clearfix">
+									<div class="field_title">Рост</div>
+									<div class="age_slider jquery_bootstrap_slider range">
+										<input id="tall_slider_search_form" class="range_slider_jquery_sod" type="text" value="" data-slider-min="18" data-slider-max="70" data-slider-step="1" data-slider-value="[25, 50]"/>
+										<div class="l_bl">25</div>
+										<div class="r_bl">45</div>
+									</div>
+								</div>
+						
+								<div class="line_wrap age_slider_wrap clearfix">
+									<div class="field_title">Вес</div>
+									<div class="age_slider jquery_bootstrap_slider range">
+										<input id="weight_slider_search_form" class="range_slider_jquery_sod" type="text" value="" data-slider-min="18" data-slider-max="70" data-slider-step="1" data-slider-value="[25, 50]"/>
+										<div class="l_bl">25</div>
+										<div class="r_bl">45</div>
+									</div>
+								</div>
+						
+								<div class="line_wrap boobs_size">
+									<div class="field_title text-center">Размер груди</div>
+									<div class="row text-center input_wrap_detection">
+										<label class="col-xs-2">
+											<input type="checkbox" name="1">
+											<span class="input_detection">
+												<span class="dib condition gray_circle"></span>
+												<span class="size_number">0</span>
+											</span>
+										</label>
+										<label class="col-xs-2">
+											<input type="checkbox" name="1">
+											<span class="input_detection">
+												<span class="dib condition gray_circle"></span>
+												<span class="size_number">1</span>
+											</span>
+										</label>
+										<label class="col-xs-2">
+											<input type="checkbox" name="1">
+											<span class="input_detection">
+												<span class="dib condition gray_circle"></span>
+												<span class="size_number">2</span>
+											</span>
+										</label>
+										<label class="col-xs-2">
+											<input type="checkbox" name="1">
+											<span class="input_detection">
+												<span class="dib condition gray_circle"></span>
+												<span class="size_number">3</span>
+											</span>
+										</label>
+										<label class="col-xs-2">
+											<input type="checkbox" name="1">
+											<span class="input_detection">
+												<span class="dib condition gray_circle"></span>
+												<span class="size_number">4</span>
+											</span>
+										</label>
+										<label class="col-xs-2">
+											<input type="checkbox" name="1">
+											<span class="input_detection">
+												<span class="dib condition gray_circle"></span>
+												<span class="size_number">5</span>
+											</span>
+										</label>
+									</div>
+								</div>
+						
+								<div class="person_body">
+									<div class="line_wrap person_parametr_select_list">
+										<div class="select_wrap">
+											<select class="selectpicker gray_select_style display_block" multiple>
+												<option selected disabled value="">Цвет волос</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+											</select>
+										</div>
+										<div class="select_wrap">
+											<select class="selectpicker gray_select_style display_block" multiple>
+												<option selected value="">Цвет глаз</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+											</select>
+										</div>
+										<div class="select_wrap">
+											<select class="selectpicker gray_select_style display_block" multiple>
+												<option selected value="">Телосложение</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+											</select>
+										</div>
+										<div class="select_wrap">
+											<select class="selectpicker gray_select_style display_block" multiple>
+												<option value="">Знак зодиака</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+											</select>
+										</div>
+										<div class="select_wrap">
+											<select class="selectpicker gray_select_style display_block" multiple>
+												<option value="">Внешность</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					
+								
+					<section class="search_param_section">
+						<div class="container">
+							<div class="col-xs-12">
+								<div class="field_title text-center line_wrap">Цель знакомства</div>
+								<div class="meet_goal">
+									<div class="row">
+										<label class="col-xs-12">
+											<input type="checkbox" class="row_connector" name="2" >
+											<span class="gray_circle"></span>
+											<span class="label_text">Постоянные отношения</span>
+										</label>
+									</div>
+									<div class="row">
+										<label class="col-xs-12">
+											<input type="checkbox"  class="row_connector" name="2" >
+											<span class="gray_circle"></span>
+											<span class="label_text">Провести вечер / ночь</span>
+										</label>
+									</div>
+									<div class="row">
+										<label class="col-xs-12">
+											<input type="checkbox"  class="row_connector" name="2" >
+											<span class="gray_circle"></span>
+											<span class="label_text">Экскорт / Сопровождение</span>
+										</label>
+									</div>
+									<div class="row to_be_a_sponsor">
+										<label class="col-xs-12">
+											<input type="checkbox"  class="row_connector" name="2" >
+											<span class="gray_circle"></span>
+											<span class="label_text">
+												Стану спонсором<br>
+												предоставлю спонсорство
+											</span>
+										</label>
+										<div class="col-xs-12">
+											<div class="select_wrap_sponsors">
+												<select class="selectpicker blue_select no_wrap">
+													<option value="">50 000 - 100 000</option>
+													<option value="">50 000 - 100 000</option>
+													<option value="">50 000 - 100 000</option>
+													<option value="">50 000 - 100 000</option>
+													<option value="">50 000 - 100 000</option>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="row">
+										<label class="col-xs-12">
+											<input type="checkbox" class="row_connector" name="2" >
+											<span class="gray_circle"></span>
+											<span class="label_text">Совместные путешествия</span>
+										</label>
+										<div class="additional_checkboxes col-xs-12">
+											<div class="additional_checkboxes_wrapper">
+												<label><input class="customized" type="checkbox" /> Есть загранпаспорт</label>
+												<label><input class="customized" type="checkbox" /> Есть шенген</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+								
+					<section>
+						<div class="container">
+							<div class="col-xs-12">
+								<div class="sexual_preferences_block">
+									<div class="field_title text-center line_wrap">Сексуальные предпочтения</div>
+									<div class="line_wrap person_parametr_select_list">
+										<div class="select_wrap">
+											<select class="selectpicker gray_select_style display_block" multiple>
+												<option value="">Цвет волос</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+											</select>
+										</div>
+										<div class="select_wrap">
+											<select class="selectpicker gray_select_style display_block" multiple>
+												<option value="">Цвет глаз</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+											</select>
+										</div>
+										<div class="select_wrap">
+											<select class="selectpicker gray_select_style display_block" multiple>
+												<option value="">Телосложение</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+												<option value="">opto</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+				</div>
+			
+				
+				
+				<div class="container">
+					<div class="text-center">
+						<button class="violet_btn submit_btn"><span class="icon icon-search-1"></span> Применить</button>
+					</div>
+				    <div class="text-center more_links">
+				    	<button type="reset" class="purple_link">Сбросить параметры</button>
+				    </div>
+				</div>
+			</form>
+		</div>
+		<!-- // END main_page_form_wrapper -->
+
+		<!-- BEGIN footer -->
+		<footer class="footer">
+			<div class="inner_wrap">
+				<div class="container">
+					<p class="full_version_link"><a href="#">Полная версия</a></p>
+					<p class="copyright">&copy; «Содержанки on-line». Лучший on-line<br>
+					сервис по поиску спонсоров и содержанок, 2015</p>
+				</div>
+			</div>
+		</footer>
+		<!-- // END footer -->
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-select.min.js"></script>
+	<script src="js/bootstrap-slider.js"></script>
+	<script>
+		$(document).bind('mobileinit',function(){
+		    /*$.mobile.changePage.defaults.changeHash = false;
+		    $.mobile.hashListeningEnabled = false;
+		    $.mobile.pushStateEnabled = false;*/
+
+		    $.extend(  $.mobile , {autoInitializePage: false});
+		});
+	</script>
+	<script src="js/jquery-mobile.min.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+</html>

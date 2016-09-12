@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>soderzhnaki mobile</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="main_site_wrap">
+		<header class="site_top_header">
+			<nav class="navbar navbar-default navbar-static-top" role="navigation">
+				<div class="container">
+					<div class="navbar-header dib">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="dib page_title_header vam ffr purple_title">
+						Сообщения
+					</div>
+				</div>
+			</nav>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li>
+						<div class="container">
+							<a href="#">Home</a>
+						</div>
+					</li>
+					<li>
+						<div class="container">
+							<a href="#">Home</a>
+						</div>
+					</li>
+					<li>
+						<div class="container">
+							<a href="#">Home</a>
+						</div>
+					</li>
+					<li>
+						<div class="container">
+							<a href="#">Home</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</header>
+
+		<!-- BEGIN msg_folders_bl -->
+		<div class="msg_folders_bl">
+			<ul class="folders_list">
+				<li class="folder_item">
+					<div class="container">
+						<div class="inner_folder_item">
+							<span class="icon icon_folder icon-folder"></span>
+							<div class="folder_name ffr">
+								Все
+							</div>
+							<div class="folder_menu">
+								<div class="clickable_menu glyphicon glyphicon-option-horizontal"></div>
+								<ul>
+									<li>
+										<div class="icon icon_edit icon-pencil"></div>
+										<p class="folder_menu_title">Переименовать</p>
+									</li>
+									<li>
+										<div class="icon icon_delete icon-cancel"></div>
+										<p class="folder_menu_title">Удалить</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="folder_item">
+					<div class="container">
+						<div class="inner_folder_item">
+							<span class="icon icon_folder icon-folder"></span>
+							<div class="folder_name ffr">
+								Онлайн
+							</div>
+							<div class="folder_menu">
+								<div class="clickable_menu glyphicon glyphicon-option-horizontal"></div>
+								<ul>
+									<li>
+										<div class="icon icon_edit icon-pencil"></div>
+										<p class="folder_menu_title">Переименовать</p>
+									</li>
+									<li>
+										<div class="icon icon_delete icon-cancel"></div>
+										<p class="folder_menu_title">Удалить</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="folder_item">
+					<div class="container">
+						<div class="inner_folder_item">
+							<span class="icon icon_folder icon-folder"></span>
+							<div class="folder_name ffr">
+								Избранные
+							</div>
+							<div class="folder_menu">
+								<div class="clickable_menu glyphicon glyphicon-option-horizontal"></div>
+								<ul>
+									<li>
+										<div class="icon icon_edit icon-pencil"></div>
+										<p class="folder_menu_title">Переименовать</p>
+									</li>
+									<li>
+										<div class="icon icon_delete icon-cancel"></div>
+										<p class="folder_menu_title">Удалить</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</li>
+				<li class="folder_item">
+					<div class="container">
+						<div class="inner_folder_item folder_menu_removed">
+							<span class="icon icon_folder icon-folder"></span>
+							<div class="folder_name ffr">
+                                <span style="display:none;" ng-show="! showForm" class="ng-binding ng-hide">
+                                  asddasdasd
+                                </span>
+
+                                <form ng-show="showForm" class="form_add_folder_block_wrap folder_rename_form ng-pristine ng-valid clearfix">
+                                   <div class="the_buttons">
+                                   		<button type="submit" class="red_btn small vam" ng-click="renameFolder()">Ок</button>
+                                   </div>
+                                    <div class="the_input ovh">
+                                    	<input type="text" class="ovh sform-control ng-pristine ng-valid ng-touched" value="asddasdasd" ng-model="folder.name">
+                                    </div>
+                                </form>
+                            </div>
+							<div class="folder_menu" style="display:none;">
+								<div class="clickable_menu glyphicon glyphicon-option-horizontal"></div>
+								<ul>
+									<li>
+										<div class="icon icon_edit icon-pencil"></div>
+										<p class="folder_menu_title">Переименовать</p>
+									</li>
+									<li>
+										<div class="icon icon_delete icon-cancel"></div>
+										<p class="folder_menu_title">Удалить</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</li>
+			</ul>
+
+			<div class="container">
+				<div class="add_folder_to_list text-center">
+					<a href="#" ng-click="showFofm()" class="gray_border_btn"><span class="icon icon-plus"></span> <span class="dib">Добавить папку</span></a>
+					<div class="input_wrap form_add_folder_block_wrap clearfix" ng-show="form">
+						<div class="the_buttons">
+							<button type="submit" class="red_btn small" ng-click="addFolder()">Ок</button>
+							<a href="" class="red_link fz14 tdu" ng-click="hideForm()">Отменить</a>
+						</div>
+						<div class="the_input ovh">
+							<input type="text" class="form-control ng-pristine ng-valid ng-touched" ng-model="model">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- // END msg_folders_bl -->
+
+		<!-- BEGIN footer -->
+		<footer class="footer">
+			<div class="inner_wrap">
+				<div class="container">
+					<p class="full_version_link"><a href="#">Полная версия</a></p>
+					<p class="copyright">&copy; «Содержанки on-line». Лучший on-line<br>
+					сервис по поиску спонсоров и содержанок, 2015</p>
+				</div>
+			</div>
+		</footer>
+		<!-- // END footer -->
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-select.min.js"></script>
+	<script src="js/bootstrap-slider.js"></script>
+	<script>
+		$(document).bind('mobileinit',function(){
+		    /*$.mobile.changePage.defaults.changeHash = false;
+		    $.mobile.hashListeningEnabled = false;
+		    $.mobile.pushStateEnabled = false;*/
+
+		    $.extend(  $.mobile , {autoInitializePage: false});
+		});
+	</script>
+	<script src="js/jquery-mobile.min.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+</html>

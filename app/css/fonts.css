@@ -1,0 +1,47 @@
+@import '../fontello/css/animation.css';
+@import '../fontello/css/fontello.css';
+@import '../fontello/css/fontello-codes.css';
+@import '../fontello/css/fontello-embedded.css';
+@import '../fontello/css/fontello-ie7.css';
+@import '../fontello/css/fontello-ie7-codes.css';
+
+@font-face {
+    font-family: "TruthCYR";
+    src: url("../fonts/TruthCYR-Light.eot");
+    src: url("../fonts/TruthCYR-Light.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/TruthCYR-Light.woff") format("woff"),
+    url("../fonts/TruthCYR-Light.ttf") format("truetype"),
+    url("../fonts/TruthCYR-Light.otf");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "TruthCYR-R";
+    src: url("../fonts/TruthCYR-Regular.eot");
+    src: url("../fonts/TruthCYR-Regular.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/TruthCYR-Regular.woff") format("woff"),
+    url("../fonts/TruthCYR-Regular.ttf") format("truetype"),
+    url("../fonts/TruthCYR-Regular.otf");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "TruthCYR-Thin";
+    src: url("../fonts/TruthCYR-Thin.eot");
+    src: url("../fonts/TruthCYR-Thin.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/TruthCYR-Thin.woff") format("woff"),
+    url("../fonts/TruthCYR-Thin.ttf") format("truetype"),
+    url("../fonts/TruthCYR-Thin.otf");
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "TruthCYR-Medium";
+    src: url("../fonts/TruthCYR-Medium.eot");
+    src: url("../fonts/TruthCYR-Medium.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/TruthCYR-Medium.woff") format("woff"),
+    url("../fonts/TruthCYR-Medium.ttf") format("truetype"),
+    url("../fonts/TruthCYR-Medium.otf");
+    font-style: normal;
+    font-weight: normal;
+}

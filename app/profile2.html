@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>soderzhnaki mobile</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div class="main_site_wrap">
+		<header class="site_top_header">
+			<nav class="navbar navbar-default navbar-static-top" role="navigation">
+				<div class="container">
+					<div class="navbar-header dib">
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+					</div>
+					<div class="dib page_title_header vam ffr purple_title">
+						Анкета
+					</div>
+					<div class="dib r_bl right_add_menu">
+						<a href="#" class="icon mail_icon_menu icon-mail">
+							<span class="msg_number">10</span>
+						</a>
+					</div>
+				</div>
+			</nav>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li>
+						<div class="container">
+							<a href="#">Home</a>
+						</div>
+					</li>
+					<li>
+						<div class="container">
+							<a href="#">Home</a>
+						</div>
+					</li>
+					<li>
+						<div class="container">
+							<a href="#">Home</a>
+						</div>
+					</li>
+					<li>
+						<div class="container">
+							<a href="#">Home</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</header>
+		
+		<div class="profile_page__block">
+			<!-- BEGIN profile_photo_carousel -->
+			<div class="profile_photo_carousel__profile_page">
+				<div id="carousel-profile-photos" class="carousel slide no-carousel-interval" data-ride="carousel">
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner text-center">
+						<div class="item active">
+							<img alt="" src="http://placehold.it/320x240" />
+						</div>
+						<div class="item">
+							<img alt="" src="http://placehold.it/320x240" />
+						</div>
+						<div class="item">
+							<img alt="" src="http://placehold.it/320x240" />
+						</div>
+						<div class="item">
+							<img alt="" src="http://placehold.it/320x240" />
+						</div>
+					</div>
+					<ol class="carousel-indicators">
+						<li data-target="#carousel-profile-photos" data-slide-to="0" class="active"></li>
+						<li data-target="#carousel-profile-photos" data-slide-to="1" class=""></li>
+						<li data-target="#carousel-profile-photos" data-slide-to="2" class=""></li>
+						<li data-target="#carousel-profile-photos" data-slide-to="3" class=""></li>
+					</ol>
+
+					<div class="profile_page_editing_carousel_buttons">
+						<div class="dib dark_bg_opacity">
+							<div class="dib">
+								<div class="icon icon__add_photo"></div>
+							</div>
+							<div class="dib">
+								<div class="icon icon__checked_photo"></div>
+							</div>
+							<div class="dib">
+								<div class="icon icon__delete_photo"></div>
+							</div>
+						</div>
+					</div>
+				</div> <!-- Carousel -->
+			</div>
+			<!-- // END profile_photo_carousel -->
+				
+			<!-- BEGIN personal_information_block -->
+			<div class="personal_information_block__profile_page">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<!-- // BEGIN main_descr_block -->
+							<div class="main_descr_block">
+								<p class="description" id="city-editable-field" data-editable-element-active data-type="address"><span class="name ffr">Катенька,</span> 20 лет, Козерог</p>
+								<p class="city"><span>Москва</span> <span data-editable-btn data-editable-target="#city-editable-field" class="icon_edit icon-pencil"></span></p>
+							</div>
+							<!-- // END main_descr_block -->
+							<!-- BEGIN testing_account -->
+							<div class="testing_account text-center">
+								<div class="red_btn rounded">Пробный</div>
+							</div>
+							<!-- // END testing_account -->
+							<!-- BEGIN profile_products_info -->
+							<div class="profile_products_info ffr">
+								<div class="row">
+									<a href="#" class="col-xs-4 right_padding5 text-left">
+										<p class="product_info_name">Баланс:</p>
+										<p class="icon_wrap">
+											<span class="dib icon icon_wallet icon-wallet"></span> 1200 Р
+										</p>
+									</a>
+									<a href="#" class="col-xs-4 right_padding5 left_padding5 text-center">
+										<p class="product_info_name">Контакты:</p>
+										<p class="icon_wrap">
+											<span class="dib icon icon_star icon-star"></span> 34
+										</p>
+									</a>
+									<a href="#" class="col-xs-4 left_padding5 text-right">
+										<p class="product_info_name">Минуты:</p>
+										<p class="icon_wrap">
+											<span class="dib icon icon_clock icon-clock"></span> 114
+										</p>
+									</a>
+								</div>
+							</div>
+							<!-- // END profile_products_info -->
+							<!-- // BEGIN text_about_yourself -->
+							<div class="text_about_yourself text-center">
+								<div class="text_content_block">
+									<p data-type="textarea" id="about-person-editable-field" data-editable-element-active>Тут будет текст о тебе, напиши самое главное.  2-3 предложения будет достаточно</p>
+								</div>
+								<span class="icon_edit icon-pencil" data-editable-target="#about-person-editable-field" data-editable-btn></span>
+							</div>
+							<!-- // END text_about_yourself -->
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- // END personal_information_block -->
+			
+			<!-- BEGIN make_call_block__profile -->
+			<div class="make_call_block__profile_page profile_editing_page">
+				<div class="container">
+					<div class="row">
+						<div class="col-xs-12">
+							<div class="buttons_wrap">
+								<p>
+									<a href="#" class="green_btn make_call db long_text text-center"><span class="icon icon-phone"></span> Принимать звонки от спонсоров</a>
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- // END make_call_block__profile -->
+			
+			<!-- BEGIN profile_appearance -->
+			<section class="section_block_separator profile_appearance profile_editing_page">
+				<div class="container">
+					<div class="block_title clickable_open_hide">Внешность <span class="icon_edit icon-pencil"></span></div>
+				</div>
+				<div class="hidden_block with_bg">
+					<div class="container">
+						<div class="block_content">
+							<div class="line_wrap age_slider_wrap clearfix">
+								<div class="field_title">Рост</div>
+								<div class="age_slider jquery_bootstrap_slider range">
+									<input id="tall_slider" class="range_slider_jquery_sod" type="text" value="" data-slider-min="18" data-slider-max="70" data-slider-step="1" data-slider-value="25"/>
+									<div class="l_bl">25</div>
+									<div class="r_bl">45</div>
+								</div>
+							</div>
+							
+											    <div class="line_wrap age_slider_wrap clearfix">
+								<div class="field_title">Вес</div>
+								<div class="age_slider jquery_bootstrap_slider range">
+									<input id="weight_slider" class="range_slider_jquery_sod" type="text" value="" data-slider-min="18" data-slider-max="70" data-slider-step="1" data-slider-value="25"/>
+									<div class="l_bl">25</div>
+									<div class="r_bl">45</div>
+								</div>
+							</div>
+							
+							<div class="line_wrap boobs_size">
+								<div class="field_title text-center">Размер груди</div>
+								<div class="row text-center input_wrap_detection">
+									<label class="col-xs-2">
+										<input type="radio" name="1" checked>
+										<span class="input_detection">
+											<span class="dib condition gray_circle"></span>
+											<span class="size_number">0</span>
+										</span>
+									</label>
+									<label class="col-xs-2">
+										<input type="radio" name="1">
+										<span class="input_detection">
+											<span class="dib condition gray_circle"></span>
+											<span class="size_number">1</span>
+										</span>
+									</label>
+									<label class="col-xs-2">
+										<input type="radio" name="1">
+										<span class="input_detection">
+											<span class="dib condition gray_circle"></span>
+											<span class="size_number">2</span>
+										</span>
+									</label>
+									<label class="col-xs-2">
+										<input type="radio" name="1">
+										<span class="input_detection">
+											<span class="dib condition gray_circle"></span>
+											<span class="size_number">3</span>
+										</span>
+									</label>
+									<label class="col-xs-2">
+										<input type="radio" name="1">
+										<span class="input_detection">
+											<span class="dib condition gray_circle"></span>
+											<span class="size_number">4</span>
+										</span>
+									</label>
+									<label class="col-xs-2">
+										<input type="radio" name="1">
+										<span class="input_detection">
+											<span class="dib condition gray_circle"></span>
+											<span class="size_number">5</span>
+										</span>
+									</label>
+								</div>
+							</div>
+							
+							<div class="line_wrap person_parametr_select_list">
+								<div class="select_wrap">
+									<select class="selectpicker gray_select_style display_block">
+										<option value="">Цвет волос</option>
+										<option value="">opto</option>
+										<option value="">opto</option>
+										<option value="">opto</option>
+										<option value="">opto</option>
+										<option value="">opto</option>
+										<option value="">opto</option>
+									</select>
+								</div>
+								<div class="select_wrap">
+									<select class="selectpicker gray_select_style display_block">
+										<option value="">Цвет глаз</option>
+										<option value="">opto</option>
+										<option value="">opto</option>
+										<option value="">opto</option>
+										<option value="">opto</option>
+										<option value="">opto</option>
+										<option value="">opto</option>
+									</select>
+								</div>
+								<div class="select_wrap">
+									<select class="selectpicker gray_select_style display_block">
+										<option value="">Телосложение</option>
+										<option value="">opto</option>
+										<option value="">opto</option>
+										<option value="">opto</option>
+										<option value="">opto</option>
+										<option value="">opto</option>
+										<option value="">opto</option>
+									</select>
+								</div>
+								<div class="select_wrap">
+									<select class="selectpicker gray_select_style display_block">
+										<option value="">Знак зодиака</option>
+										<option value="">opto</option>
+										<option value="">opto</option>
+										<option value="">opto</option>
+										<option value="">opto</option>
+										<option value="">opto</option>
+										<option value="">opto</option>
+									</select>
+								</div>
+								<div class="select_wrap">
+									<select class="selectpicker gray_select_style display_block">
+										<option value="">Внешность</option>
+										<option value="">opto</option>
+										<option value="">opto</option>
+										<option value="">opto</option>
+										<option value="">opto</option>
+										<option value="">opto</option>
+										<option value="">opto</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- // END profile_appearance -->
+
+			<!-- BEGIN goal_of_meet -->
+			<section class="section_block_separator has_border goal_of_meet">
+				<div class="container">
+					<div class="block_title clickable_open_hide">Цель знакомства <span class="icon_edit icon-pencil"></span></div>
+				</div>
+
+				<div class="hidden_block with_bg">
+					<div class="container">
+						<div class="block_content">
+							<div class="meet_goal">
+								<div class="row">
+									<label class="col-xs-12">
+										<input type="checkbox" class="row_connector" name="2" >
+										<span class="gray_circle"></span>
+										<span class="label_text">Постоянные отношения</span>
+									</label>
+								</div>
+								<div class="row">
+									<label class="col-xs-12">
+										<input type="checkbox"  class="row_connector" name="2" >
+										<span class="gray_circle"></span>
+										<span class="label_text">Провести вечер / ночь</span>
+									</label>
+								</div>
+								<div class="row">
+									<label class="col-xs-12">
+										<input type="checkbox"  class="row_connector" name="2" >
+										<span class="gray_circle"></span>
+										<span class="label_text">Экскорт / Сопровождение</span>
+									</label>
+								</div>
+								<div class="row to_be_a_sponsor">
+									<label class="col-xs-12">
+										<input type="checkbox"  class="row_connector" name="2" >
+										<span class="gray_circle"></span>
+										<span class="label_text">
+											Стану спонсором<br>
+											предоставлю спонсорство
+										</span>
+									</label>
+									<div class="col-xs-12">
+										<div class="select_wrap_sponsors">
+											<select class="selectpicker blue_select no_wrap">
+												<option value="">50 000 - 100 000</option>
+												<option value="">50 000 - 100 000</option>
+												<option value="">50 000 - 100 000</option>
+												<option value="">50 000 - 100 000</option>
+												<option value="">50 000 - 100 000</option>
+											</select>
+										</div>
+									</div>
+								</div>
+								<div class="row">
+									<label class="col-xs-12">
+										<input type="checkbox" class="row_connector" name="2" >
+										<span class="gray_circle"></span>
+										<span class="label_text">Совместные путешествия</span>
+									</label>
+									<div class="additional_checkboxes col-xs-12">
+										<div class="additional_checkboxes_wrapper">
+											<label><input class="customized" type="checkbox" /> Есть загранпаспорт</label>
+											<label><input class="customized" type="checkbox" /> Есть шенген</label>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- // END goal_of_meet -->
+
+			<!-- BEGIN sexual_preferences -->
+			<section class="section_block_separator has_border sexual_preferences">
+				<div class="container">
+					<div class="block_title clickable_open_hide">Сексуальные предпочтения <span class="icon_edit icon-pencil"></span></div>
+				</div>
+				<div class="hidden_block with_bg">
+					<div class="container">
+						<div class="block_content">
+							<div class="sexual_preferences_block">
+								<div class="line_wrap person_parametr_select_list">
+									<div class="select_wrap">
+										<select class="selectpicker gray_select_style display_block">
+											<option value="">Цвет волос</option>
+											<option value="">opto</option>
+											<option value="">opto</option>
+											<option value="">opto</option>
+											<option value="">opto</option>
+											<option value="">opto</option>
+											<option value="">opto</option>
+										</select>
+									</div>
+									<div class="select_wrap">
+										<select class="selectpicker gray_select_style display_block">
+											<option value="">Цвет глаз</option>
+											<option value="">opto</option>
+											<option value="">opto</option>
+											<option value="">opto</option>
+											<option value="">opto</option>
+											<option value="">opto</option>
+											<option value="">opto</option>
+										</select>
+									</div>
+									<div class="select_wrap">
+										<select class="selectpicker gray_select_style display_block">
+											<option value="">Телосложение</option>
+											<option value="">opto</option>
+											<option value="">opto</option>
+											<option value="">opto</option>
+											<option value="">opto</option>
+											<option value="">opto</option>
+											<option value="">opto</option>
+										</select>
+									</div>
+								</div>
+								<div class="line_wrap text-center profile_save_button_wrap">
+									<div class="red_btn">
+										Сохранить
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- // END sexual_preferences -->
+		</div>
+
+		<!-- BEGIN footer -->
+		<footer class="footer">
+			<div class="inner_wrap">
+				<div class="container">
+					<p class="full_version_link"><a href="#">Полная версия</a></p>
+					<p class="copyright">&copy; «Содержанки on-line». Лучший on-line<br>
+					сервис по поиску спонсоров и содержанок, 2015</p>
+				</div>
+			</div>
+		</footer>
+		<!-- // END footer -->
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/bootstrap-select.min.js"></script>
+	<script src="js/bootstrap-slider.js"></script>
+	<script src="js/bootstrap-editable.min.js"></script>
+	<script src="js/editable.address.js"></script>
+	<script>
+		$(document).bind('mobileinit',function(){
+		    /*$.mobile.changePage.defaults.changeHash = false;
+		    $.mobile.hashListeningEnabled = false;
+		    $.mobile.pushStateEnabled = false;*/
+
+		    $.extend(  $.mobile , {autoInitializePage: false});
+		});
+	</script>
+	<script src="js/jquery-mobile.min.js"></script>
+	<script src="js/custom.js"></script>
+</body>
+</html>
