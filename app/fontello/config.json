@@ -293,6 +293,12 @@
       "css": "block-1",
       "code": 59407,
       "src": "websymbols"
+    },
+    {
+      "uid": "197375a3cea8cb90b02d06e4ddf1433d",
+      "css": "globe",
+      "code": 59440,
+      "src": "fontawesome"
     }
   ]
 }
