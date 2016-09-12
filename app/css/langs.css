@@ -1,21 +1,20 @@
 /*
 Error: Undefined variable: "$reg".
-        on line 56 of D:/PhpStormProjects/sod_mobile/app/sass/langs.sass
+        on line 5 of D:/PhpStormProjects/sod_mobile/app/sass/langs.sass
 
-51: 
-52: .langs-link
-53:   display: block
-54:   line-height: 45px
-55:   font-size: 18px
-56:   font-family: $reg
-57:   padding: 0 35px 0 15px
-58: 
-59: .langs-link__icon-wrap
-60:   width: 22px
-61:   height: 15px
+1: @import mixins/_mixins.sass
+2: 
+3: .no-registrated__lang-wrapper
+4:   line-height: 35px
+5:   font-family: $reg
+6:   font-size: 15px
+7:   cursor: pointer
+8: 
+9: .-icon-lang
+10:   vertical-align: middle
 
 Backtrace:
-D:/PhpStormProjects/sod_mobile/app/sass/langs.sass:56
+D:/PhpStormProjects/sod_mobile/app/sass/langs.sass:5
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/script/tree/node.rb:58:in `perform'
 C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:397:in `visit_prop'
@@ -67,4 +66,4 @@ C:/Ruby23-x64/lib/ruby/gems/2.3.0/gems/sass-3.4.22/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$reg\".\A         on line 56 of D:/PhpStormProjects/sod_mobile/app/sass/langs.sass\A \A 51: \A 52: .langs-link\A 53:   display: block\A 54:   line-height: 45px\A 55:   font-size: 18px\A 56:   font-family: $reg\A 57:   padding: 0 35px 0 15px\A 58: \A 59: .langs-link__icon-wrap\A 60:   width: 22px\A 61:   height: 15px"; }
+  content: "Error: Undefined variable: \"$reg\".\A         on line 5 of D:/PhpStormProjects/sod_mobile/app/sass/langs.sass\A \A 1: @import mixins/_mixins.sass\A 2: \A 3: .no-registrated__lang-wrapper\A 4:   line-height: 35px\A 5:   font-family: $reg\A 6:   font-size: 15px\A 7:   cursor: pointer\A 8: \A 9: .-icon-lang\A 10:   vertical-align: middle"; }
