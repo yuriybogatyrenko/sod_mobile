@@ -4,107 +4,126 @@
 /* NEW LANGS CSS STARTS */
 
 .no-registrated__lang-wrapper
-  line-height: 35px
-  font-family: $reg
-  font-size: 15px
-  cursor: pointer
+    line-height: 35px
+    font-family: $reg
+    font-size: 15px
+    cursor: pointer
 
 .-icon-lang
-  vertical-align: middle
-  display: inline-block
-  margin-right: 5px
-  position: relative
-  top: -1px
+    vertical-align: middle
+    display: inline-block
+    margin-right: 5px
+    position: relative
+    top: -1px
 
-  $flags: b-g, b-y, c-n, d-e, e-e, e-s, f-r, i-l, i-t, p-t, r-u, t-r, u-a, u-s
+    $flags: b-g, b-y, c-n, d-e, e-e, e-s, f-r, i-l, i-t, p-t, r-u, t-r, u-a, u-s
 
-  @each $lang in $flags
-    &.lang__#{$lang}
-      +sprite(#{$lang})
-      display: inline-block
+    @each $lang in $flags
+        &.lang__#{$lang}
+            +sprite(#{$lang})
+            display: inline-block
 
 .-icon-carret-down
-  display: inline-block
-  vertical-align: middle
-  border: 5px solid transparent
-  border-top: 5px solid #ccc
-  position: relative
-  margin-left: 5px
-  top: 1px
+    display: inline-block
+    vertical-align: middle
+    border: 5px solid transparent
+    border-top: 5px solid #ccc
+    position: relative
+    margin-left: 5px
+    top: 1px
 
 .langs-listing
-  padding: 0
-  margin: 0
+    padding: 0
+    margin: 0
 
 .langs-item
-  list-style: none
-  border-bottom: 1px solid #ccc
+    list-style: none
+    border-bottom: 1px solid #ccc
 
-  &.active
-    position: relative
-    &:after
-      display: block
-      content: ''
-      position: absolute
-      top: 50%
-      +transform(translateY(-50%))
-      right: 15px
-      +sprite(icon-lang-checked)
+    &.active
+        position: relative
+        &:after
+            display: block
+            content: ''
+            position: absolute
+            top: 50%
+            +transform(translateY(-50%))
+            right: 15px
+            +sprite(icon-lang-checked)
 
-
-  &:last-child
-    border-bottom: none
+    &:last-child
+        border-bottom: none
 
 .langs-link
-  display: block
-  line-height: 45px
-  font-size: 18px
-  font-family: $reg
-  padding: 0 35px 0 15px
+    display: block
+    line-height: 45px
+    font-size: 18px
+    font-family: $reg
+    padding: 0 35px 0 15px
 
 .langs-link__icon-wrap
-  width: 22px
-  height: 15px
-  display: inline-block
-  vertical-align: middle
-  margin-right: 8px
-  border-radius: 2px
-  background: #fff
-  font-size: 0
-  line-height: 0
+    width: 22px
+    height: 15px
+    display: inline-block
+    vertical-align: middle
+    margin-right: 8px
+    border-radius: 2px
+    background: #fff
+    font-size: 0
+    line-height: 0
 
 .icon-secured
-  vertical-align: middle
-  +sprite(icon-secured)
-  display: inline-block
-  margin-right: 10px
+    vertical-align: middle
+    +sprite(icon-secured)
+    display: inline-block
+    margin-right: 10px
 
 .secure-text
-  color: #fff
-  background: #000
-  font-size: 13px
+    color: #fff
+    background: #000
+    font-size: 13px
 
-  &__inner
-    padding: 10px
-    width: 100%
-    text-decoration: underline
-    display: block
-    &:hover
-      text-decoration: none
+    &__inner
+        padding: 10px
+        width: 100%
+        text-decoration: underline
+        display: block
+        &:hover
+            text-decoration: none
 
 .--langs-popup__body
-  position: fixed
-  top: 0
-  bottom: 0
-  left: 0
-  right: 0
-  overflow: auto
-  background: #fff
-  z-index: 1000
-  +trans
-  +transform(translateX(-100%))
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    overflow: auto
+    background: #fff
+    z-index: 1000
+    +trans
+    +transform(translateX(-100%))
 
-  &.active
-    +transform(translateX(0))
+    &.active
+        +transform(translateX(0))
 
 /* NEW LANGS CSS ENDS */
+
+// profile photo moderation
+.profile_photo_carousel__profile_page
+    position: relative
+
+.profile-carousel__photo-moderation
+    position: absolute
+    bottom: 0
+    background: rgba(0, 0, 0, 0.3)
+    left: 0
+    right: 0
+    padding: 15px
+    z-index: 20
+    color: #fff
+
+    p
+        margin-bottom: 0
+        
+.profile-carousel__phptp-moderation__title
+    color: #000
