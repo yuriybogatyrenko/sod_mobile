@@ -108,22 +108,60 @@
 
 /* NEW LANGS CSS ENDS */
 
-// profile photo moderation
+/* profile photo moderation */
 .profile_photo_carousel__profile_page
     position: relative
 
 .profile-carousel__photo-moderation
-    position: absolute
-    bottom: 0
-    background: rgba(0, 0, 0, 0.3)
-    left: 0
-    right: 0
+    background: rgba(0, 0, 0, 0.7)
     padding: 15px
     z-index: 20
     color: #fff
+    font-size: 14px
 
     p
         margin-bottom: 0
-        
+
+.profile-carousel__photo-moderation__title
+    color: #10c899
+    
 .profile-carousel__phptp-moderation__title
     color: #000
+
+.icon-photo-on-moderation
+    +sprite(icon-moderation)
+    display: inline-block
+    vertical-align: middle
+    position: relative
+    top: -2px
+
+.carousel-indicators
+    position: static
+    margin: 0 0 10px
+    width: 100%
+
+.profile-carousel__bottom-block
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+
+.profile_photo_carousel__profile_page .carousel-indicators li
+    background: #f7f7f7
+    opacity: 1
+    width: 8px
+    height: 8px
+    &.active
+        background: #df6466
+        width: 8px
+        height: 8px
+
+.icon-photo-premoderation
+    +sprite(icon-premoderation)
+    position: relative
+    vertical-align: middle
+    display: inline-block
+    top: -1px
+
+.photo-premoderation__title
+    margin-bottom: 10px
