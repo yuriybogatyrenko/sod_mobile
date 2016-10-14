@@ -1,15 +1,26 @@
 .blog-article__title-wrapper
-    margin-bottom: 40px
-    h1
+    margin-bottom: 15px
+    padding-top: 20px
+    h1, .blog-item__title
         font-size: 18px
         font-weight: normal
         font-style: normal
         font-stretch: normal
         line-height: 1.33
         color: #dd467b
+        display: inline
+        margin: 0
+
+    .b-commented
+        margin-left: 10px
+        display: inline-block
+        vertical-align: middle
+        position: relative
+        top: -1px
 
 .blog-article__image
     margin-bottom: 20px
+
 
 .blog-article__content
     margin-bottom: 80px
@@ -33,6 +44,36 @@
     
 .blog-article__category-link
     color: #808080
+    text-decoration: underline
+
+.blog-similar__units
+    margin: 0
+    padding: 0
+
+.blog-similar
+    margin-bottom: 30px
+
+.blog-similar__item
+    color: #2c7db8
+    margin-bottom: 10px
+    list-style: none
+    position: relative
+    padding-left: 20px
+    text-decoration: underline
+
+    &:hover
+        text-decoration: none
+
+    &:before
+        display: block
+        content: ''
+        width: 5px
+        height: 5px
+        background: #2c7db8
+        border-radius: 100%
+        position: absolute
+        top: 10px
+        left: 0
 
 .b-commented
     display: inline-block
@@ -121,6 +162,8 @@
 .blog-commens__form
     textarea
         height: 140px
+        border-radius: 5px
+        border: none
 
 // MAIN BLOG PAGE
 
@@ -129,49 +172,28 @@
         font-size: 20px
         margin-bottom: 20px
 
-.blog__main-select
-    margin-bottom: 20px
-
 .display-flex
     display: flex
 
 .blog-item
     &:not(.full-screen)
-        border-bottom: 1px solid #e3e3e4
-        padding: 20px
-        margin-left: -20px
-        margin-right: -20px
+        //border-bottom: 1px solid #e3e3e4
+        padding: 0 15px
+        margin-bottom: 20px
+        margin-left: -15px
+        margin-right: -15px
 
-    &.full-screen
-        position: relative
-        display: block
+    .blog-article__title-wrapper
+        padding: 0
 
-.blog-item__full-screen
-    display: block
-    position: relative
+    .blog-article__image
+        margin-bottom: 0
 
 .blog-more__posts
-    padding-top: 20px
     .violet_btn
         display: block
         width: 100%
 
-.blog-item__fullscreen-title
-    color: #fff
-    font-size: 18px
-    //line-height: 1
-    font-weight: bold
-    position: absolute
-    top: 10px
-    left: 15px
-
-    .pink-color
-        background: #dd467b
-        padding: 3px 10px
-
-    .b-commented
-        margin-left: 10px
-        
 .blog-item__fullscreen-views
     margin-bottom: 0
     position: absolute
@@ -198,3 +220,10 @@
 
 .blog-item__image-wrapper
     margin-right: 15px
+
+.blog-article__short
+    font-size: 13px
+    margin-bottom: 15px
+
+.blog__main-select
+    margin-bottom: 20px
