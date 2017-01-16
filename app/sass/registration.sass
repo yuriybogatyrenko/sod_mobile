@@ -1,0 +1,167 @@
+// icons
+.icon-infoplate-warn
+    +sprite(icon-infoplate-wran)
+    display: inline-block
+
+.icon-reg
+    &-question
+        +sprite(icon-reg-question)
+
+    &-appstore
+        +sprite(icon-reg-appstore)
+
+    &-googleplay
+        +sprite(icon-reg-googleplay)
+
+    &-confidence
+        +sprite(icon-reg-confidence)
+
+    &-present
+        +sprite(icon-reg-present)
+
+    &-mailonline
+        +sprite(icon-reg-mailonline)
+
+    &-metro
+        +sprite(icon-reg-metro)
+
+    &-wmj
+        +sprite(icon-reg-wmj)
+
+    &-tatler
+        +sprite(icon-reg-tatler)
+
+    &-video
+        +retina-bg("icon-reg-video.jpg", "icon-reg-video@2x.jpg")
+        background-size: cover
+        height: 146px
+        width: 253px
+        display: inline-block
+
+// info plate && new reg SASS
+
+.info-plate
+    padding: 15px 0
+    font-size: 12px
+    background: rgba(#bc79c3, 0.1)
+
+    .icon-infoplate-warn
+        margin-right: 5px
+        vertical-align: top
+
+// registration SASS
+
+.reg
+    &-question
+        &__content
+            position: absolute
+            top: 100%
+            left: 0
+            width: 100%
+            box-shadow: 0 2px 11px 0 rgba(0, 0, 0, 0.43)
+            background: #fff
+            z-index: 10
+            font-size: 12px
+            padding: 15px
+            margin-top: 10px
+            display: none
+
+            &:after, &:before
+                display: block
+                content: ''
+                position: absolute
+                bottom: 100%
+                border: 6px solid transparent
+                border-bottom: 6px solid #fff
+                right: 15px
+
+            &:before
+                border-bottom: 6px solid #ccc
+                margin-bottom: 1px
+
+        &__wrapper
+            .icon-reg-question
+                position: absolute
+                top: 50%
+                +transform(translateY(-50%))
+                right: 10px
+
+                &:hover
+                    & + .reg-question__content
+                        display: block
+
+.input-focus-show-tooltip
+    &:focus
+        + .reg-question__wrapper
+            .reg-question__content
+                display: block
+
+
+.display-flex
+    display: flex
+
+.space-around
+    justify-content: space-around
+
+.space-between
+    justify-content: space-between
+
+.flex-middle
+    align-items: center
+
+.line_wrap
+    &.small-mb
+        margin-bottom: 10px
+
+.main_page_form_wrapper .reg_form
+    &.no-mt
+        margin-top: 0
+
+
+.registration-present
+    border-radius: 5px
+    background-color: #f9faff
+    border: solid 1px #bec2e8
+    margin-bottom: 15px
+    padding: 12px
+    text-decoration: none
+
+    &__content
+        width: calc(100% - 65px)
+        color: #747aa8
+
+.registration-smi
+    padding: 30px 0
+
+    &__title
+        margin-bottom: 30px
+
+    &__units
+        margin-bottom: 20px
+
+    &__item:not(:last-child)
+        margin-bottom: 20px
+
+    &__descr
+        list-style: disc
+        font-size: 12px
+        padding: 0 0 0 10px
+        margin: 0
+
+    &__descr-item
+        list-style: disc
+        padding-left: 10px
+        line-height: 1.6
+
+.registration-video
+    &__title
+        margin-bottom: 20px
+
+.purple_link
+    &.tdn
+        text-decoration: none
+        &:hover
+            text-decoration: underline
+            
+.main_site_wrap
+    background: #F7F8FE
