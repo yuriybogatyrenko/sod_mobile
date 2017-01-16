@@ -1,36 +1,23 @@
 /*
-Error: Undefined mixin 'sprite'.
-        on line 3 of D:/PhpStormProjects/sod_mobile/app/sass/registration.sass, in `sprite'
-        from line 3 of D:/PhpStormProjects/sod_mobile/app/sass/registration.sass
+Error: Undefined mixin 'generate-framework'.
+        on line 1 of D:/PhpStormProjects/sod_mobile/app/sass/registration.sass, in `generate-framework'
+        from line 1 of D:/PhpStormProjects/sod_mobile/app/sass/registration.sass
 
-1: // icons
-2: .icon-infoplate-warn
-3:     +sprite(icon-infoplate-wran)
-4:     display: inline-block
-5: 
-6: .icon-reg
-7:     &-question
-8:         +sprite(icon-reg-question)
+1: +generate-framework(mb45 mb20 mb15 mb12 mb10)
+2: 
+3: // icons
+4: .icon-infoplate-warn
+5:     +sprite(icon-infoplate-wran)
+6:     display: inline-block
 
 Backtrace:
-D:/PhpStormProjects/sod_mobile/app/sass/registration.sass:3:in `sprite'
-D:/PhpStormProjects/sod_mobile/app/sass/registration.sass:3
+D:/PhpStormProjects/sod_mobile/app/sass/registration.sass:1:in `generate-framework'
+D:/PhpStormProjects/sod_mobile/app/sass/registration.sass:1
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:351:in `block in visit_mixin'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:98:in `block in with_mixin'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:98:in `with_mixin'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:349:in `visit_mixin'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block (2 levels) in visit_rule'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `map'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:433:in `block in visit_rule'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
-C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:431:in `visit_rule'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
 C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
@@ -70,4 +57,4 @@ C:/Ruby22-x64/lib/ruby/gems/2.2.0/gems/sass-3.4.22/vendor/listen/lib/listen/adap
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined mixin 'sprite'.\A         on line 3 of D:/PhpStormProjects/sod_mobile/app/sass/registration.sass, in `sprite'\A         from line 3 of D:/PhpStormProjects/sod_mobile/app/sass/registration.sass\A \A 1: // icons\A 2: .icon-infoplate-warn\A 3:     +sprite(icon-infoplate-wran)\A 4:     display: inline-block\A 5: \A 6: .icon-reg\A 7:     &-question\A 8:         +sprite(icon-reg-question)"; }
+  content: "Error: Undefined mixin 'generate-framework'.\A         on line 1 of D:/PhpStormProjects/sod_mobile/app/sass/registration.sass, in `generate-framework'\A         from line 1 of D:/PhpStormProjects/sod_mobile/app/sass/registration.sass\A \A 1: +generate-framework(mb45 mb20 mb15 mb12 mb10)\A 2: \A 3: // icons\A 4: .icon-infoplate-warn\A 5:     +sprite(icon-infoplate-wran)\A 6:     display: inline-block"; }

@@ -1,6 +1,12 @@
++generate-framework(mb45 mb20 mb15 mb12 mb10)
+
 // icons
 .icon-infoplate-warn
     +sprite(icon-infoplate-wran)
+    display: inline-block
+
+.icon-upload-item
+    +sprite(icon-upload-item)
     display: inline-block
 
 .icon-reg
@@ -109,6 +115,9 @@
 .flex-middle
     align-items: center
 
+.flex-wrap
+    flex-wrap: wrap
+
 .line_wrap
     &.small-mb
         margin-bottom: 10px
@@ -165,3 +174,49 @@
             
 .main_site_wrap
     background: #F7F8FE
+
+.violet_btn
+    &:disabled, &.disabled
+        background-image: linear-gradient(to bottom, #c1c1c1, #a2a2a2)
+        background-image: -webkit-linear-gradient(to bottom, #c1c1c1, #a2a2a2)
+        background-image: -moz-linear-gradient(to bottom, #c1c1c1, #a2a2a2)
+        background-image: -ms-linear-gradient(to bottom, #c1c1c1, #a2a2a2)
+        background-image: -o-linear-gradient(to bottom, #c1c1c1, #a2a2a2)
+
+.registration
+    &-step
+        padding: 15px 0
+        
+        &__header
+            color: #a9a9a9
+    
+        &__title
+            font-size: 17px
+    
+        &__descr
+            color: #393939
+            line-height: 1.5
+        
+    &-mask
+
+    &__upload
+        &-area
+            position: relative
+            background: #f8f8f8
+            border-top: 2px dashed #8890bd
+            border-bottom: 2px dashed #8890bd
+            min-height: 150px
+            margin-left: -15px
+            margin-right: -15px
+
+        &-placeholder
+            position: absolute
+            top: 50%
+            +transform(translateY(-50%))
+            left: 0
+            width: 100%
+            text-align: center
+            color: #6d83ec
+
+.skip-link-style
+    color: #ababab
