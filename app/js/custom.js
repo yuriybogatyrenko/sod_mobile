@@ -426,8 +426,9 @@ function get_body_pos() {
 }
 
 function set_body_pos() {
-    var pos = parseInt($('body').attr('data-wpos'));
-    $('body').css({top: 0})
+    var body = $(body)
+    var pos = parseInt(body.attr('data-wpos'));
+    body.css({top: 0});
     $(window).scrollTop(pos);
 }
 
@@ -457,13 +458,14 @@ App.photosUpload = function (options) {
     plugin.vars.deleteIconsClass = '.icon-reg-delete-mask';
     plugin.vars.cropIconsClass = '.icon-reg-crop-mask';
     plugin.vars.moderationIconClass = '.icon-moderation-middle';
-    plugin.vars.cropClose = plugin.vars.container.find('.js-close-crop');
+    plugin.vars.cropCloseButton = plugin.vars.container.find('.js-close-crop');
+    plugin.vars.closeNoticeClass = '.js-close-notice';
     plugin.vars.input = plugin.vars.container.find('.js-registration__upload-input');
     plugin.vars.containerText = plugin.vars.container.find('.js-registration__upload-placeholder');
     plugin.vars.addedPhotos = 0;
     plugin.vars.photosContainer = plugin.vars.container.find('.registration__upload-units');
     plugin.vars.continueButton = $('.js-crop-continue-button');
-    plugin.vars.cropContainer = plugin.vars.container.closest('.registration-mask__wrapper');
+    plugin.vars.cropContainer = plugin.vars.container.closest('.registration-crop__container');
     plugin.vars.doc = $(document);
     plugin.vars.newPhotosClass = '.registration__upload-added-item';
     plugin.vars.template = function (ev) {
@@ -480,13 +482,35 @@ App.photosUpload = function (options) {
         plugin.bindings();
     };
 
+    plugin.deleteImage = function (bl) {
+        var el = bl.closest(plugin.vars.newPhotosClass);
+        el.css({width: 0});
+        setTimeout(function () {
+            el.remove();
+        }, 300);
+    };
+
     plugin.bindings = function () {
         plugin.vars.doc.on('click', plugin.vars.cropIconsClass, function () {
             plugin.cropOpen();
         });
 
-        plugin.vars.doc.on('click', plugin.vars.deleteIconsClass, function () {
+        plugin.vars.doc.on('click', plugin.vars.cropCloseButton, function () {
             plugin.cropClose();
+        });
+
+        plugin.vars.doc.on('click', plugin.vars.deleteIconsClass, function () {
+            var $this = $(this);
+            console.log($this);
+            plugin.deleteImage($this);
+        });
+
+        plugin.vars.doc.on('click', plugin.vars.newPhotosClass, function () {
+            plugin.showNotice();
+        });
+
+        plugin.vars.doc.on('click', plugin.vars.closeNoticeClass, function () {
+            plugin.hideNotice();
         });
     };
 
@@ -499,7 +523,6 @@ App.photosUpload = function (options) {
     };
 
     plugin.conditionUpdate = function () {
-        console.log(plugin.countUpdate())
         if (plugin.countUpdate() > 0) {
             plugin.vars.containerText.addClass('hidden');
             plugin.vars.continueButton.removeAttr('disabled');
@@ -515,14 +538,14 @@ App.photosUpload = function (options) {
         return array.length;
     };
 
-    plugin.showNotice = function (bl) {
+    plugin.showNotice = function () {
         // show notice
-        bl.classList.add('show-notice-active');
+        document.body.classList.add('show-notice-active');
     };
 
-    plugin.hideNotice = function (bl) {
+    plugin.hideNotice = function () {
         // hide notice
-        bl.classList.remove('show-notice-active');
+        document.body.classList.remove('show-notice-active');
     };
 
     plugin.vars.input.on('change', function () {
@@ -544,7 +567,6 @@ App.photosUpload = function (options) {
                         input.removeAttribute("value");
 
                         plugin.conditionUpdate();
-                        plugin.bindings();
                     }, 20);
                 };
                 reader.readAsDataURL(value)

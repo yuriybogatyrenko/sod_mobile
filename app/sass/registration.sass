@@ -1,6 +1,6 @@
 @import "mixins/mixins"
 
-+generate-framework(mb45 mb20 mb15 mb12 mb10)
++generate-framework(mb45 mb20 mb15 mb12 mb10 mb0)
 
 // icons
 .icon-infoplate-warn
@@ -13,6 +13,9 @@
     vertical-align: middle
 
 .icon-reg
+    &-success
+        +sprite(icon-reg-success)
+
     &-question
         +sprite(icon-reg-question)
 
@@ -183,7 +186,7 @@
         text-decoration: none
         &:hover
             text-decoration: underline
-            
+
 .main_site_wrap
     background: #F7F8FE
 
@@ -198,13 +201,13 @@
 .registration
     &-step
         padding: 15px 0
-        
+
         &__header
             color: #a9a9a9
-    
+
         &__title
             font-size: 17px
-    
+
         &__descr
             color: #393939
             line-height: 1.5
@@ -288,3 +291,30 @@
 
 .skip-link-style
     color: #ababab
+
+.popup-moderation-info
+    position: fixed
+    visibility: hidden
+    opacity: 0
+    +trans
+    top: 50%
+    left: 50%
+    width: 90%
+    background: #fff
+    border-radius: 5px
+    padding: 20px
+    +transform(translate3d(-50%, -50%, 0))
+    max-width: 350px
+    z-index: 50
+    min-width: 280px
+
+body
+    &.show-notice-active
+        .popup-moderation-info
+            visibility: visible
+            opacity: 1
+
+        .main_site_wrap
+            filter: blur(3px)
+            -webkit-filter: blur(3px)
+            -ms-filter: blur(3px)
