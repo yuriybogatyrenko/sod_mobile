@@ -1,3 +1,5 @@
+@import "mixins/mixins"
+
 +generate-framework(mb45 mb20 mb15 mb12 mb10)
 
 // icons
@@ -8,6 +10,7 @@
 .icon-upload-item
     +sprite(icon-upload-item)
     display: inline-block
+    vertical-align: middle
 
 .icon-reg
     &-question
@@ -36,6 +39,15 @@
 
     &-tatler
         +sprite(icon-reg-tatler)
+
+    &-moderation-middle
+        +sprite(icon-moderation-middle)
+
+    &-crop-mask
+        +sprite(icon-crop-mask)
+
+    &-delete-mask
+        +sprite(icon-delete-mask)
 
     &-video
         +retina-bg("icon-reg-video.jpg", "icon-reg-video@2x.jpg")
@@ -196,8 +208,6 @@
         &__descr
             color: #393939
             line-height: 1.5
-        
-    &-mask
 
     &__upload
         &-area
@@ -208,6 +218,22 @@
             min-height: 150px
             margin-left: -15px
             margin-right: -15px
+            padding: 40px 25px
+            text-align: left
+
+            .registration__upload-input
+                position: absolute
+                width: 100% !important
+                height: 100% !important
+                z-index: 2
+                opacity: 0
+                display: block
+                margin: 0
+                left: 0
+                top: 0
+
+        &-units
+            margin-right: -15px
 
         &-placeholder
             position: absolute
@@ -217,6 +243,48 @@
             width: 100%
             text-align: center
             color: #6d83ec
+            +trans
+
+            &.hidden
+                display: block
+                opacity: 0
+
+        &-item
+            font-size: 0
+            width: 80px
+            vertical-align: middle
+            border-radius: 8px
+            background: #fff
+            line-height: 80px
+            height: 80px
+            text-align: center
+            margin-right: 15px
+            +trans
+
+            .icon-reg-delete-mask
+                position: absolute
+                top: -5px
+                left: -5px
+                cursor: pointer
+
+            .icon-reg-crop-mask
+                position: absolute
+                top: 50%
+                left: 50%
+                cursor: pointer
+                +transform(translate3d(-50%, -50%, 0))
+
+        &-added-item
+            position: relative
+            z-index: 5
+
+        &-image
+            border-radius: 8px
+            height: 100%
+            width: 100%
+            object-fit: cover
+
+
 
 .skip-link-style
     color: #ababab
