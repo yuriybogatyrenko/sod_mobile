@@ -228,8 +228,9 @@ gulp.task('watch', function () {
     // gulp.watch(sources.sass.watch, ['sass']);
     gulp.watch(sources.sass.watch, ['compass']);
     // gulp.watch(sources.pug.watch, ["pug"]);
-    gulp.watch(sources.twig.watch, ["twig"]);
+    // gulp.watch(sources.twig.watch, ["twig"]);
     gulp.watch(sources.js.watch).on('change', browserSync.reload);
+    gulp.watch(sources.html.src).on('change', browserSync.reload);
 });
 
-gulp.task('default', ['browser-sync', 'twig', 'compass', 'watch']);
+gulp.task('default', ['browser-sync', 'compass', 'watch']);

@@ -1,19 +1,21 @@
-(function () {
-    Zolushka = function (doc) {
+var ZOLUSHKA = (function () {
+
+    function ZOLUSHKA() {
         var _self = this;
 
         _self.doc = document;
         _self.window = window;
+        _self.html = _self.doc.querySelector('html');
 
         _self.bootstrap();
     };
 
-    Zolushka.prototype.bootstrap = function () {
+    ZOLUSHKA.prototype.bootstrap = function () {
         var _self = this;
     };
 
     // Window load types (loading, dom, full)
-    Zolushka.prototype.appLoad = function (type, callback) {
+    ZOLUSHKA.prototype.appLoad = function (type, callback) {
         var _self = this;
 
         switch (type) {
@@ -38,7 +40,7 @@
         }
     };
 
-    Zolushka.prototype.photosUpload = function (options) {
+    ZOLUSHKA.prototype.photosUpload = function (options) {
         var _self = this;
         var plugin = {};
 
@@ -56,6 +58,7 @@
         plugin.vars.continueButton = $('.js-crop-continue-button');
         plugin.vars.cropContainer = plugin.vars.container.closest('.registration-crop__container');
         plugin.vars.doc = $(document);
+        plugin.vars.cropPreloader = _self.doc.querySelector('.crop-preloader');
         plugin.vars.newPhotosClass = '.registration__upload-added-item';
         plugin.vars.template = function (ev) {
             return '' +
@@ -69,7 +72,6 @@
 
         plugin.init = function () {
             plugin.bindings();
-            console.log(_self);
         };
 
         plugin.deleteImage = function (bl) {
@@ -102,6 +104,16 @@
             plugin.vars.doc.on('click', plugin.vars.closeNoticeClass, function () {
                 plugin.hideNotice();
             });
+        };
+
+        plugin.showCropPreloader = function () {
+            _self.html.classList.add('modal-open');
+            _self.doc.querySelector('.crop-preloader').classList.add('active');
+        };
+
+        plugin.hideCropPreloader = function () {
+            _self.html.classList.remove('modal-open');
+            _self.doc.querySelector('.crop-preloader').classList.remove('active');
         };
 
         plugin.cropOpen = function () {
@@ -170,28 +182,49 @@
             return plugin;
     };
 
-    Zolushka.prototype.registration = function (step) {
+    ZOLUSHKA.prototype.registration = function (step) {
         var _self = this;
         var plugin = {};
 
-        plugin.currentStep = step;
+        plugin.currentStep = 1;
 
-        plugin.init = function () {
-            plugin.switchStep(step);
+        plugin.bindings = function () {
+            $('.js-call-photo-terms').on('click', function () {
+                plugin.showImageTerms();
+            });
+
+            $('.js-close-reg-popup').on('click', function () {
+                plugin.hideImageTerms();
+            });
+
+            return false;
         };
 
         plugin.switchStep = function (step) {
-            console.log(step);
+            if (step)
+                console.log(step);
+
+            return false;
         };
 
         plugin.changeStep = function () {
-            if(plugin.validateStep() != true)
+            if (plugin.validateStep() != true)
                 return false;
         };
 
         plugin.validateStep = function () {
             // here validate form and return true or false // default: true
             return true;
+        };
+
+        plugin.showImageTerms = function () {
+            _self.html.classList.add('modal-open');
+            _self.doc.querySelector('.popup-photo-terms').classList.add('active');
+        };
+
+        plugin.hideImageTerms = function () {
+            _self.html.classList.remove('modal-open');
+            _self.doc.querySelector('.popup-photo-terms').classList.remove('active');
         };
 
         plugin.switchBlocks = function (closing, opening) {
@@ -207,13 +240,21 @@
             bl.hide();
         };
 
-        if(step)
+        plugin.init = function () {
+
+            console.log('hi');
+            // plugin.switchStep(plugin.currentStep);
+
+            plugin.bindings();
+        };
+
+        if (step)
             plugin.init();
 
         return plugin;
     };
 
-    Zolushka.prototype.form = function () {
+    ZOLUSHKA.prototype.form = function () {
         var _self = this;
         var plugin = {};
 
@@ -232,7 +273,7 @@
         };
 
         plugin.showFormPreloader = function (form) {
-            if(!form.find('.form-preloader').lenght > 0)
+            if (!form.find('.form-preloader').lenght > 0)
                 plugin.addFormPreloader(form);
             form.addClass('preloader-active');
         };
@@ -244,16 +285,17 @@
         return plugin;
     };
 
-    var app = new Zolushka(document);
-
-
-    app.appLoad('full', function (e) {
-
-        app.registration(1);
-
-        app.photosUpload({
-            className: '.registration__upload-area'
-        });
-    });
-
+    return ZOLUSHKA;
 })();
+
+var app = new ZOLUSHKA();
+
+
+app.appLoad('full', function (e) {
+
+    var registration = app.registration(1);
+
+    var photos = app.photosUpload({
+        className: '.registration__upload-area'
+    });
+});
