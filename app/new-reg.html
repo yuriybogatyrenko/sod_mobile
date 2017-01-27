@@ -78,16 +78,16 @@
     </header>
 
     <!-- START registration-step1 -->
-    <div class="registration-step registration-step1 text-center" data-step="upload-photo">
+    <div class="registration-step hidden-step registration-step1 text-center" data-step="upload-photo">
         <div class="container">
             <div class="registration-step__inner-wrapper">
                 <div class="registration-step__content fill-full">
                     <div class="registration-step__header mb10">Шаг 1 из 3. Добавление фото.</div>
                     <div class="registration-step__title ffr">Создайте Вашу <br>конфиденциальную фотографию</div>
-                    <div class="registratioin-mask__placeholders">
+                    <div class="registratioin-mask__placeholders js-registration-step1__can-be-hidden">
                         <i class="icon-mask-placeholder"></i>
                     </div>
-                    <div class="registration-step__descr ffr">
+                    <div class="js-registration-step1__can-be-hidden registration-step__descr ffr">
                         Чтобы сохранить вашу анонимность, мы сделали мужские анкеты не доступными для
                         незарегистрированных
                         пользователей.
@@ -96,33 +96,36 @@
                     </div>
 
                     <div class="registration-mask__wrapper">
-                        <div class="registration-mask__photo-requirements text-center mb20">
-                            <a href="#" class="js-call-photo-terms purple_link tdn dib ffr">Требования к фото</a>
+                        <div class="registration-mask__photo-requirements text-center mb20 js-registration-step1__can-be-hidden">
+                            <a href="#" data-popup-name="terms" class="js-open-reg-popup purple_link tdn dib ffr">Требования к фото</a>
                         </div>
-                        <div class="registration__upload-area mb15 hidden">
+                        <div class="registration__upload-area mb15 custom-hidden js-registration__step1-comes-visible">
                             <div class="registration__upload-units display-flex flex-wrap">
                                 <div class="registration__upload-item">
                                     <i class="icon-upload-item"></i>
                                 </div>
                             </div>
-                            <div class="js-registration__upload-placeholder registration__upload-placeholder">
-                                <i class="icon-upload-item"></i>
-                                <p class="fz16 ffr">Добавить фотографии</p>
-                            </div>
-
                             <input type="file"
                                    class="js-registration__upload-input registration__upload-input">
                         </div>
                     </div>
                 </div>
-                <div class="registration-step__bottom-content">
+                <div class="registration-step__bottom-content js-registration-step1__can-be-hidden">
                     <div class="violet_btn db mb15 posr">
                         Добавить фото
                         <input type="file"
                                class="js-registration__upload-input registration__upload-input">
                     </div>
                     <div>
-                        <a href="#" class="skip-link-style">Пропустить</a>
+                        <a href="#" class="js-change-step skip-link-style" data-moveto-step="two">Пропустить</a>
+                    </div>
+                </div>
+                <div class="registration-step__bottom-content custom-hidden js-registration__step1-comes-visible">
+                    <div class="js-change-step violet_btn db mb15 posr" data-moveto-step="two">
+                        Продолжить
+                    </div>
+                    <div>
+                        <a href="#" class="js-change-step skip-link-style" data-moveto-step="two">Пропустить</a>
                     </div>
                 </div>
             </div>
@@ -131,7 +134,7 @@
     <!-- // END registration-step1 -->
 
     <!-- START registration-step2 -->
-    <div class="registration-step registration-step2 text-center" data-step="two">
+    <div class="registration-step hidden-step registration-step2 text-center" data-step="two">
         <div class="container">
             <div class="registration-step__header mb15">Шаг 2 из 3. Защита анкеты</div>
             <div class="registration-step__title mb12 ffr">Защитите Вашу анкету</div>
@@ -139,7 +142,7 @@
                 Чтобы сделать доступ к учетной записи безопасным, добавьте свой номер мобильного телефона, на который мы
                 вышлем бесплатное СМС с кодом подтверждения.
             </div>
-            <form action="#" class="mb15 posr">
+            <form action="#" class="mb15 posr" data-validate-form="empty">
                 <div class="form-line mb20 mb15 posr">
                     <input type="number" placeholder="Код из смс">
                     <div class="form-error-tooltip">Неверный код</div>
@@ -148,12 +151,13 @@
                     <button class="violet_btn db">Отправить</button>
                 </div>
                 <div>
-                    <a href="#" class="light-link-style ffr">Выслать другой код</a>
+                    <a href="#" class="js-change-step light-link-style ffr" data-moveto-step="right-mail">Выслать другой код</a>
                 </div>
 
                 <i class="form-preloader"></i>
                 <div class="form-notification ffl text-center">
-                    Готово!
+                    <div class="mb10">Готово!</div>
+                    <div><a href="#" class="js-change-step violet_btn" data-moveto-step="three">Продолжить</a></div>
                 </div>
             </form>
             <p class="ffr fz12 text-grey">Данная информация необходима для защиты учетной записи. Мы ни кому не
@@ -165,7 +169,7 @@
     <!-- // END registration-step2 -->
 
     <!-- START registration-step3 -->
-    <div class="registration-step registration-step3 text-center" data-step="three">
+    <div class="registration-step hidden-step registration-step3 text-center" data-step="three">
         <div class="container">
             <div class="registration-step__header mb15">Шаг 3 из 3. Защита анкеты</div>
             <div class="registration-step__title mb12 ffr">Заполните Вашу анкету</div>
@@ -283,7 +287,7 @@
                 </div>
                 <div class="form-line form-separator mb20"></div>
                 <div class="form-line mb40">
-                    <button class="violet_btn db">Продолжить</button>
+                    <button class="js-change-step violet_btn db" data-moveto-step="confirm">Продолжить</button>
                 </div>
                 <div><a href="#" class="skip-link-style">Пропустить</a></div>
             </form>
@@ -292,7 +296,7 @@
     <!-- // END registration-step3 -->
 
     <!-- START registration-mail-confirm -->
-    <div class="registration-step registration-mail-confirm text-center ffr" data-step="confirm">
+    <div class="registration-step hidden-step registration-mail-confirm text-center ffr" data-step="confirm">
         <div class="container">
             <form action="#" class="registration-step__inner-wrapper">
                 <div class="registration-step__content fill-full">
@@ -308,7 +312,7 @@
                 </div>
                 <div class="registration-step__bottom-content">
                     <p>
-                        <button class="violet_btn db">Отправить</button>
+                        <button class="js-change-step violet_btn db" data-moveto-step="congratulations">Отправить</button>
                     </p>
                 </div>
             </form>
@@ -317,7 +321,7 @@
     <!-- // END registration-mail-confirm -->
 
     <!-- START registration-right-mail-confirm -->
-    <div class="registration-step registration-right-mail-confirm text-center ffr" data-step="right-mail">
+    <div class="registration-step hidden-step registration-right-mail-confirm text-center ffr" data-step="right-mail">
         <div class="container">
             <form action="#" class="registration-step__inner-wrapper">
                 <div class="registration-step__content fill-full">
@@ -325,31 +329,50 @@
                     <p><input type="email"></p>
                 </div>
                 <div class="registration-step__bottom-content">
-                    <button class="violet_btn db" disabled>Продолжить</button>
+                    <button class="js-change-step violet_btn db" data-moveto-step="right-mail-submit">Продолжить</button>
                 </div>
             </form>
         </div>
     </div>
     <!-- // END registration-right-mail-confirm -->
 
-    <!-- START registration-congritulations -->
-    <div class="registration-step registration-congritulations text-center ffr" data-step="congritulations">
+    <!-- START registration-right-mail-submit-confirm -->
+    <div class="registration-step hidden-step registration-right-mail-submit-confirm text-center ffr" data-step="right-mail-submit">
         <div class="container">
-            <div class="registration-step__inner-wrapper">
+            <form action="#" class="registration-step__inner-wrapper">
                 <div class="registration-step__content fill-full">
-                    <i class="icon-reg-success mb15"></i>
-                    <div class="registration-step__title mb12 ffr">Поздравляем, <br>Вы зарегистрированы</div>
+                    <div class="registration-step__title mb12 ffr">Укажите правильную почту для регистрации</div>
+                    <div class="registration-step__descr black mb20">Для активации анкеты подтвердите почту. Для этого перейдите по ссылке в письме, которое мы отправили на info@me.com</div>
+                    <p><input type="email"></p>
                 </div>
                 <div class="registration-step__bottom-content">
-                    <a href="#" class="violet_btn db">Продолжить</a>
+                    <button class="js-change-step violet_btn db" data-moveto-step="confirm">Отправить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <!-- // END registration-right-mail-submit-confirm -->
+
+    <!-- START registration-congratulations -->
+    <div class="registration-step hidden-step registration-congratulations text-center ffr" data-step="congratulations">
+        <div class="container">
+            <div class="registration-step__inner-wrapper">
+                <div class="registration-step__content display-flex fill-full">
+                    <div class="dib vam">
+                        <i class="icon-reg-success mb15"></i>
+                        <div class="registration-step__title mb12 ffr">Поздравляем, <br>Вы зарегистрированы</div>
+                    </div>
+                </div>
+                <div class="registration-step__bottom-content">
+                    <a href="#" class="js-change-step violet_btn db" data-moveto-step="thanks">Продолжить</a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- // END registration-congritulations -->
+    <!-- // END registration-congratulations -->
 
     <!-- START registration-registration -->
-    <div class="registration-step registration-registration text-center ffr" data-step="right-mail">
+    <div class="registration-step hidden-step registration-registration text-center ffr" data-step="thanks">
         <div class="container">
             <div class="registration-step__inner-wrapper">
                 <div class="registration-step__content fill-full">
@@ -375,7 +398,7 @@
     <!-- // END registration-registration -->
 </div>
 
-<div class="popup-photo-terms reg-popup fz12 text-left">
+<div class="popup-photo-terms reg-popup fz12 text-left" data-popup="terms">
     <i class="js-close-reg-popup close-popup"></i>
     <p class="popup-photo-terms__title fz18 mb15 ffr text-center">Требования к фото:</p>
     <p class="ffm mb5 text-center">Допускаются фотографии:</p>
@@ -408,15 +431,21 @@
     <div class="text-center"><a href="#" class="js-close-reg-popup purple_link fz16 tdn">Закрыть</a></div>
 </div>
 
-<div class="popup-moderation-info text-center">
+<div class="popup-moderation-info text-center reg-popup" data-popup="moderation-notice">
     <p class="mb12"><i class="icon-reg-success"></i></p>
     <p class="mb0 ffr">Фото добавлено и отправлено на модерацию</p>
     <p class="mb20 ffr">Сейчас это фото не видно другим пользователям</p>
-    <p><a href="#" class="js-close-notice purple_link tdn">Понятно</a></p>
+    <p><a href="#" class="js-close-reg-popup purple_link tdn">Понятно</a></p>
 </div>
 
 <div class="crop-preloader">
     <i class="icon-crop-preloader"></i>
+</div>
+
+<div class="photos-upload__action-popup reg-popup fz21" data-popup="edit-element">
+    <a href="#" class="js-close-reg-popup js-open-crop photos-upload__action-link photos-upload__action-link_edit">Редактировать</a>
+    <a href="#" class="js-close-reg-popup js-delete-upload-element photos-upload__action-link photos-upload__action-link_delete mb10">Удалить</a>
+    <a href="#" class="js-close-reg-popup photos-upload__action-link photos-upload__action-link_cancel">Отмена</a>
 </div>
 
 <div class="--langs-popup__body">

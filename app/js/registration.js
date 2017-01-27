@@ -46,12 +46,12 @@ var ZOLUSHKA = (function () {
 
         plugin.vars = {};
         plugin.vars.container = $(options.className);
-        plugin.vars.deleteIconsClass = '.icon-reg-delete-mask';
-        plugin.vars.cropIconsClass = '.icon-reg-crop-mask';
-        plugin.vars.moderationIconClass = '.icon-moderation-middle';
+        plugin.vars.deleteIconsClass = '.js-delete-upload-element';
+        plugin.vars.cropIconsClass = '.js-open-crop';
+        plugin.vars.moderationIconClass = '.icon-reg-moderation-middle';
+        plugin.vars.editIconClass = '.icon-reg-crop-edit';
         plugin.vars.cropCloseButton = plugin.vars.container.find('.js-close-crop');
-        plugin.vars.closeNoticeClass = '.js-close-notice';
-        plugin.vars.input = plugin.vars.container.find('.js-registration__upload-input');
+        plugin.vars.input = $('.js-registration__upload-input');
         plugin.vars.containerText = plugin.vars.container.find('.js-registration__upload-placeholder');
         plugin.vars.addedPhotos = 0;
         plugin.vars.photosContainer = plugin.vars.container.find('.registration__upload-units');
@@ -60,13 +60,13 @@ var ZOLUSHKA = (function () {
         plugin.vars.doc = $(document);
         plugin.vars.cropPreloader = _self.doc.querySelector('.crop-preloader');
         plugin.vars.newPhotosClass = '.registration__upload-added-item';
+        plugin.imagesCount = 0;
         plugin.vars.template = function (ev) {
             return '' +
-                '<div class="registration__upload-item registration__upload-added-item" style="width: 0;">' +
+                '<div data-item-key="' + plugin.imagesCount + '" class="registration__upload-item registration__upload-added-item" style="width: 0;">' +
                 '<img src="' + ev.target.result + '" class="registration__upload-image" alt="">' +
-                '<i class="icon-moderation-middle"></i>' +
-                '<i class="icon-reg-delete-mask"></i>' +
-                '<i class="icon-reg-crop-mask"></i>' +
+                '<i class="js-open-popup icon-reg-moderation-middle" data-popup-name="moderation-notice"></i>' +
+                '<i data-element-key="' + plugin.imagesCount + '" class="js-open-popup icon-reg-crop-edit" data-popup-name="edit-element"></i>' +
                 '</div>';
         };
 
@@ -74,8 +74,8 @@ var ZOLUSHKA = (function () {
             plugin.bindings();
         };
 
-        plugin.deleteImage = function (bl) {
-            var el = bl.closest(plugin.vars.newPhotosClass);
+        plugin.deleteImage = function (key) {
+            el = $(plugin.vars.newPhotosClass).filter('[data-item-key="' + key + '"]');
             el.css({width: 0});
             setTimeout(function () {
                 el.remove();
@@ -93,16 +93,17 @@ var ZOLUSHKA = (function () {
 
             plugin.vars.doc.on('click', plugin.vars.deleteIconsClass, function () {
                 var $this = $(this);
-                console.log($this);
-                plugin.deleteImage($this);
+                plugin.deleteImage($this.attr('data-element-key'));
             });
 
-            plugin.vars.doc.on('click', plugin.vars.newPhotosClass, function () {
-                plugin.showNotice();
+            plugin.vars.doc.on('click', plugin.vars.moderationIconClass, function () {
+                _self.popups().popupOpen('moderation-notice');
             });
 
-            plugin.vars.doc.on('click', plugin.vars.closeNoticeClass, function () {
-                plugin.hideNotice();
+            plugin.vars.doc.on('click', plugin.vars.editIconClass, function () {
+                var key = this.getAttribute('data-element-key');
+                $('[data-popup="edit-element"]').find('.js-delete-upload-element').attr('data-element-key', key);
+                _self.popups().popupOpen('edit-element');
             });
         };
 
@@ -140,16 +141,6 @@ var ZOLUSHKA = (function () {
             return array.length;
         };
 
-        plugin.showNotice = function () {
-            // show notice
-            document.html.classList.add('show-notice-active');
-        };
-
-        plugin.hideNotice = function () {
-            // hide notice
-            document.html.classList.remove('show-notice-active');
-        };
-
         plugin.vars.input.on('change', function () {
             if (this.files && this.files[0] && window.FileReader) {
                 // console.log(this.files);
@@ -160,10 +151,27 @@ var ZOLUSHKA = (function () {
                     var input = _this;
                     var reader = new FileReader();
 
+                    // open crop preloader
+                    plugin.showCropPreloader();
+
                     reader.onload = function (e) {
+                        // hide crop preloader
+                        plugin.hideCropPreloader();
+                        plugin.imagesCount += 1;
+
+                        // switch block to upload area
+                        _self
+                            .registration()
+                            .switchBlocks(
+                                $('.js-registration-step1__can-be-hidden'),
+                                $('.js-registration__step1-comes-visible')
+                            );
+
+                        // insert image into upload area
                         plugin.vars.photosContainer
                             .append(plugin.vars.template(e));
 
+                        // make some animation
                         setTimeout(function () {
                             $(plugin.vars.newPhotosClass).removeAttr('style');
                             input.removeAttribute("value");
@@ -186,35 +194,63 @@ var ZOLUSHKA = (function () {
         var _self = this;
         var plugin = {};
 
-        plugin.currentStep = 1;
+        plugin.currentStep = step;
+        if(_self.doc.location.hash != '') {
+            plugin.currentStep = _self.doc.location.hash.replace('#', '');
+        }
 
         plugin.bindings = function () {
-            $('.js-call-photo-terms').on('click', function () {
-                plugin.showImageTerms();
-            });
+            var steps = _self.doc.querySelectorAll('.js-change-step');
+            for (i = 0; i < steps.length; i++) {
+                steps[i].addEventListener('click', function (e) {
+                    e.preventDefault();
+                    var step = this.getAttribute('data-moveto-step');
 
-            $('.js-close-reg-popup').on('click', function () {
-                plugin.hideImageTerms();
-            });
+                    plugin.switchStep(step);
+                });
+            }
 
-            return false;
+            var regForms = _self.doc.querySelectorAll('[data-validate-form]');
+            for (i = 0; i < regForms.length; i++) {
+                plugin.validateStep(regForms[i]);
+            }
         };
 
         plugin.switchStep = function (step) {
-            if (step)
-                console.log(step);
+            var stepBlocks = document.querySelectorAll('[data-step]');
 
-            return false;
+            for (i = 0; i < stepBlocks.length; i++) {
+                if (stepBlocks[i].getAttribute('data-step') != step)
+                    stepBlocks[i].classList.add('hidden-step');
+                else {
+                    stepBlocks[i].classList.remove('hidden-step');
+                    _self.doc.location.hash = step;
+                }
+            }
         };
 
-        plugin.changeStep = function () {
-            if (plugin.validateStep() != true)
+        plugin.validateStep = function (bl) {
+            bl.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                //simple validation on empty field
+                var input = this.querySelector('input');
+                if (input && input.value != '') {
+                    input.classList.remove('error');
+                    // show form preloader
+                    _self.form().showFormPreloader($(bl));
+
+                    // remove form preloader in server response
+                    setTimeout(function () {
+                        _self.form().hideFormPreloader($(bl));
+                        _self.form().showFormNotification($(bl));
+                    }, 2000);
+                } else if (input && input.value == '') {
+                    input.classList.add('error');
+                }
+
                 return false;
-        };
-
-        plugin.validateStep = function () {
-            // here validate form and return true or false // default: true
-            return true;
+            });
         };
 
         plugin.showImageTerms = function () {
@@ -229,7 +265,7 @@ var ZOLUSHKA = (function () {
 
         plugin.switchBlocks = function (closing, opening) {
             plugin.showBlock(opening);
-            plugin.hideBlock(opening);
+            plugin.hideBlock(closing);
         };
 
         plugin.showBlock = function (bl) {
@@ -241,9 +277,7 @@ var ZOLUSHKA = (function () {
         };
 
         plugin.init = function () {
-
-            console.log('hi');
-            // plugin.switchStep(plugin.currentStep);
+            plugin.switchStep(plugin.currentStep);
 
             plugin.bindings();
         };
@@ -273,7 +307,7 @@ var ZOLUSHKA = (function () {
         };
 
         plugin.showFormPreloader = function (form) {
-            if (!form.find('.form-preloader').lenght > 0)
+            if (!form.find('.form-preloader').length > 0)
                 plugin.addFormPreloader(form);
             form.addClass('preloader-active');
         };
@@ -281,6 +315,59 @@ var ZOLUSHKA = (function () {
         plugin.hideFormPreloader = function (form) {
             form.removeClass('preloader-active');
         };
+
+        plugin.showFormNotification = function (form) {
+            form.addClass('show-form-notification');
+        };
+
+        plugin.hideFormNotification = function (form) {
+            form.removeClass('show-form-notification');
+        };
+
+        return plugin;
+    };
+
+    ZOLUSHKA.prototype.popups = function () {
+        var _self = this;
+
+        var plugin = {};
+
+        plugin.init = function () {
+            plugin.bindings();
+        };
+
+        plugin.bindings = function () {
+            $('.js-open-reg-popup').on('click', function () {
+                console.log(this)
+                plugin.popupOpen(this.getAttribute('data-popup-name'));
+            });
+
+            $('.js-close-reg-popup').on('click', function () {
+                if (this.hasAttribute('data-popup-name')) {
+                    plugin.popupClose(this.getAttribute('data-popup-name'));
+                } else {
+                    plugin.popupClose($(this).closest('.reg-popup').attr('data-popup'));
+                }
+            });
+        };
+
+        plugin.popupOpen = function (name) {
+            _self.html.classList.add('modal-open');
+            document.body.style.overflow = 'scroll';
+
+            var popup = _self.doc.querySelector('[data-popup="' + name + '"]');
+            popup.classList.add('active')
+        };
+
+        plugin.popupClose = function (name) {
+            _self.html.classList.remove('modal-open');
+            document.body.style.overflow = 'initial';
+
+            var popup = _self.doc.querySelector('[data-popup="' + name + '"]');
+            popup.classList.remove('active');
+        };
+
+        plugin.init();
 
         return plugin;
     };
@@ -293,9 +380,13 @@ var app = new ZOLUSHKA();
 
 app.appLoad('full', function (e) {
 
-    var registration = app.registration(1);
+    app.popups();
+
+    var registration = app.registration("upload-photo");
 
     var photos = app.photosUpload({
         className: '.registration__upload-area'
     });
+
+    // photos.init();
 });
