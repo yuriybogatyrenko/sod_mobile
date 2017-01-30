@@ -337,12 +337,18 @@ var ZOLUSHKA = (function () {
         };
 
         plugin.bindings = function () {
-            $('.js-open-reg-popup').on('click', function () {
-                console.log(this)
+            $('.js-open-reg-popup').on('click', function (e) {
+                e.preventDefault();
                 plugin.popupOpen(this.getAttribute('data-popup-name'));
             });
 
-            $('.js-close-reg-popup').on('click', function () {
+            $('.js-switch-reg-popup').on('click', function (e) {
+                e.preventDefault();
+                plugin.switchPopup(this.getAttribute('data-popup-close-name'), this.getAttribute('data-popup-name'));
+            });
+
+            $('.js-close-reg-popup').on('click', function (e) {
+                e.preventDefault();
                 if (this.hasAttribute('data-popup-name')) {
                     plugin.popupClose(this.getAttribute('data-popup-name'));
                 } else {
@@ -365,6 +371,11 @@ var ZOLUSHKA = (function () {
 
             var popup = _self.doc.querySelector('[data-popup="' + name + '"]');
             popup.classList.remove('active');
+        };
+
+        plugin.switchPopup = function (closeName, openName) {
+            plugin.popupClose(closeName);
+            plugin.popupOpen(openName);
         };
 
         plugin.init();

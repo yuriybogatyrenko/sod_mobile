@@ -390,12 +390,40 @@
 
                 <div class="registration-step__bottom-content">
                     <p class="mb20"><a href="#" class="violet_btn db">Перейти в поиск</a></p>
-                    <p class="mb0"><a href="#" class="light-link-style">Указать другую почту</a></p>
+                    <p class="mb0"><a href="#" class="js-change-step light-link-style" data-moveto-step="right-mail-submit">Указать другую почту</a></p>
                 </div>
             </div>
         </div>
     </div>
     <!-- // END registration-registration -->
+</div>
+
+<div class="reg-popup popup-crop text-center" data-popup="crop-popup">
+    <div class="container popup-crop__container">
+        <div class="popup-crop__title mb15">Выберите один из фильтров <br>или просто кадрируйте фотографию</div>
+        <div class="popup-crop__masks display-flex space-between mb15">
+            <a href="#" class="popup-crop__masks-item"><i class="icon-photo-mask1"></i></a>
+            <a href="#" class="popup-crop__masks-item"><i class="icon-photo-mask2"></i></a>
+            <a href="#" class="popup-crop__masks-item"><i class="icon-photo-mask3"></i></a>
+            <a href="#" class="popup-crop__masks-item"><i class="icon-photo-mask4"></i></a>
+            <a href="#" class="popup-crop__masks-item"><i class="icon-photo-mask5"></i></a>
+        </div>
+        <div class="popup-crop__plugin">
+            <div class="popup-crop__plugin-area mb15">
+                <img alt="" src="http://placehold.it/320x320"/>
+            </div>
+            <div class="popup-crop__plugin-button display-flex space-between">
+                <a href="#" class="js-close-reg-popup popup-crop__cross">
+                    <i class="icon-mask-cross mr5"></i>
+                    <span class="dib vam">Без фильтра</span>
+                </a>
+                <a href="#" class="js-close-reg-popup popup-crop__success">
+                    <i class="icon-mask-success mr5"></i>
+                    <span class="dib vam">Готово</span>
+                </a>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div class="popup-photo-terms reg-popup fz12 text-left" data-popup="terms">
@@ -443,7 +471,7 @@
 </div>
 
 <div class="photos-upload__action-popup reg-popup fz21" data-popup="edit-element">
-    <a href="#" class="js-close-reg-popup js-open-crop photos-upload__action-link photos-upload__action-link_edit">Редактировать</a>
+    <a href="#" class="js-switch-reg-popup photos-upload__action-link photos-upload__action-link_edit" data-popup-name="crop-popup" data-popup-close-name="edit-element">Редактировать</a>
     <a href="#" class="js-close-reg-popup js-delete-upload-element photos-upload__action-link photos-upload__action-link_delete mb10">Удалить</a>
     <a href="#" class="js-close-reg-popup photos-upload__action-link photos-upload__action-link_cancel">Отмена</a>
 </div>
