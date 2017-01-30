@@ -1,0 +1,75 @@
+@import "mixins/mixins"
+
+.green_btn-round
+    background: linear-gradient(to bottom, #48ddb0, #3fd0a5)
+    background: -webkit-linear-gradient(to bottom, #48ddb0, #3fd0a5)
+    background: -moz-linear-gradient(to bottom, #48ddb0, #3fd0a5)
+    background: -ms-linear-gradient(to bottom, #48ddb0, #3fd0a5)
+    background: -o-linear-gradient(to bottom, #48ddb0, #3fd0a5)
+    box-shadow: 0 1px 3px 0 rgba(63, 208, 165, 0.7)
+    display: inline-block
+    vertical-align: middle
+    line-height: 40px
+    padding: 0 40px
+    border-radius: 50px
+
+.premium-page
+    &__header
+        color: #fff
+        padding: 20px 0
+        +retina-bg("premium-first-screen.jpg", "premium-first-screen@2x.jpg")
+        background-size: cover !important
+
+    &__note
+        padding-left: 20px
+        position: relative
+        color: #585858
+
+    &__section
+        padding: 20px 0
+
+    &__feedbacks
+        background: rgba(#8e94be, 0.1)
+        padding-top: 30px
+        padding-bottom: 30px
+
+    &__abilities-listing
+        color: #585858
+        
+    &__warning
+        background: #f2535c
+        color: #fff
+        padding: 15px 0
+
+    &__feedbacks
+        &-inner
+            margin-left: -15px
+            margin-right: -15px
+
+        &-text
+            width: calc(100% - 126px)
+            padding-right: 15px
+
+// icons
+
+.icon-premium-crown
+    +sprite(icon-premium-crown)
+
+.icon-premium-chat
+    +sprite(icon-premium-chat)
+
+.icon-premium-settings
+    +sprite(icon-premium-settings)
+
+.icon-premium-arrows
+    +sprite(icon-premium-arrows)
+    
+.icon-premium-note
+    position: absolute
+    color: #fa6161
+    font-size: 25px
+    left: 0
+    top: 0
+
+.icon-premium-feedbacks
+    +sprite(icon-premium-feedbacks)
