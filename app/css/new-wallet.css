@@ -19,4 +19,30 @@
   content: "";
 }
 
+.club-card {
+  border-radius: 14px;
+  width: 290px;
+  height: 184px;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background-image: linear-gradient(-120deg, #e2adea, #d663c6);
+  background-image: -webkit-linear-gradient(-120deg, #e2adea, #d663c6);
+  background-image: -moz-linear-gradient(-120deg, #e2adea, #d663c6);
+  background-image: -ms-linear-gradient(-120deg, #e2adea, #d663c6);
+  background-image: -o-linear-gradient(-120deg, #e2adea, #d663c6);
+  color: #ffffff;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+}
+
+.club-card__duration {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.content_with_margins .club-card__descr p {
+  margin-bottom: 20px;
+}
+
 /*# sourceMappingURL=new-wallet.css.map */
