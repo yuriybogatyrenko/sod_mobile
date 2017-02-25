@@ -356,7 +356,7 @@
   }
 }
 .icon-reg-video {
-  background-image: url('../images/icon-reg-video.jpg?1484538938');
+  background-image: url('../images/icon-reg-video.jpg?1488009250');
   background-size: cover;
   height: 146px;
   width: 253px;
@@ -364,7 +364,7 @@
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
   .icon-reg-video {
-    background-image: url('../images/icon-reg-video@2x.jpg?1484538938');
+    background-image: url('../images/icon-reg-video@2x.jpg?1488009250');
     background-size: 253px 146px;
   }
 }
@@ -648,10 +648,6 @@
 }
 .purple_link.tdn:hover {
   text-decoration: underline;
-}
-
-.main_site_wrap {
-  background: #F7F8FE;
 }
 
 .violet_btn:disabled, .violet_btn.disabled {

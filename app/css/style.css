@@ -136,8 +136,10 @@ a, a:hover, a:active, a:focus {
   min-width: 320px;
   position: relative;
   padding-bottom: 140px;
-  min-height: 100%;
+  min-height: 100vh;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 .main_site_wrap.no_footer {
   padding-bottom: 0;
@@ -932,12 +934,7 @@ textarea {
 }
 
 .footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  left: 0;
   font-family: "TruthCYR-R";
-  padding-top: 6px;
   padding: 4px 0px 0;
   background: transparent -webkit-linear-gradient(left, #CC7D90 0%, #A987A7 50%, #8591C0 100%) repeat scroll 0% 0%;
   background: transparent -o-linear-gradient(left, #CC7D90 0%, #A987A7 50%, #8591C0 100%) repeat scroll 0% 0%;
@@ -2903,6 +2900,7 @@ body.popup_show {
 /* WALLET PAGE START */
 .wallet_page_block {
   background: #f7f7f7;
+  flex-grow: 1;
 }
 
 .ballance_block {
@@ -4432,7 +4430,7 @@ body.popup_show {
   }
 }
 .icon-reg-video {
-  background-image: url('../images/icon-reg-video.jpg?1484538938');
+  background-image: url('../images/icon-reg-video.jpg?1488009250');
   background-size: cover;
   height: 146px;
   width: 253px;
@@ -4440,7 +4438,7 @@ body.popup_show {
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
   .icon-reg-video {
-    background-image: url('../images/icon-reg-video@2x.jpg?1484538938');
+    background-image: url('../images/icon-reg-video@2x.jpg?1488009250');
     background-size: 253px 146px;
   }
 }
@@ -4724,10 +4722,6 @@ body.popup_show {
 }
 .purple_link.tdn:hover {
   text-decoration: underline;
-}
-
-.main_site_wrap {
-  background: #F7F8FE;
 }
 
 .violet_btn:disabled, .violet_btn.disabled {
