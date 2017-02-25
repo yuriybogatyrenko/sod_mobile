@@ -124,3 +124,47 @@
   color: #000
   opacity: 0.4
   text-decoration: line-through
+
+.suggestions__item
+  border-radius: 3px
+  background-color: rgba(#bdbdbd,0.1)
+  border: solid 1px rgba(#8c8c8c,0.1)
+  padding: 15px
+  overflow: hidden
+  position: relative
+  line-height: 1.4
+
+  &:not(:last-child)
+    margin-bottom: 15px
+
+
+  &:after
+    display: block
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    border-style: solid
+    border-width: 0 15px 15px 0
+    border-color: transparent #8c8c8c transparent transparent
+
+  &.minimal
+
+    &:after
+      border-color: transparent #41d0a5 transparent transparent
+
+    .suggestions__title
+      color: #41d0a5
+
+  &.optimal
+    &:after
+      border-color: transparent #a46aa9 transparent transparent
+
+    .suggestions__title
+      color: #a46aa9
+
+  &.active
+    box-shadow: 0 2px 11px 0 rgba(0, 0, 0, 0.2)
+
+.suggestions__title
+  color: #8c8c8c
