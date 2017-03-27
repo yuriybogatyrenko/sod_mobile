@@ -168,3 +168,44 @@
 
 .suggestions__title
   color: #8c8c8c
+
+.wallet-card__form-table
+  border: 1px solid #ccc
+  border-radius: 3px
+  width: 100%
+
+  td
+    padding: 5px 10px
+
+  tr
+    &:first-child
+      td:first-child
+        border-radius: 3px 0 0 0
+      td:last-child
+        border-radius: 0 3px 0 0
+    &:not(:last-child)
+      td
+        border-bottom: 1px solid #ccc
+
+  .wallet-card__form-input
+    border: none
+    height: 20px
+    padding: 0
+    font-family: TruthCYR-Medium, arial
+    color: #333
+    
+    +plh()
+      color: #ccc !important
+      opacity: 0
+
+.wallet-card__form-title-wrapper
+  white-space: nowrap
+  width: 1px
+
+.wallet-card__form-small
+  font-size: 10px
+  color: #999
+
+.wallet-card__form-secure-link
+  color: cornflowerblue
+  font-size: 10px

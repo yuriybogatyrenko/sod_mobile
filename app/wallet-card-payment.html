@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>soderzhnaki mobile</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/new-wallet.css">
+</head>
+<body>
+<div class="main_site_wrap">
+  <header class="site_top_header">
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container wallet_header">
+        <div class="dib">
+          <a href="#" class="go_back icon icon-left-open"></a>
+        </div>
+        <div class="dib page_title_header vam ffr purple_title">
+          Премиум
+        </div>
+      </div>
+    </nav>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li>
+          <div class="container">
+            <a href="#">Home</a>
+          </div>
+        </li>
+        <li>
+          <div class="container">
+            <a href="#">Home</a>
+          </div>
+        </li>
+        <li>
+          <div class="container">
+            <a href="#">Home</a>
+          </div>
+        </li>
+        <li>
+          <div class="container">
+            <a href="#">Home</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- BEGIN wallet_page_block -->
+  <div class="wallet_page_block">
+    <!-- BEGIN ballance_block -->
+    <div class="ballance_block">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="wallet_info">
+              <span class="icon icon-wallet"></span>
+              <div class="text ffr">
+                <p>Ваш баланс</p>
+                <p class="money">1200 Р</p>
+              </div>
+            </div>
+          </div>
+          <!--<div class="col-xs-5 left_padding5">
+            <a href="#" class="red_btn db">Пополнить</a>
+          </div>-->
+        </div>
+      </div>
+    </div>
+    <!-- // END ballance_block -->
+
+    <!-- BEGIN wallet_content_info_page_product -->
+    <div class="wallet_content_info_page_product ffr">
+      <div class="container">
+        <div class="content ffr wallet_buy_premium">
+          <div class="mb15"><p class="fz16">Укажите данные карты</p></div>
+
+          <form action="#" class="wallet-card__form">
+            <table class="wallet-card__form-table mb20">
+              <tr>
+                <td class="wallet-card__form-title-wrapper">
+                  <div class="wallet-card__form-title">Номер карты</div>
+                </td>
+                <td class="wallet-card__form-field-wrapper">
+                  <input type="text" class="wallet-card__form-input ffm" placeholder="Номер карты">
+                </td>
+              </tr>
+              <tr>
+                <td class="wallet-card__form-title-wrapper">
+                  <div class="wallet-card__form-title">Имя владельца</div>
+                  <div class="wallet-card__form-small">Латинскими буквами</div>
+                </td>
+                <td class="wallet-card__form-field-wrapper">
+                  <input type="text" class="wallet-card__form-input text-uppercase" placeholder="oleg fomin">
+                </td>
+              </tr>
+              <tr>
+                <td class="wallet-card__form-title-wrapper">
+                  <div class="wallet-card__form-title">Действует до</div>
+                </td>
+                <td class="wallet-card__form-field-wrapper">
+                  <input type="text" class="wallet-card__form-input ffm" placeholder="MM/ГГ">
+                </td>
+              </tr>
+              <tr>
+                <td class="wallet-card__form-title-wrapper">
+                  <div class="wallet-card__form-title">Код CVV</div>
+                  <div class="wallet-card__form-small">Последние 3 цифры <br>обратной стороны карты</div>
+                </td>
+                <td class="wallet-card__form-field-wrapper">
+                  <input type="text" class="wallet-card__form-input ffm" placeholder="123" maxlength="3" minlength="3">
+                </td>
+              </tr>
+              <tr>
+                <td class="wallet-card__form-title-wrapper">
+                  <div class="wallet-card__form-title">E-mail</div>
+                  <div class="wallet-card__form-small">Укажите адрес, если <br>вам нужна квитанция</div>
+                </td>
+                <td class="wallet-card__form-field-wrapper">
+                  <input type="email" class="wallet-card__form-input ffm" placeholder="user@example.com">
+                </td>
+              </tr>
+            </table>
+
+            <div class="mb10"><button type="submit" class="violet_btn db">Оплатить 9000 руб.</button></div>
+            <p class="wallet-card__form-secure text-center">
+              <a class="wallet-card__form-secure-link" href="#">
+                <!--<i class="icon-lock-small"></i>-->
+                <span class="dib">Безопасное соединение</span></a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- // END wallet_content_info_page_product -->
+  </div>
+  <!-- // END wallet_page_block -->
+
+  <!-- BEGIN footer -->
+  <footer class="footer">
+    <div class="inner_wrap">
+      <div class="container">
+        <p class="full_version_link"><a href="#">Полная версия</a></p>
+        <p class="copyright">&copy; «Содержанки on-line». Лучший on-line<br>
+          сервис по поиску спонсоров и содержанок, 2015</p>
+      </div>
+    </div>
+  </footer>
+  <!-- // END footer -->
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.min.js"></script>
+<script src="js/bootstrap-slider.js"></script>
+<script>
+	$ ( document ).bind ( 'mobileinit', function () {
+    /*$.mobile.changePage.defaults.changeHash = false;
+     $.mobile.hashListeningEnabled = false;
+     $.mobile.pushStateEnabled = false;*/
+
+		$.extend ( $.mobile, { autoInitializePage: false } );
+	} );
+</script>
+<script src="js/jquery-mobile.min.js"></script>
+<script src="js/custom.js"></script>
+</body>
+</html>
