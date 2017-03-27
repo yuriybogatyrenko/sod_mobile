@@ -259,7 +259,7 @@
   -ms-transition: all 0.3s ease 0s;
 }
 .other-payment__item:hover {
-  box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.1) inset;
 }
 .other-payment__item:not(:last-child) {
   margin-bottom: 10px;
