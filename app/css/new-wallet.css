@@ -245,7 +245,7 @@
 
 .other-payment__item {
   display: flex;
-  height: 44px;
+  min-height: 44px;
   align-items: center;
   justify-content: flex-start;
   padding: 0 15px 0 0;
@@ -257,6 +257,13 @@
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   -ms-transition: all 0.3s ease 0s;
+}
+.other-payment__item.payment-main {
+  padding: 0 10px 0 15px;
+  justify-content: space-between;
+}
+.other-payment__item.payment-main .other-payment__icon {
+  margin-right: 0;
 }
 .other-payment__item:hover {
   box-shadow: 0 0 0 500px rgba(0, 0, 0, 0.1) inset;
@@ -272,6 +279,10 @@
   align-items: center;
   justify-content: center;
   margin-right: 10px;
+  box-sizing: content-box;
+}
+.other-payment__icon.visa-mc {
+  padding: 8px 0;
 }
 
 .fill-balance__form-line {
@@ -308,10 +319,6 @@
 
 .wallet_content_info_page_product__button {
   margin-top: auto;
-}
-
-input.error {
-  border-color: red;
 }
 
 /*# sourceMappingURL=new-wallet.css.map */

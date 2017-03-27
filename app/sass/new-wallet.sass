@@ -212,7 +212,7 @@
 
 .other-payment__item
   display: flex
-  height: 44px
+  min-height: 44px
   align-items: center
   justify-content: flex-start
   padding: 0 15px 0 0
@@ -220,6 +220,13 @@
   text-decoration: none
   border-radius: 3px
   +trans
+
+  &.payment-main
+    padding: 0 10px 0 15px
+    justify-content: space-between
+
+    .other-payment__icon
+      margin-right: 0
 
   &:hover
     box-shadow: 0 0 0 500px rgba(#000, 0.1) inset
@@ -234,6 +241,10 @@
   align-items: center
   justify-content: center
   margin-right: 10px
+  box-sizing: content-box
+
+  &.visa-mc
+    padding: 8px 0
 
 .fill-balance__form-line
   position: relative
@@ -265,6 +276,3 @@
 
 .wallet_content_info_page_product__button
   margin-top: auto
-
-input.error
-  border-color: red

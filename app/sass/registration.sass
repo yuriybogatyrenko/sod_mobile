@@ -450,8 +450,11 @@ html
         border-bottom: 7px solid #fff
         margin-bottom: -1px
 
-input.error + .form-error-tooltip
-    display: block
+input.error
+    border-color: red
+
+    & + .form-error-tooltip
+        display: block
 
 .popup-photo-terms
     position: fixed
