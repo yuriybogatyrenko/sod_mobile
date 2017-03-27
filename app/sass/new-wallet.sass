@@ -209,3 +209,28 @@
 .wallet-card__form-secure-link
   color: cornflowerblue
   font-size: 10px
+
+.other-payment__item
+  display: flex
+  height: 44px
+  align-items: center
+  justify-content: flex-start
+  padding: 0 15px 0 0
+  background: #fafafa
+  text-decoration: none
+  border-radius: 3px
+  +trans
+
+  &:hover
+    box-shadow: 0 0 0 500px rgba(#000, 0.2) inset
+
+  &:not(:last-child)
+    margin-bottom: 10px
+
+.other-payment__icon
+  width: 50px
+  height: 44px
+  display: flex
+  align-items: center
+  justify-content: center
+  margin-right: 10px
