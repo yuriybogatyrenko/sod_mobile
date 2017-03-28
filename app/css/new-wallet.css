@@ -245,6 +245,7 @@
 
 .other-payment__item {
   display: flex;
+  width: 100%;
   min-height: 44px;
   align-items: center;
   justify-content: flex-start;
@@ -311,10 +312,12 @@
 .wallet_content_info_page_product {
   flex-grow: 1;
   display: flex;
+  width: 100%;
 }
 .wallet_content_info_page_product > .container {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 
 .wallet_content_info_page_product__button {
