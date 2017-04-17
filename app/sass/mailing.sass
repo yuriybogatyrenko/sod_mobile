@@ -1,0 +1,53 @@
+@import "mixins/mixins"
+
+.mailing-top-image
+    width: 160px
+    height: 75px
+    display: inline-block
+    vertical-align: middle
+    +retina-bg('mailing-top-image.png', 'mailing-top-image@2x.png')
+
+.mailing-top-screen
+    color: #fff
+    +retina-bg('mailing-background.png', 'mailing-background@2x.png', false)
+    padding: 20px 0
+
+.mailing-slider__item
+    display: flex
+
+.mailing-slider__avatar
+    flex-basis: 40px
+    margin-right: 10px
+
+.mailing-slider__avatar-img
+    border-radius: 4px
+    max-width: 100%
+
+.mailing-slider__content
+    flex-grow: 1
+    flex-basis: 0
+
+.mailing-slider
+    padding: 20px 0
+    line-height: normal
+    border-bottom: 1px solid #d7d7d7
+
+    .owl-dots
+        text-align: center
+        padding: 15px 0 0
+
+    .owl-dot
+        display: inline-block
+        vertical-align: middle
+        width: 6px
+        height: 6px
+        border-radius: 100%
+        background: #d7d7d7
+        margin: 0 4px
+        +trans()
+
+        &.active
+            background-color: #ac5eb3
+
+.mailing-bottom__buttons
+    padding: 15px 0

@@ -1,0 +1,77 @@
+.mailing-top-image {
+  width: 160px;
+  height: 75px;
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url('../images/mailing-top-image.png?1492405548');
+  background-size: cover;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  .mailing-top-image {
+    background-image: url('../images/mailing-top-image@2x.png?1492405548');
+  }
+}
+
+.mailing-top-screen {
+  color: #fff;
+  background-image: url('../images/mailing-background.png?1492405532');
+  background-size: cover;
+  padding: 20px 0;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
+  .mailing-top-screen {
+    background-image: url('../images/mailing-background@2x.png?1492405532');
+  }
+}
+
+.mailing-slider__item {
+  display: flex;
+}
+
+.mailing-slider__avatar {
+  flex-basis: 40px;
+  margin-right: 10px;
+}
+
+.mailing-slider__avatar-img {
+  border-radius: 4px;
+  max-width: 100%;
+}
+
+.mailing-slider__content {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+.mailing-slider {
+  padding: 20px 0;
+  line-height: normal;
+  border-bottom: 1px solid #d7d7d7;
+}
+.mailing-slider .owl-dots {
+  text-align: center;
+  padding: 15px 0 0;
+}
+.mailing-slider .owl-dot {
+  display: inline-block;
+  vertical-align: middle;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background: #d7d7d7;
+  margin: 0 4px;
+  transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+}
+.mailing-slider .owl-dot.active {
+  background-color: #ac5eb3;
+}
+
+.mailing-bottom__buttons {
+  padding: 15px 0;
+}
+
+/*# sourceMappingURL=mailing.css.map */

@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 .mb30 {
   margin-bottom: 30px;
 }
@@ -410,7 +408,7 @@
 }
 
 .form-preloader {
-  background-image: url('../images/icons-s3c0ca7f5e2.png');
+  background-image: url('../images/icons-sf31bc5fe87.png');
   background-position: 0 -2010px;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -430,7 +428,7 @@
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-resolution: 1.5dppx) {
   .form-preloader {
-    background-image: url('../images/icons-2x-sd719ab9ad5.png');
+    background-image: url('../images/icons-2x-sd4edb4d808.png');
     background-size: 218px auto;
     background-position: 0 -2010px;
     height: 44px;
@@ -444,7 +442,7 @@
 }
 
 .icon-crop-preloader {
-  background-image: url('../images/icons-s3c0ca7f5e2.png');
+  background-image: url('../images/icons-sf31bc5fe87.png');
   background-position: 0 -340px;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -458,7 +456,7 @@
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-resolution: 1.5dppx) {
   .icon-crop-preloader {
-    background-image: url('../images/icons-2x-sd719ab9ad5.png');
+    background-image: url('../images/icons-2x-sd4edb4d808.png');
     background-size: 218px auto;
     background-position: 0 -340px;
     height: 35px;
@@ -828,7 +826,7 @@ input:checked + .custom-input-detector {
 }
 
 .icon-mask-cross {
-  background-image: url('../images/icons-s3c0ca7f5e2.png');
+  background-image: url('../images/icons-sf31bc5fe87.png');
   background-position: 0 -293px;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -839,7 +837,7 @@ input:checked + .custom-input-detector {
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-resolution: 1.5dppx) {
   .icon-mask-cross {
-    background-image: url('../images/icons-2x-sd719ab9ad5.png');
+    background-image: url('../images/icons-2x-sd4edb4d808.png');
     background-size: 218px auto;
     background-position: 0 -293px;
     height: 14px;
@@ -848,7 +846,7 @@ input:checked + .custom-input-detector {
 }
 
 .icon-mask-success {
-  background-image: url('../images/icons-s3c0ca7f5e2.png');
+  background-image: url('../images/icons-sf31bc5fe87.png');
   background-position: 0 -411px;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -859,7 +857,7 @@ input:checked + .custom-input-detector {
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-resolution: 1.5dppx) {
   .icon-mask-success {
-    background-image: url('../images/icons-2x-sd719ab9ad5.png');
+    background-image: url('../images/icons-2x-sd4edb4d808.png');
     background-size: 218px auto;
     background-position: 0 -411px;
     height: 10px;
@@ -868,4 +866,3 @@ input:checked + .custom-input-detector {
 }
 
 /*# sourceMappingURL=registration.css.map */
->>>>>>> Stashed changes

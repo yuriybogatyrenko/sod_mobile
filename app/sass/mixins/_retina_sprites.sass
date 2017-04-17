@@ -1,13 +1,15 @@
 =retina-bg($normal, $retina, $contain: false)
 	background-image: image-url($normal)
 
+	@if $contain == true
+		background-size: contain
+	@else if $contain == false
+		background-size: cover
+	@else
+		background-size: (image-width($retina) / 2) (image-height($retina) / 2)
+
 	@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx)
 		background-image: image-url($retina)
-
-		@if $contain == true
-			background-size: contain
-		@else
-			background-size: (image-width($retina) / 2) (image-height($retina) / 2)
 
 // first we'll define the folders where the sprites are and their layouts
 // $icons: sprite-map("icons/*.png", $layout: smart)

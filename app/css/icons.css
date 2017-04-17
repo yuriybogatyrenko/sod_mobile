@@ -410,6 +410,7 @@
 .icon-reg-video {
   background-image: url('../images/icon-reg-video.jpg?1484538938');
   background-size: cover;
+  background-size: cover;
   height: 146px;
   width: 253px;
   display: inline-block;
@@ -417,7 +418,6 @@
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 1.5dppx) {
   .icon-reg-video {
     background-image: url('../images/icon-reg-video@2x.jpg?1484538938');
-    background-size: 253px 146px;
   }
 }
 .icon-reg-crop-edit {

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>soderzhnaki mobile</title>
+	<link rel="stylesheet" href="bower_components/owl.carousel/dist/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="main_site_wrap">
+	<header class="site_top_header">
+		<nav class="navbar navbar-default navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header dib">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="dib page_title_header vam ffr purple_title">
+					Рассылка
+				</div>
+			</div>
+		</nav>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li>
+					<div class="container">
+						<a href="#">Home</a>
+					</div>
+				</li>
+				<li>
+					<div class="container">
+						<a href="#">Home</a>
+					</div>
+				</li>
+				<li>
+					<div class="container">
+						<a href="#">Home</a>
+					</div>
+				</li>
+				<li>
+					<div class="container">
+						<a href="#">Home</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</header>
+
+	<!-- START mailing -->
+	<div class="mailing">
+		<div class="mailing-top-screen text-center">
+			<div class="container">
+				<div class="mailing-top-image"></div>
+
+				<h1 class="mailing-title ffl fz21">Найти девушку за 30 минут</h1>
+
+				<div class="ffl fz12">Получайте десятки откликов, <br>
+					не теряя время на изучение множества анкет и переписку</div>
+			</div>
+		</div>
+
+		<div class="mailing-content">
+			<div class="mailing-slider">
+				<div class="container">
+					<div class="owl-carousel">
+						<div class="mailing-slider__item">
+							<div class="mailing-slider__avatar">
+								<img alt="" src="http://placehold.it/40x40" class="mailing-slider__avatar-img" />
+							</div>
+							<div class="mailing-slider__content">
+								<div class="mailing-slider__name fz16 mb5 ffr">Maxim 35, Москва</div>
+								<div class="mailing-slider__text">
+									На все, про все ушло 15 минут, через час мы уже пили кофе в центре..
+								</div>
+							</div>
+						</div>
+						<div class="mailing-slider__item">
+							<div class="mailing-slider__avatar">
+								<img alt="" src="http://placehold.it/40x40" class="mailing-slider__avatar-img" />
+							</div>
+							<div class="mailing-slider__content">
+								<div class="mailing-slider__name fz16 mb5 ffr">Maxim 35, Москва</div>
+								<div class="mailing-slider__text">
+									На все, про все ушло 15 минут, через час мы уже пили кофе в центре..
+								</div>
+							</div>
+						</div>
+						<div class="mailing-slider__item">
+							<div class="mailing-slider__avatar">
+								<img alt="" src="http://placehold.it/40x40" class="mailing-slider__avatar-img" />
+							</div>
+							<div class="mailing-slider__content">
+								<div class="mailing-slider__name fz16 mb5 ffr">Maxim 35, Москва</div>
+								<div class="mailing-slider__text">
+									На все, про все ушло 15 минут, через час мы уже пили кофе в центре..
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mailing-bottom__buttons">
+			<div class="container">
+				<a href="#" class="violet_btn db">Создать рассылку</a>
+			</div>
+		</div>
+	</div>
+	<!-- // END mailing -->
+
+	<!-- BEGIN footer -->
+	<footer class="footer">
+		<div class="inner_wrap">
+			<div class="container">
+				<p class="full_version_link"><a href="#">Полная версия</a></p>
+				<p class="copyright">&copy; «Содержанки on-line». Лучший on-line<br>
+					сервис по поиску спонсоров и содержанок, 2015</p>
+			</div>
+		</div>
+	</footer>
+	<!-- // END footer -->
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.min.js"></script>
+<script src="js/bootstrap-slider.js"></script>
+<script>
+    $(document).bind('mobileinit',function(){
+		/*$.mobile.changePage.defaults.changeHash = false;
+		 $.mobile.hashListeningEnabled = false;
+		 $.mobile.pushStateEnabled = false;*/
+
+        $.extend(  $.mobile , {autoInitializePage: false});
+    });
+</script>
+<script src="js/jquery-mobile.min.js"></script>
+<script src="bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+
+<script>
+	$('.owl-carousel').owlCarousel({
+		items: 1,
+		dots: true
+	});
+</script>
+<script src="js/custom.js"></script>
+</body>
+</html>
