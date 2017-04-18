@@ -54,61 +54,119 @@
 
 	<!-- START mailing -->
 	<div class="mailing">
-		<div class="mailing-top-screen text-center">
-			<div class="container">
-				<div class="mailing-top-image"></div>
-
-				<h1 class="mailing-title ffl fz21">Найти девушку за 30 минут</h1>
-
-				<div class="ffl fz12">Получайте десятки откликов, <br>
-					не теряя время на изучение множества анкет и переписку</div>
-			</div>
-		</div>
-
-		<div class="mailing-content">
-			<div class="mailing-slider">
+		<div class="mailing-step" data-mailing-step="main">
+			<div class="mailing-top-screen text-center">
 				<div class="container">
-					<div class="owl-carousel">
-						<div class="mailing-slider__item">
-							<div class="mailing-slider__avatar">
-								<img alt="" src="http://placehold.it/40x40" class="mailing-slider__avatar-img" />
-							</div>
-							<div class="mailing-slider__content">
-								<div class="mailing-slider__name fz16 mb5 ffr">Maxim 35, Москва</div>
-								<div class="mailing-slider__text">
-									На все, про все ушло 15 минут, через час мы уже пили кофе в центре..
+					<div class="mailing-top-image"></div>
+
+					<h1 class="mailing-title ffl fz21">Найти девушку за 30 минут</h1>
+
+					<div class="ffl fz12">Получайте десятки откликов, <br>
+						не теряя время на изучение множества анкет и переписку
+					</div>
+				</div>
+			</div>
+			<div class="mailing-content">
+				<div class="mailing-slider">
+					<div class="container">
+						<div class="owl-carousel">
+							<div class="mailing-slider__item">
+								<div class="mailing-slider__avatar">
+									<img alt="" src="http://placehold.it/40x40" class="mailing-slider__avatar-img" />
+								</div>
+								<div class="mailing-slider__content">
+									<div class="mailing-slider__name fz16 mb5 ffr">Maxim 35, Москва</div>
+									<div class="mailing-slider__text">
+										На все, про все ушло 15 минут, через час мы уже пили кофе в центре..
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="mailing-slider__item">
-							<div class="mailing-slider__avatar">
-								<img alt="" src="http://placehold.it/40x40" class="mailing-slider__avatar-img" />
-							</div>
-							<div class="mailing-slider__content">
-								<div class="mailing-slider__name fz16 mb5 ffr">Maxim 35, Москва</div>
-								<div class="mailing-slider__text">
-									На все, про все ушло 15 минут, через час мы уже пили кофе в центре..
+							<div class="mailing-slider__item">
+								<div class="mailing-slider__avatar">
+									<img alt="" src="http://placehold.it/40x40" class="mailing-slider__avatar-img" />
+								</div>
+								<div class="mailing-slider__content">
+									<div class="mailing-slider__name fz16 mb5 ffr">Maxim 35, Москва</div>
+									<div class="mailing-slider__text">
+										На все, про все ушло 15 минут, через час мы уже пили кофе в центре..
+									</div>
 								</div>
 							</div>
-						</div>
-						<div class="mailing-slider__item">
-							<div class="mailing-slider__avatar">
-								<img alt="" src="http://placehold.it/40x40" class="mailing-slider__avatar-img" />
-							</div>
-							<div class="mailing-slider__content">
-								<div class="mailing-slider__name fz16 mb5 ffr">Maxim 35, Москва</div>
-								<div class="mailing-slider__text">
-									На все, про все ушло 15 минут, через час мы уже пили кофе в центре..
+							<div class="mailing-slider__item">
+								<div class="mailing-slider__avatar">
+									<img alt="" src="http://placehold.it/40x40" class="mailing-slider__avatar-img" />
+								</div>
+								<div class="mailing-slider__content">
+									<div class="mailing-slider__name fz16 mb5 ffr">Maxim 35, Москва</div>
+									<div class="mailing-slider__text">
+										На все, про все ушло 15 минут, через час мы уже пили кофе в центре..
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
+			<div class="mailing-bottom__buttons">
+				<div class="container">
+					<a href="#" class="violet_btn db" data-mailing-change-step="create">Создать рассылку</a>
+				</div>
+			</div>
 		</div>
-		<div class="mailing-bottom__buttons">
+
+		<div class="mailing-step" data-mailing-step="create">
 			<div class="container">
-				<a href="#" class="violet_btn db">Создать рассылку</a>
+				<form action="#">
+					<div class="field-section">
+						<div class="field-group">
+							<p class="purple_text ffr">Укажите кому показывать рассылку</p>
+							<p class="field-caption fz16">Возраст</p>
+							<div class="mailing-age-slider">
+								<div class="age_slider jquery_bootstrap_slider range">
+									<input id="age_slider" class="range_slider_jquery_sod" type="text" value="" data-slider-min="18" data-slider-max="70" data-slider-step="1" data-slider-value="[25,45]" />
+								</div>
+								<div class="mailing-age-slider__values ffr">
+									18-70
+								</div>
+							</div>
+						</div>
+						<div class="field-group">
+							<select multiple title="Цели знакомства" class="selectpicker gray_select_style display_block">
+								<option value="#">Спонсора</option>
+								<option value="#">Спонсора</option>
+								<option value="#">Спонсора</option>
+								<option value="#">Содержанку</option>
+							</select>
+						</div>
+						<div class="field-group mb20">
+							<input type="text" placeholder="Город">
+						</div>
+						<label class="mb0 field-group display-flex space-between flex-middle">
+							<span class="show-in-other-cities fz16 field-caption">
+								Показывать в других городах
+							</span>
+							<span>
+								<input type="checkbox" class="hidden">
+								<span class="show-in-other-cities__detector"></span>
+							</span>
+						</label>
+					</div>
+
+					<div class="field-section js-open-reg-popup" data-popup-name="exclude">
+						<div class="field-group">
+							<div class="field-caption fz16">Исключить пользователей</div>
+						</div>
+					</div>
+					<div class="field-section">
+						<p class="purple_text ffr">Текст рассылки</p>
+						<div class="mb15">
+							<textarea placeholder="Например:Девушки,встречусь сегодня вечером, 20-25 лет, блондинки, с меня подарок и ужин" class="mailing-textarea" cols="30" rows="20"></textarea>
+						</div>
+						<p>
+							<button class="violet_btn db js-open-reg-popup" data-popup-name="mailing-ready">Активировать рассылку</button>
+						</p>
+					</div>
+				</form>
 			</div>
 		</div>
 	</div>
@@ -127,28 +185,211 @@
 	<!-- // END footer -->
 </div>
 
+<div class="mailing-popup mailing-exclude-popup reg-popup" data-popup="exclude">
+	<header class="site_top_header">
+		<nav class="navbar navbar-default navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header dib">
+					<i class="go_back icon icon-left-open js-close-reg-popup"></i>
+				</div>
+				<div class="dib page_title_header vam ffr purple_title">
+					Исключить
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="container">
+		<div class="field-section">
+			<div class="ffr fz16 lh1">
+				Выберите пользователей из вашего контактного листа, которые не будут видеть рассылку
+			</div>
+		</div>
+		<div class="field-section display-flex space-between flex-middle">
+			<div class="fz16">Исключить всех</div>
+			<label class="mb0 display-flex flex-middle">
+				<span class="mailing-exclude-all__counter mr10 ffr">0</span>
+				<input type="checkbox" class="hidden">
+				<span class="mailing-exclude-all__detector"></span>
+			</label>
+		</div>
+		<div class="field-section">
+			<div class="exclude-list">
+				<label class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+					<span class="exclude-list__checkbox display-flex flex-middle">
+						<input type="checkbox" class="hidden">
+						<span class="mailing-exclude-all__detector"></span>
+					</span>
+				</label>
+				<label class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+					<span class="exclude-list__checkbox display-flex flex-middle">
+						<input type="checkbox" class="hidden">
+						<span class="mailing-exclude-all__detector"></span>
+					</span>
+				</label>
+				<label class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+					<span class="exclude-list__checkbox display-flex flex-middle">
+						<input type="checkbox" class="hidden">
+						<span class="mailing-exclude-all__detector"></span>
+					</span>
+				</label>
+				<label class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+					<span class="exclude-list__checkbox display-flex flex-middle">
+						<input type="checkbox" class="hidden">
+						<span class="mailing-exclude-all__detector"></span>
+					</span>
+				</label>
+				<label class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+					<span class="exclude-list__checkbox display-flex flex-middle">
+						<input type="checkbox" class="hidden">
+						<span class="mailing-exclude-all__detector"></span>
+					</span>
+				</label>
+				<label class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+					<span class="exclude-list__checkbox display-flex flex-middle">
+						<input type="checkbox" class="hidden">
+						<span class="mailing-exclude-all__detector"></span>
+					</span>
+				</label>
+				<label class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+					<span class="exclude-list__checkbox display-flex flex-middle">
+						<input type="checkbox" class="hidden">
+						<span class="mailing-exclude-all__detector"></span>
+					</span>
+				</label>
+				<label class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+					<span class="exclude-list__checkbox display-flex flex-middle">
+						<input type="checkbox" class="hidden">
+						<span class="mailing-exclude-all__detector"></span>
+					</span>
+				</label>
+				<label class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+					<span class="exclude-list__checkbox display-flex flex-middle">
+						<input type="checkbox" class="hidden">
+						<span class="mailing-exclude-all__detector"></span>
+					</span>
+				</label>
+				<label class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+					<span class="exclude-list__checkbox display-flex flex-middle">
+						<input type="checkbox" class="hidden">
+						<span class="mailing-exclude-all__detector"></span>
+					</span>
+				</label>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="mailing-ready-popup js-popup reg-popup" data-popup="mailing-ready">
+	<p class="mb30 fz24">Ваша рассылка активирована</p>
+	<p class="js-close-reg-popup purple_text fz18 mb0 ffr">
+		Готово
+	</p>
+</div>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/bootstrap-select.min.js"></script>
 <script src="js/bootstrap-slider.js"></script>
 <script>
-    $(document).bind('mobileinit',function(){
+    $(document).bind('mobileinit', function () {
 		/*$.mobile.changePage.defaults.changeHash = false;
 		 $.mobile.hashListeningEnabled = false;
 		 $.mobile.pushStateEnabled = false;*/
 
-        $.extend(  $.mobile , {autoInitializePage: false});
+        $.extend($.mobile, {autoInitializePage: false});
     });
 </script>
 <script src="js/jquery-mobile.min.js"></script>
 <script src="bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
 
 <script>
-	$('.owl-carousel').owlCarousel({
-		items: 1,
-		dots: true
-	});
+    $('.owl-carousel').owlCarousel({
+        items: 1,
+        dots: true
+    });
 </script>
 <script src="js/custom.js"></script>
+<script src="js/registration.js"></script>
+<script src="js/mailing.js"></script>
 </body>
 </html>
