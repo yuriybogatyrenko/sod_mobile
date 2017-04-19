@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>soderzhnaki mobile</title>
+	<link rel="stylesheet" href="bower_components/owl.carousel/dist/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="main_site_wrap">
+	<header class="site_top_header">
+		<nav class="navbar navbar-default navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header dib">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="dib page_title_header vam ffr purple_title">
+					Рассылка
+				</div>
+			</div>
+		</nav>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li>
+					<div class="container">
+						<a href="#">Home</a>
+					</div>
+				</li>
+				<li>
+					<div class="container">
+						<a href="#">Home</a>
+					</div>
+				</li>
+				<li>
+					<div class="container">
+						<a href="#">Home</a>
+					</div>
+				</li>
+				<li>
+					<div class="container">
+						<a href="#">Home</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</header>
+
+	<!-- START mailing -->
+	<div class="mailing">
+		<div class="mailing-step" data-mailing-step="main">
+			<div class="container">
+				<div class="mailing-empty">
+					<div class="field-section empty-mailing">
+						<div class="fz16 text-center ffr">У вас нет активных рассылок</div>
+					</div>
+
+					<div class="mailing-archive field-section display-flex space-between flex-middle js-open-reg-popup" data-popup-name="archive">
+						<div class="mailing-archive__title fz16">
+							Архив
+						</div>
+						<div class="mailing-archive__counter ffr">
+							5
+						</div>
+					</div>
+					<div class="field-section mta">
+						<a href="#" class="violet_btn db">Создать рассылку</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="mailing-step" data-mailing-step="edit">
+			<div class="container">
+				<form action="#" class="display-flex flex-grow flex-column">
+					<div class="field-section">
+						<div class="field-group">
+							<p class="purple_text ffr">Укажите кому показывать рассылку</p>
+							<p class="field-caption fz16">Возраст</p>
+							<div class="mailing-age-slider">
+								<div class="age_slider jquery_bootstrap_slider range">
+									<input id="age_slider" class="range_slider_jquery_sod" type="text" value="" data-slider-min="18" data-slider-max="70" data-slider-step="1" data-slider-value="[25,45]" />
+								</div>
+								<div class="mailing-age-slider__values ffr">
+									18-70
+								</div>
+							</div>
+						</div>
+						<div class="field-group">
+							<select multiple title="Цели знакомства" class="selectpicker gray_select_style display_block">
+								<option value="#">Спонсора</option>
+								<option value="#">Спонсора</option>
+								<option value="#">Спонсора</option>
+								<option value="#">Содержанку</option>
+							</select>
+						</div>
+						<div class="field-group mb20">
+							<input type="text" placeholder="Город">
+						</div>
+						<label class="mb0 field-group display-flex space-between flex-middle">
+							<span class="show-in-other-cities fz16 field-caption">
+								Показывать в других городах
+							</span>
+							<span>
+								<input type="checkbox" class="hidden">
+								<span class="show-in-other-cities__detector"></span>
+							</span>
+						</label>
+					</div>
+
+					<div class="field-section js-open-reg-popup" data-popup-name="exclude">
+						<div class="field-group display-flex space-between flex-middle">
+							<div class="field-caption fz16">Исключить пользователей</div>
+							<div class="ffr" data-excluded-count></div>
+						</div>
+					</div>
+					<div class="field-section mta">
+						<p class="purple_text ffr">Текст рассылки</p>
+						<div class="mb15">
+							<textarea placeholder="Например:Девушки,встречусь сегодня вечером, 20-25 лет, блондинки, с меня подарок и ужин" class="mailing-textarea" cols="30" rows="20"></textarea>
+						</div>
+						<p class="mb0">
+							<button class="violet_btn db js-open-reg-popup" data-popup-name="mailing-ready">Активировать рассылку
+							</button>
+						</p>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div class="mailing-step" data-mailing-step="create">
+			<div class="container">
+				<form action="#">
+					<div class="field-section">
+						<div class="field-group">
+							<p class="purple_text ffr">Укажите кому показывать рассылку</p>
+							<p class="field-caption fz16">Возраст</p>
+							<div class="mailing-age-slider">
+								<div class="age_slider jquery_bootstrap_slider range">
+									<input id="age_slider" class="range_slider_jquery_sod" type="text" value="" data-slider-min="18" data-slider-max="70" data-slider-step="1" data-slider-value="[25,45]" />
+								</div>
+								<div class="mailing-age-slider__values ffr">
+									18-70
+								</div>
+							</div>
+						</div>
+						<div class="field-group">
+							<select multiple title="Цели знакомства" class="selectpicker gray_select_style display_block">
+								<option value="#">Спонсора</option>
+								<option value="#">Спонсора</option>
+								<option value="#">Спонсора</option>
+								<option value="#">Содержанку</option>
+							</select>
+						</div>
+						<div class="field-group mb20">
+							<input type="text" placeholder="Город">
+						</div>
+						<label class="mb0 field-group display-flex space-between flex-middle">
+							<span class="show-in-other-cities fz16 field-caption">
+								Показывать в других городах
+							</span>
+							<span>
+								<input type="checkbox" class="hidden">
+								<span class="show-in-other-cities__detector"></span>
+							</span>
+						</label>
+					</div>
+
+					<div class="field-section js-open-reg-popup" data-popup-name="exclude">
+						<div class="field-group display-flex flex-middle space-between">
+							<div class="field-caption fz16">Исключить пользователей</div>
+							<div class="ffr" data-excluded-count></div>
+						</div>
+					</div>
+					<div class="field-section">
+						<p class="purple_text ffr">Текст рассылки</p>
+						<div class="mb15">
+							<textarea placeholder="Например:Девушки,встречусь сегодня вечером, 20-25 лет, блондинки, с меня подарок и ужин" class="mailing-textarea" cols="30" rows="20"></textarea>
+						</div>
+						<p>
+							<button class="violet_btn db js-open-reg-popup" data-popup-name="mailing-ready">Активировать
+								рассылку
+							</button>
+						</p>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- // END mailing -->
+
+	<!-- BEGIN footer -->
+	<footer class="footer">
+		<div class="inner_wrap">
+			<div class="container">
+				<p class="full_version_link"><a href="#">Полная версия</a></p>
+				<p class="copyright">&copy; «Содержанки on-line». Лучший on-line<br>
+					сервис по поиску спонсоров и содержанок, 2015</p>
+			</div>
+		</div>
+	</footer>
+	<!-- // END footer -->
+</div>
+
+<div class="mailing-popup mailing-exclude-popup reg-popup" data-popup="archive">
+	<header class="site_top_header">
+		<nav class="navbar navbar-default navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header dib">
+					<i class="go_back icon icon-left-open js-close-reg-popup"></i>
+				</div>
+				<div class="dib page_title_header vam ffr purple_title">
+					Архив
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="container">
+		<div class="mailing-archive__list">
+			<div class="mailing-archive__item js-switch-reg-popup" data-popup-name="archive-item" data-popup-close-name="archive">
+				<div class="mailing-archive__header display-flex space-between mb5">
+					<div class="mr10 ffr">
+						21–25, Москва, провести вечер
+					</div>
+					<div class="ffr purple_text">15</div>
+				</div>
+				<div class="mailing-archive__content lhn">
+					Встречусь с девушкой. Спортивная фигура, милая, начитанная, высшее
+				</div>
+			</div>
+			<div class="mailing-archive__item">
+				<div class="mailing-archive__header display-flex space-between mb5">
+					<div class="mr10 ffr">
+						21–25, Москва, провести вечер
+					</div>
+					<div class="ffr purple_text">15</div>
+				</div>
+				<div class="mailing-archive__content lhn">
+					Встречусь с девушкой. Спортивная фигура, милая, начитанная, высшее
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="mailing-popup mailing-exclude-popup reg-popup" data-popup="archive-item">
+	<header class="site_top_header">
+		<nav class="navbar navbar-default navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header dib">
+					<i class="go_back icon icon-left-open js-switch-reg-popup" data-popup-name="archive" data-popup-close-name="archive-item"></i>
+				</div>
+				<div class="dib page_title_header vam ffr purple_title">
+					Архив
+				</div>
+				<div class="dib r_bl right_add_menu mailing-right-menu">
+					<i class="purple_text icon-pencil dib fz24 js-close-reg-popup" data-mailing-change-step="edit"></i>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="container">
+		<div class="field-section">
+			<div class="mailing-archive__full">
+				<p class="text-grey">21.01.2017</p>
+				<p class="ffr">21-25, Москва, провести вечер, показывается во всех городах</p>
+				<div>
+					Привет! Предлагаю встретиться 04.11, вечером. Хочу познакомиться с пермским гостеприимством и
+					темпераментом. Жду ответа и надеюсь на продолжение общения. Юлиан
+				</div>
+			</div>
+		</div>
+		<div class="mailing-interested field-section display-flex space-between flex-middle js-open-reg-popup" data-popup-name="empty">
+			<div class="mailing-interested__title fz16">Проявили интерес</div>
+			<div class="mailing-interested__counter ffr display-flex flex-middle">
+				<span data-interested-count="144">144</span>
+				<div class="profiles-short-list">
+					<div class="profiles-short-list__item">
+						<img alt="" src="http://placehold.it/26x26" />
+					</div>
+					<div class="profiles-short-list__item">
+						<img alt="" src="http://placehold.it/26x26" />
+					</div>
+					<div class="profiles-short-list__item">
+						<img alt="" src="http://placehold.it/26x26" />
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="field-section mta">
+			<a href="#" class="violet_btn db">Возобновить</a>
+		</div>
+	</div>
+</div>
+
+<div class="mailing-popup mailing-exclude-popup reg-popup" data-popup="exclude">
+	<header class="site_top_header">
+		<nav class="navbar navbar-default navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header dib">
+					<i class="go_back icon icon-left-open js-close-reg-popup"></i>
+				</div>
+				<div class="dib page_title_header vam ffr purple_title">
+					Исключить
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="container">
+		<div class="field-section">
+			<div class="ffr fz16 lh1">
+				Вы не можете менять список исключенных пользователей из публикуемой рассылки
+			</div>
+		</div>
+		<div class="field-section">
+			<div class="exclude-list">
+				<div class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+				</div>
+				<div class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+				</div>
+				<div class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+				</div>
+				<div class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+				</div>
+				<div class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+				</div>
+				<div class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+				</div>
+				<div class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+				</div>
+				<div class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+				</div>
+				<div class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+				</div>
+				<div class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="mailing-popup mailing-exclude-popup reg-popup" data-popup="interested">
+	<header class="site_top_header">
+		<nav class="navbar navbar-default navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header dib">
+					<i class="go_back icon icon-left-open js-close-reg-popup"></i>
+				</div>
+				<div class="dib page_title_header vam ffr purple_title">
+					Проявили интерес
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="container">
+		<div class="field-section">
+			<div class="ffr fz16 lh1">
+				Вы не можете менять список исключенных пользователей из публикуемой рассылки
+			</div>
+		</div>
+		<div class="field-section">
+			<div class="exclude-list">
+				<div class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+				</div>
+				<div class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+				</div>
+				<div class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+				</div>
+				<div class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+				</div>
+				<div class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+				</div>
+				<div class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+				</div>
+				<div class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+				</div>
+				<div class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+				</div>
+				<div class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+				</div>
+				<div class="exclude-list__item display-flex flex-middle space-between">
+					<span class="exclude-list__person display-flex flex-middle">
+						<span class="exclude-list__avatar">
+							<img alt="" class="exclude-list__avatar-image" src="http://placehold.it/50x50" />
+						</span>
+						<span class="exclude-list__name fz16 ffr">
+							Irina, 25
+						</span>
+					</span>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="mailing-popup mailing-exclude-popup reg-popup" data-popup="empty-interested">
+	<header class="site_top_header">
+		<nav class="navbar navbar-default navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header dib">
+					<i class="go_back icon icon-left-open js-close-reg-popup"></i>
+				</div>
+				<div class="dib page_title_header vam ffr purple_title">
+					Проявили интерес
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="cancel-mailing__content">
+		<div class="container">
+			<div class="mb30 text-center">
+				<i class="icon-empty-interested"></i>
+			</div>
+			<p class="text-center fz16 ffr lh1">Увы, пока ни одной девушки не откликнулось. </p>
+			<div class="mb45 text-center">
+				По пробуйте сделать текст Вашего объявления более привлекательным, заполните подробнее вашу анкету,
+				добавьте фотографию в профиль или подождите еще не много.
+			</div>
+
+			<div>
+				<a href="#" class="violet_btn db empty fz14 js-close-reg-popup">Понятно</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="mailing-ready-popup js-popup reg-popup" data-popup="mailing-ready">
+	<p class="mb30 fz24">Ваша рассылка активирована</p>
+	<p class="js-close-reg-popup purple_text fz18 mb0 ffr">
+		Готово
+	</p>
+</div>
+
+<div class="mailing-popup mailing-exclude-popup reg-popup" data-popup="cancel-mailing">
+	<header class="site_top_header">
+		<nav class="navbar navbar-default navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header dib">
+					<i class="go_back icon icon-left-open js-close-reg-popup"></i>
+				</div>
+				<div class="dib page_title_header vam ffr purple_title">
+					Рассылка
+				</div>
+			</div>
+		</nav>
+	</header>
+	<div class="cancel-mailing__content">
+		<div class="container">
+			<div class="mb30 text-center">
+				<i class="icon-mailing-cancel"></i>
+			</div>
+			<p class="text-center fz16 ffr lh1">Внимание! Вы хотите остановить рассылку.</p>
+			<div class="mb45 text-center">
+				Для возобновления рассылки, Вам необходимо будет оплатить ее полную стоимость
+			</div>
+
+			<p>
+				<a href="#" class="violet_btn db js-close-reg-popup">Отмена</a>
+			</p>
+			<div>
+				<a href="#" class="violet_btn db empty fz14">Остановить</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.min.js"></script>
+<script src="js/bootstrap-slider.js"></script>
+<script>
+    $(document).bind('mobileinit', function () {
+		/*$.mobile.changePage.defaults.changeHash = false;
+		 $.mobile.hashListeningEnabled = false;
+		 $.mobile.pushStateEnabled = false;*/
+
+        $.extend($.mobile, {autoInitializePage: false});
+    });
+</script>
+<script src="js/jquery-mobile.min.js"></script>
+<script src="bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+
+<script>
+    $('.owl-carousel').owlCarousel({
+        items: 1,
+        dots: true
+    });
+</script>
+<script src="js/custom.js"></script>
+<script src="js/registration.js"></script>
+<script src="js/mailing.js"></script>
+</body>
+</html>

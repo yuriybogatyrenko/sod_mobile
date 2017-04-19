@@ -1,5 +1,16 @@
 @import "mixins/mixins"
 
+.mailing, .mailing-step.active-step, .mailing-step > .container, .mailing-empty, .mailing-popup > .container, .mailing-popup
+    display: flex
+    flex-grow: 1
+    flex-direction: column
+
+.flex-grow
+    flex-grow: 1
+
+.flex-column
+    flex-direction: column
+
 .mailing-top-image
     width: 160px
     height: 75px
@@ -60,13 +71,9 @@
     &.paddings
         padding: 15px 0
 
-    &.active-step
-        display: block
-        //max-height: 20000px
-
     .bootstrap-select.btn-group.show-tick .dropdown-menu li.selected a span.check-mark
         margin-top: 10px
-        
+
 .purple_text
     color: #ac5eb3
 
@@ -101,7 +108,7 @@
         top: 50%
         margin-top: -12px
         content: ''
-        
+
 input:checked
     & + .show-in-other-cities__detector
         background-color: #ac5eb3
@@ -109,15 +116,18 @@ input:checked
         &:after
             left: 100%
             margin-left: -26px
-            
+
     & + .mailing-exclude-all__detector
         background-color: #ac5eb3
-    
+
         &:after
             opacity: 1
 
 .field-section
     padding: 15px 0
+
+    &.empty-mailing
+        padding: 40px 0
 
     &.display-flex
         min-height: 52px
@@ -159,7 +169,7 @@ input:checked
         left: 50%
         margin-top: -1px
         +trans()
-        +transform(translate(-50%,-50%) rotate(-45deg))
+        +transform(translate(-50%, -50%) rotate(-45deg))
         opacity: 0
 
 .exclude-list__avatar-image
@@ -201,7 +211,7 @@ input:checked
     z-index: 101
     top: 50%
     left: 50%
-    +transform(translate(-50%,-50%))
+    +transform(translate(-50%, -50%))
     text-align: center
     padding: 20px
     box-sizing: border-box
@@ -237,3 +247,12 @@ input:checked
 *[data-interested-count="0"], *[data-interested-count=""]
     & + *
         display: none
+
+.mta
+    margin-top: auto
+
+.mailing-archive__item
+    padding: 15px 0
+
+    &:not(:last-child)
+        border-bottom: 1px solid #d7d7d7
