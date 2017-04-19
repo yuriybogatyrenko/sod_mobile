@@ -155,6 +155,10 @@ input:checked + .mailing-exclude-all__detector:after {
 .field-section {
   padding: 15px 0;
 }
+.field-section.display-flex {
+  min-height: 52px;
+  padding: 5px 0;
+}
 .field-section:not(:last-child) {
   border-bottom: 1px solid #d7d7d7;
   margin-left: -15px;
@@ -235,6 +239,7 @@ input:checked + .mailing-exclude-all__detector:after {
   width: 100%;
   overflow: auto;
   background: #fff;
+  z-index: 101;
   transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -webkit-transition: all 0.3s ease 0s;
@@ -243,7 +248,6 @@ input:checked + .mailing-exclude-all__detector:after {
 }
 .mailing-exclude-popup.active {
   left: 0;
-  z-index: 101;
 }
 
 .mailing-ready-popup {
@@ -275,6 +279,36 @@ input:checked + .mailing-exclude-all__detector:after {
   margin-top: 0;
   visibility: visible;
   opacity: 1;
+}
+
+.profiles-short-list {
+  display: flex;
+  margin-left: 15px;
+}
+.profiles-short-list__item:not(:last-child) {
+  margin-right: -10px;
+}
+.profiles-short-list__item img {
+  border-radius: 4px;
+  box-shadow: 0 0 0 2px #fff;
+}
+
+.mailing-right-menu {
+  line-height: 38px;
+}
+
+.violet_btn.empty {
+  background: #fff;
+  border-color: #d8d9d8;
+  color: #a269a7;
+}
+
+.cancel-mailing__content {
+  padding: 30px 0 20px;
+}
+
+*[data-interested-count="0"] + *, *[data-interested-count=""] + * {
+  display: none;
 }
 
 /*# sourceMappingURL=mailing.css.map */

@@ -73,6 +73,39 @@ var MAILING = (function () {
         return steps;
     };
 
+    MAILING.prototype.interestedPopups = function () {
+        var countWrapper = $('[data-interested-count]');
+        if(!countWrapper.length > 0)
+            return;
+
+        var interested = {
+            init: function () {
+                interested.bindings();
+                interested.changeCaller(countWrapper);
+            },
+            bindings: function () {
+                countWrapper.bind("DOMSubtreeModified",function(){
+                    interested.changeCaller($(this));
+                });
+            },
+            changeCaller: function (bl) {
+                var popupCaller = bl.closest('[data-popup-name]');
+                var count = parseInt(bl.text());
+                bl.attr('data-interested-count', count);
+
+                if(count > 0) {
+                    popupCaller.attr('data-popup-name', 'interested');
+                } else {
+                    popupCaller.attr('data-popup-name', 'empty-interested');
+                }
+            }
+        };
+
+        interested.init();
+
+        return interested;
+    };
+
     return MAILING;
 })();
 
@@ -82,7 +115,7 @@ var registration = new ZOLUSHKA();
 
 mailing.appLoad('full', function (e) {
     mailing.steps();
-
+    mailing.interestedPopups();
     registration.popups();
 });
 

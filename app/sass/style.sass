@@ -4,6 +4,7 @@
 @import 'bootstrap-slider.css'
 @import 'bootstrap-editable.css'
 @import 'bootstrap_edit.css'
+@import "icons.css"
 // @import 'vars'
 @import 'additional_framework'
 @import 'mailing'
@@ -30,6 +31,7 @@ a, a:hover, a:active, a:focus
 	width: 100%
 	display: flex
 	flex-direction: column
+	z-index: 100
 
 	&.no_footer
 		padding-bottom: 0
@@ -1163,9 +1165,11 @@ textarea
 		width: 30px
 		text-align-last: auto
 		display: inline-block
+		line-height: 0.9
 
 		&:before
 			margin-left: 0
+			line-height: 0.9
 
 	.wallet_header
 		.page_title_header

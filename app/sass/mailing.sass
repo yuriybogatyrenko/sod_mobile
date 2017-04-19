@@ -118,6 +118,10 @@ input:checked
 
 .field-section
     padding: 15px 0
+
+    &.display-flex
+        min-height: 52px
+        padding: 5px 0
     &:not(:last-child)
         border-bottom: 1px solid #d7d7d7
         margin-left: -15px
@@ -179,11 +183,11 @@ input:checked
     width: 100%
     overflow: auto
     background: #fff
+    z-index: 101
     +trans
 
     &.active
         left: 0
-        z-index: 101
 
 .mailing-ready-popup
     position: fixed
@@ -206,3 +210,30 @@ input:checked
         margin-top: 0
         visibility: visible
         opacity: 1
+
+.profiles-short-list
+    display: flex
+    margin-left: 15px
+
+    &__item
+        &:not(:last-child)
+            margin-right: -10px
+
+        img
+            border-radius: 4px
+            box-shadow: 0 0 0 2px #fff
+
+.mailing-right-menu
+    line-height: 38px
+
+.violet_btn.empty
+    background: #fff
+    border-color: #d8d9d8
+    color: #a269a7
+
+.cancel-mailing__content
+    padding: 30px 0 20px
+
+*[data-interested-count="0"], *[data-interested-count=""]
+    & + *
+        display: none
