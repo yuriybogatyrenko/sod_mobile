@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>soderzhnaki mobile</title>
+	<link rel="stylesheet" href="bower_components/owl.carousel/dist/assets/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="main_site_wrap">
+	<header class="site_top_header">
+		<nav class="navbar navbar-default navbar-static-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header dib">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="dib page_title_header vam ffr purple_title">
+					Рассылка
+				</div>
+				<!--<div class="dib r_bl right_add_menu mailing-right-menu">
+					<i class="purple_text icon-pencil dib fz24" data-mailing-change-step="edit"></i>
+				</div>-->
+			</div>
+		</nav>
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li>
+					<div class="container">
+						<a href="#">Home</a>
+					</div>
+				</li>
+				<li>
+					<div class="container">
+						<a href="#">Home</a>
+					</div>
+				</li>
+				<li>
+					<div class="container">
+						<a href="#">Home</a>
+					</div>
+				</li>
+				<li>
+					<div class="container">
+						<a href="#">Home</a>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</header>
+
+	<!-- START mailing -->
+	<div class="mailing">
+		<div class="active_subscribes_second__block">
+			<div class="container">
+				<p class="page_title ffr text-center fz18">Рассылки в Вашем городе</p>
+
+				<div class="units subscribes_active_list_block">
+					<div class="item clearfix">
+						<div class="clearfix">
+							<a href="#" class="avatar">
+								<img alt="" src="http://placehold.it/90x90">
+							</a>
+							<div class="profile_information">
+								<p class="profile_status online ffr"><span class="network_status"></span> Он-лайн</p>
+								<p class="time">01.08.2015 13:12</p>
+								<p class="name_age"><a href="#">Валентин</a>, 36</p>
+								<p class="city">Москва</p>
+							</div>
+						</div>
+						<div class="clearfix subscribe_text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut voluptas corrupti fuga nam necessitatibus nemo quia impedit, nostrum est incidunt iste voluptatem, culpa et, facilis porro illum ipsum consectetur error!</p>
+						</div>
+					</div>
+					<div class="item clearfix">
+						<div class="clearfix">
+							<a href="#" class="avatar">
+								<img alt="" src="http://placehold.it/90x90">
+							</a>
+							<div class="profile_information">
+								<p class="profile_status online ffr"><span class="network_status"></span> Он-лайн</p>
+								<p class="time">01.08.2015 13:12</p>
+								<p class="name_age"><a href="#">Валентин</a>, 36</p>
+								<p class="city">Москва</p>
+							</div>
+						</div>
+						<div class="clearfix subscribe_text">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut voluptas corrupti fuga nam necessitatibus nemo quia impedit, nostrum est incidunt iste voluptatem, culpa et, facilis porro illum ipsum consectetur error!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="text-center mb15"><a href="#" class="fz18 ffr">Другие города</a></div>
+	</div>
+	<!-- // END mailing -->
+
+	<!-- BEGIN footer -->
+	<footer class="footer">
+		<div class="inner_wrap">
+			<div class="container">
+				<p class="full_version_link"><a href="#">Полная версия</a></p>
+				<p class="copyright">&copy; «Содержанки on-line». Лучший on-line<br>
+					сервис по поиску спонсоров и содержанок, 2015</p>
+			</div>
+		</div>
+	</footer>
+	<!-- // END footer -->
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/bootstrap-select.min.js"></script>
+<script src="js/bootstrap-slider.js"></script>
+<script>
+    $(document).bind('mobileinit', function () {
+		/*$.mobile.changePage.defaults.changeHash = false;
+		 $.mobile.hashListeningEnabled = false;
+		 $.mobile.pushStateEnabled = false;*/
+
+        $.extend($.mobile, {autoInitializePage: false});
+    });
+</script>
+<script src="js/jquery-mobile.min.js"></script>
+<script src="bower_components/owl.carousel/dist/owl.carousel.min.js"></script>
+
+<script>
+    $('.owl-carousel').owlCarousel({
+        items: 1,
+        dots: true
+    });
+</script>
+<script src="js/custom.js"></script>
+<script src="js/registration.js"></script>
+<script src="js/mailing.js"></script>
+</body>
+</html>
