@@ -190,6 +190,9 @@ gulp.task('build',["clean"], function(){
         gulp.start('build_dist');
         gulp.start('fonts');
         gulp.start('images');
+        gulp.start('js');
+        gulp.start('css');
+        gulp.start('fontello');
     }, 500);
 });
 
@@ -200,6 +203,27 @@ gulp.task('build_dist', function(){
         .pipe(gulpif('*.css', minifyCss()))
         .pipe(useref())
         .pipe(gulp.dest('dist'));
+});
+
+gulp.task('js', function () {
+    gulp.src([
+        'app/js/**'
+    ])
+        .pipe(gulp.dest('dist/js'));
+});
+
+gulp.task('fontello', function () {
+    gulp.src([
+        'app/fontello/**'
+    ])
+        .pipe(gulp.dest('dist/fontello'));
+});
+
+gulp.task('css', function () {
+    gulp.src([
+        'app/css/**'
+    ])
+        .pipe(gulp.dest('dist/css'));
 });
 
 gulp.task('fonts', function () {

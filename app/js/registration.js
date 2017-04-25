@@ -359,7 +359,7 @@ var ZOLUSHKA = (function () {
 
         plugin.popupOpen = function (name) {
             _self.html.classList.add('modal-open');
-            document.body.style.overflow = 'scroll';
+            document.body.style.overflowY = 'scroll';
 
             var popup = _self.doc.querySelector('[data-popup="' + name + '"]');
             popup.classList.add('active')
