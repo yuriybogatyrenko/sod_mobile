@@ -518,12 +518,28 @@ input:checked + .mailing-exclude-all__detector:after {
 }
 
 .wallet-purchases__arch-link-wrapper {
-  padding: 12px;
+  padding: 12px 0;
   border-top: 1px solid #d8d8d8;
   border-bottom: 1px solid #d8d8d8;
+  position: relative;
 }
 .wallet-purchases__arch-link-wrapper a {
   text-decoration: none;
+}
+.wallet-purchases__arch-link-wrapper:after {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  border: 5px solid transparent;
+  border-top: 5px solid #484848;
+  display: block;
+  content: "";
+  margin-top: -8px;
+  transform: rotate(180deg);
+}
+.wallet-purchases__arch-link-wrapper.collapsed:after {
+  margin-top: -2px;
+  transform: rotate(0deg);
 }
 
 .wallet-purchases__arch-item {

@@ -25,12 +25,30 @@
         transform: rotate(45deg)
 
 .wallet-purchases__arch-link-wrapper
-    padding: 12px
+    padding: 12px 0
     border-top: 1px solid #d8d8d8
     border-bottom: 1px solid #d8d8d8
+    position: relative
 
     a
         text-decoration: none
+
+    &:after
+        position: absolute
+        top: 50%
+        right: 0
+        border: 5px solid transparent
+        border-top: 5px solid #b3b3b3*0.4
+        display: block
+        content: ''
+        margin-top: -8px
+        transform: rotate(180deg)
+
+    &.collapsed
+        &:after
+            margin-top: -2px
+            transform: rotate(0deg)
+
 
 .wallet-purchases__arch
     &-item
