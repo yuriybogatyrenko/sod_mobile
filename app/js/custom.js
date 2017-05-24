@@ -446,4 +446,13 @@ $(document).ready(function () {
         $('body').addClass('popup_show');
         $('.--langs-popup__body').addClass('active');
     });
+
+    $('.wallet-purchases__arch-link-wrapper.collapsed').on('click', function (e) {
+        e.preventDefault();
+        $this = $(this);
+
+        setTimeout(function () {
+            $('html, body').animate({scrollTop: $this.offset().top})
+        }, 300);
+    });
 });
