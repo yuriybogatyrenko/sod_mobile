@@ -220,7 +220,7 @@ var ZOLUSHKA = (function () {
             var stepBlocks = document.querySelectorAll('[data-step]');
 
             for (i = 0; i < stepBlocks.length; i++) {
-                if (stepBlocks[i].getAttribute('data-step') != step)
+                if (stepBlocks[i].getAttribute('data-step') !== step)
                     stepBlocks[i].classList.add('hidden-step');
                 else {
                     stepBlocks[i].classList.remove('hidden-step');
