@@ -4632,6 +4632,10 @@ body.popup_show {
   align-items: center;
 }
 
+.flex-center {
+  justify-content: center;
+}
+
 .flex-wrap {
   flex-wrap: wrap;
 }
