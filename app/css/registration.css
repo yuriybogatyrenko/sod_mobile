@@ -418,8 +418,8 @@
 }
 
 .form-preloader {
-  background-image: url('../images/icons-sc21a13175b.png');
-  background-position: 0 -2522px;
+  background-image: url('../images/icons-s21dacd475c.png');
+  background-position: 0 -2575px;
   background-repeat: no-repeat;
   overflow: hidden;
   display: inline-block;
@@ -438,9 +438,9 @@
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-resolution: 1.5dppx) {
   .form-preloader {
-    background-image: url('../images/icons-2x-sc87fe02559.png');
+    background-image: url('../images/icons-2x-s6f28da27aa.png');
     background-size: 218px auto;
-    background-position: 0 -2522px;
+    background-position: 0 -2575px;
     height: 44px;
     width: 44px;
     position: absolute;
@@ -452,7 +452,7 @@
 }
 
 .icon-crop-preloader {
-  background-image: url('../images/icons-sc21a13175b.png');
+  background-image: url('../images/icons-s21dacd475c.png');
   background-position: 0 -473px;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -466,7 +466,7 @@
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-resolution: 1.5dppx) {
   .icon-crop-preloader {
-    background-image: url('../images/icons-2x-sc87fe02559.png');
+    background-image: url('../images/icons-2x-s6f28da27aa.png');
     background-size: 218px auto;
     background-position: 0 -473px;
     height: 35px;
@@ -836,44 +836,14 @@ input:checked + .custom-input-detector {
   color: #df6365;
 }
 
-.icon-mask-cross {
-  background-image: url('../images/icons-sc21a13175b.png');
-  background-position: 0 -426px;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  display: inline-block;
-  vertical-align: middle;
-  height: 14px;
-  width: 13px;
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-resolution: 1.5dppx) {
-  .icon-mask-cross {
-    background-image: url('../images/icons-2x-sc87fe02559.png');
-    background-size: 218px auto;
-    background-position: 0 -426px;
-    height: 14px;
-    width: 13px;
-  }
+.registration--photo-confirm-block img {
+  border-radius: 100%;
 }
 
-.icon-mask-success {
-  background-image: url('../images/icons-sc21a13175b.png');
-  background-position: 0 -544px;
-  background-repeat: no-repeat;
-  overflow: hidden;
-  display: inline-block;
-  vertical-align: middle;
-  height: 10px;
-  width: 14px;
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min--moz-device-pixel-ratio: 1.5), (-o-min-device-pixel-ratio: 3 / 2), (min-resolution: 1.5dppx) {
-  .icon-mask-success {
-    background-image: url('../images/icons-2x-sc87fe02559.png');
-    background-size: 218px auto;
-    background-position: 0 -544px;
-    height: 10px;
-    width: 14px;
-  }
+.registration--photo-confirm-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 /*# sourceMappingURL=registration.css.map */
